@@ -1,0 +1,11 @@
+@use "./mixins.scss" as *;
+
+.jardin {
+  background-size    : cover;
+  background-image: url('/assets/images/la-planque-jardin-mobile.webp');
+
+  @include aPartir('tablet'){
+    background-position: bottom;
+    background-image: url('/assets/images/la-planque-jardin-desktop.webp');
+  }
+}

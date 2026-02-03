@@ -1,0 +1,29 @@
+@use "sass:color";
+
+@function highlighted-color($color, $lighter: true) {
+  $amount: 10%;
+
+  @if $lighter {
+    @return color.scale($color, $lightness: $amount, $saturation: $amount);
+  } @else {
+    @return color.scale($color, $lightness: -$amount, $saturation: $amount);
+  }
+}
+
+$color-1      : #1F4839;  //foret
+$color-2      : #2F7056;  //sapin
+$color-3      : #61A345;  //herbe
+$color-4      : #AD3C05;  //feuillage
+$color-5      : #D67000;  //citrouille
+$color-6      : #CE8C8D;  //brique
+$color-7      : #DEB150;  //soleil
+// $color-7-light: #FFD986;  //soleil clair
+$color-8      : #BC8F35;  //sable
+$color-9      : #B5DFFF;  //ciel
+$color-10     : #F4F1EF;  //nuage
+$color-11     : #B2B1AE;  //cailloux
+$color-12     : #29261F;  //terreau
+$color-13     : #FFFFFF;  //neige
+
+
+$link-color: highlighted-color($color-7, true);

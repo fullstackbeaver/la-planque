@@ -1,0 +1,138 @@
+@use "../../styles/colors.scss" as *;
+@use "../../styles/extenders.scss";
+@use "../../styles/sizes.scss" as *;
+@use "../cta/cta.scss" as *;
+
+footer {
+  position: relative;
+  display: grid;
+  grid:
+    "logo propos decouvrir form"
+    "hr hr hr hr"
+    "cp legal legal legal";
+  padding: $section-spacing-v $section-spacing-h 0 $section-spacing-h;
+
+  &::after {
+content: "";
+    background-image: url(/assets/icons/herbes.svg);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    top: -153px;
+    bottom: auto;
+    left: auto;
+    width: 362px;
+    height: 500px;
+    background-size: contain;
+    z-index: 0;
+  }
+
+  hr {
+    grid-area: hr;
+  }
+
+  aside {
+    grid-area: logo;
+
+    a {
+      background-color: $color-10;
+      padding         : 1rem;
+      margin          : 1rem $padding-xs;
+      border-radius   : 50%;
+      display         : inline-block;
+      width           : 48px;
+      height          : 48px;
+
+      &:first-of-type{
+        margin-left: 0;
+      }
+    }
+  }
+
+  & > nav, p {
+    @extend .useAlbertRegular;
+  }
+
+  & > nav:first-of-type {
+    grid-area: propos;
+  }
+
+  & > nav:nth-of-type(2) {
+    grid-area: decouvrir;
+  }
+
+  & > nav:last-of-type {
+    grid-area: legal;
+    font-weight: bold;
+    font-size: 1rem;
+    justify-self: end;
+    margin-bottom: $padding-default;
+    z-index: 1;
+
+    li {
+      display: inline-flex;
+      margin: 0 .5rem;
+    }
+  }
+
+  form {
+    grid-area: form;
+    display: grid;
+    grid:
+      "h h" $padding-xl
+      "p p" $padding-xl
+      "i b" 48px
+      "n n" 67px
+      / auto $finalSize;
+    column-gap: $padding-s;
+    z-index: 1;
+
+    h4 {
+      grid-area: h;
+    }
+
+    p {
+      grid-area: p;
+    }
+
+    nav {
+      grid-area: n;
+      margin-top: $padding-l;
+      display: flex;
+      gap: $padding-default;
+      width: 100%;
+    }
+
+    a {
+      @extend .cta;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+
+    button {
+      grid-area: b;
+      margin-left: 4px;
+    }
+  }
+
+  & > p {
+    grid-area: cp;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  li {
+    list-style-type: none;
+    margin-top: 20px;
+  }
+
+  input{
+    @extend .inputForm;
+    @extend .useAlbertSemi;
+    font-size: 1rem;
+    // width: calc(100% - #{$finalSize} - ($padding-default / 2) ); //padding-default c'est la marge entre le bouton et l'input
+  }
+
+}

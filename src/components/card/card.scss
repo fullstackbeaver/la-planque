@@ -1,0 +1,72 @@
+@use "../../styles/colors.scss" as *;
+@use "../../styles/extenders.scss";
+@use "../../styles/fonts.scss" as *;
+@use "../../styles/sizes.scss" as *;
+
+$iconSize: 73px;
+$spacing : 21px;
+
+.card {
+  @extend .withBorder;
+
+  border-color    : $color-13;
+  background-color: $color-13;
+  padding         : $padding-xl $padding-xl;
+  width           : clamp(200px, calc(383px * 100vw / 1440px), 383px);
+
+  h3 {
+    color: $color-8;
+  }
+
+  p{
+    @extend .useAlbertMedium;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.cardHome {
+
+  @extend .card;
+
+  display   : grid;
+  gap       : 0 $spacing ;
+  grid      :
+    "img p"
+    "img h2" / $iconSize 1fr;
+  height: calc($iconSize + ($padding-l *2 ));
+  padding         : $padding-l $padding-xl;
+  border-color    : $color-10;
+  background-color: $color-10;
+
+  img {
+    grid-area: img;
+  }
+
+  p {
+    grid-area  : p;
+    // max-width  : 439px;
+    font-size  : 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    // font-family: $action-font;
+    display: flex;
+    align-self: self-end;
+  }
+
+  h2 {
+    grid-area: h2;
+    font-size: 1.5rem;
+  }
+}
+
+// .cardTriptyque {
+
+//   margin-top: $section-spacing;
+  
+//   article {
+//     @extend .card;
+//     display: grid;
+//     justify-items: center;
+//   }
+// }

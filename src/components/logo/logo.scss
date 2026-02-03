@@ -1,0 +1,20 @@
+@use "../../styles/colors.scss" as *;
+
+logo {
+  --img       : url('/assets/icons/logo.svg') no-repeat center / contain;
+  display     : block;
+  mask        : var(--img);
+  -webkit-mask: var(--img);
+
+  &.light {
+    background-color: $color-13;
+    width           : 151px;
+    height          : 148px;
+  }
+
+  &.dark {
+    background-color: $color-12;
+    width           : 179px;
+    height          : 178px;
+  }
+}

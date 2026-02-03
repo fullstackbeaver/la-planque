@@ -1,0 +1,89 @@
+@use "./animations.scss";
+@use "./colors.scss" as *;
+@use "./fonts.scss" as *;
+@use "./sizes.scss" as *;
+
+.withBorder {
+  border       : 2px solid;
+  border-radius: 4px;
+}
+
+.underline-short::after {
+  animation : underlineGrow 0.5s ease forwards;
+  background: $link-color;
+  bottom    : -3px;
+  content   : "";
+  display   : block;
+  height    : 2px;
+  left      : 50%;
+  position  : relative;
+  transform : translateX(-50%);
+  width     : 50%;
+}
+
+.titleStyleShadow {
+  font-family: $title-font;
+  color      : $color-10;
+  text-shadow: $shadow-size;
+}
+
+
+.tear {
+  --tear:
+    linear-gradient(white, white),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1972 82.5" preserveAspectRatio="none"><path fill="white" d="M1 36.5h17l21.5 4 19-2 20-6.5 26.5-1.5 17-3.5 42.5-1.5L186 22l22.5-2 21.5 8.5 39-5 21.5 5 19-8.5H332l20 7 19-5 25-2 20.5 2h20l20.5-4.5 21 6 21-3.5 19 5.5 22.5-2h23l17 10 25.5-3 21.5 6 10.5 9L700 62l64.5-6 21 6 18.5-2 19-4 25 6 27.5-6 24.5 8.5h20l20.5 7 22.5-7 19.5 2 24.5-2 20 2 20-4.5 22 6.5 62.5-14 47-3 29-9.5 28 1.5L1256 40l21-8 18.5-1.5 30.5 3 40.5-18 19-2 40.5 2 19-4h25l21-5.5 25.5 3 17.5-3 46 7.5 23.5-7.5 19-2 24.5 2 44.5 7.5L1714 6l20 7.5 24.5-2 19 2 48-2h43L1880 1l8 3h21l23.5-3 38.5 1.5v79H1v-45z"/></svg>');
+  position: relative;
+  mask-image: var(--tear);
+  -webkit-mask-image: (--tear);
+  mask-position: 0 -2px, bottom;
+  -webkit-mask-position: 0 -2px, bottom;
+  mask-size: 100% 100%, 100% 30px;
+  -webkit-mask-size: 100% 100%, 100% 30px;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-composite: exclude;
+  -webkit-mask-composite: source-out;
+}
+
+@supports (-moz-appearance: none) {
+  .tear {
+    mask-position: 0 0, bottom;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+//TODO refaire le point sur les variantes
+.useAlbertRegular{
+  font-family: $action-font;
+  font-weight: 400;
+}
+
+.useAlbertMedium{
+  font-family: $action-font;
+  font-weight: 500;
+}
+
+.useAlbertSemi{
+  font-family: $action-font;
+  font-weight: 600;
+}
+
+.inputForm{
+  @extend .withBorder;
+
+  background-color: $color-10;
+  border-color    : $color-11;
+  border-style    : solid;
+  color           : $color-11;
+  font-size       : 1.25rem;
+  padding         : $padding-default;
+
+  &:focus-visible {
+    outline: $color-11 auto 1px;
+  }
+}

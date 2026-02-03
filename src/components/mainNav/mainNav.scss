@@ -1,0 +1,56 @@
+@use "../../styles/colors.scss" as *;
+@use "../../styles/sizes.scss" as *;
+@use "../../styles/fonts.scss" as *;
+@use "../../styles/extenders.scss";
+
+$navBarHeight: 196px;
+
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  & ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+    a {
+      @extend .titleStyleShadow;
+
+      font-size: 1.5rem;
+      text-decoration: none;
+
+      &:hover {
+        @extend .underline-short;
+        color: $link-color;
+      }
+
+      &[href="#"] {
+        color: $link-color;
+        @extend .underline-short;
+      }
+    }
+  }
+
+  img {
+    max-height: 150px;
+  }
+}
+
+// .logo {
+//   font-family: var(--font-serif);
+//   font-size  : 1.5rem;
+//   text-align : center;
+//   flex       : 1;
+// }
+
+// .logo small {
+//   display       : block;
+//   font-size     : 0.7rem;
+//   letter-spacing: 2px;
+//   text-transform: uppercase;
+// }

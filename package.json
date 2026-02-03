@@ -1,0 +1,20 @@
+{
+  "name": "la-planque",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "chokidar": "^5.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "build": "bun run build.js",
+    "watch": "bun run build.js --watch",
+    "serve": "bun run build.js --serve",
+    "dev": "bun run build.js --serve --watch"
+  },
+  "dependencies": {
+    "glob": "^13.0.0"
+  }
+}

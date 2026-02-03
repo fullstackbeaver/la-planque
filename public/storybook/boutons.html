@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+
+  <title>Variantes de boutons</title>
+  <style>
+    .container {
+      margin: 0 auto;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+
+
+    h3 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+  </style>
+
+</head>
+
+<body id="boutons">
+  <div class="container">
+    <h3>Boutons texte</h3>
+    <div class="button-group">
+      <button>Mon bouton</button>
+      <button>Mon bouton</button>
+      <button class="cta-secondary" disabled>Mon bouton</button>
+    </div>
+
+    <div class="button-group">
+      <button>Mon bouton</button>
+      <button disabled>Mon bouton</button>
+    </div>
+
+    <div class="button-group">
+      <button class="cta-small">Mon bouton</button>
+      <button class="cta-small">Mon bouton</button>
+      <button class="cta-small cta-secondary" disabled>Mon bouton</button>
+    </div>
+
+    <div class="button-group">
+      <button>Mon bouton</button>
+      <button disabled>Mon bouton</button>
+    </div>
+
+    <h3>Boutons avec icône et texte</h3>
+    <div class="button-group">
+      <button data-icon="1">Mon bouton</button>
+      <button data-icon="1">Mon bouton</button>
+      <button class="cta-secondary" data-icon="1" disabled>Mon bouton</button>
+    </div>
+
+    <div class="button-group">
+      <button data-icon="1">Mon bouton</button>
+      <button data-icon="1" disabled>Mon bouton</button>
+    </div>
+
+    <div class="button-group">
+      <button class="cta-small" data-icon="1">Mon bouton</button>
+      <button class="cta-small" data-icon="1">Mon bouton</button>
+      <button class="cta-small cta-secondary" data-icon="1" disabled>Mon bouton</button>
+    </div>
+
+    <div class="button-group">
+      <button class="cta-small" data-icon="1">Mon bouton</button>
+      <button class="cta-small" data-icon="1" disabled>Mon bouton</button>
+    </div>
+    <h3>Boutons icône seule</h3>
+    <div class="button-group">
+      <button data-icon="1"></button>
+      <button data-icon="1"></button>
+      <button class="cta-secondary" data-icon="1" disabled></button>
+    </div>
+
+    <div class="button-group">
+      <button data-icon="1"></button>
+      <button data-icon="1" disabled></button>
+    </div>
+
+    <div class="button-group">
+      <button class="cta-small" data-icon="1"></button>
+      <button class="cta-small" data-icon="1"></button>
+      <button class="cta-small cta-secondary" data-icon="1" disabled></button>
+    </div>
+
+    <div class="button-group">
+      <button class="cta-small" data-icon="1"></button>
+      <button class="cta-small" data-icon="1" disabled></button>
+    </div>
+  </div>
+</body>
+
+</html>

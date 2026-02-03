@@ -1,0 +1,13 @@
+@use "./colors.scss" as *;
+
+$padding-xs     : 8px;
+$padding-s      : 12px;
+$padding-default: 16px;
+$padding-l      : 24px;
+$padding-xl     : 32px;
+
+$section-spacing-h: 120px;
+$section-spacing-v: 60px;
+
+
+$shadow-size: 0px 0px 4px rgba($color-12, 0.5);

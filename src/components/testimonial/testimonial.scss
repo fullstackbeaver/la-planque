@@ -1,0 +1,54 @@
+@use "../../styles/colors.scss" as * ;
+@use "../../styles/sizes.scss" as * ;
+@use "../../styles/extenders.scss" as *;
+
+.testimonial {
+  display: grid;
+  grid: "h h h"
+   "t1 t2 t3"
+   "t4 t5 t6";
+  width: 100%;
+  row-gap: $padding-l;
+
+  h2 {
+    grid-area: h;
+    text-align: left;
+  }
+
+  article:nth-of-type(1){
+    grid-area: t1;
+  }
+
+
+  article:nth-of-type(2){
+    grid-area: t2;
+  }
+
+
+  article:nth-of-type(3){
+    grid-area: t3;
+  }
+
+
+  article:nth-of-type(4){
+    grid-area: t4;
+  }
+
+
+  article:nth-of-type(5){
+    grid-area: t5;
+  }
+
+
+  article:nth-of-type(6){
+    grid-area: t6;
+  }
+
+  p{
+    @extend .useAlbertMedium;
+
+    text-align: left;
+    color     : $color-4;
+  }
+
+}

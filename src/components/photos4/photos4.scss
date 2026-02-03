@@ -1,0 +1,63 @@
+@use "../../styles/colors.scss" as *;
+@use "../../styles/extenders.scss";
+@use "../../styles/fonts.scss" as *;
+@use "../../styles/sizes.scss" as *;
+@use "../cta/cta.scss" as *;
+
+.photos4 {
+  @extend .tear;
+
+  position        : relative;
+  background-color: $color-7;
+  display         : flex;
+  gap             : 1rem;
+  text-align      : left !important;
+  margin-bottom   : $section-spacing-v;
+  padding-bottom  : 90px !important;           //à cause de la déchirure
+
+  hgroup {
+    max-width : 50%;
+    align-self: center;
+  }
+
+  aside {
+    padding              : 0 !important;
+    max-width            : 50%;
+    display              : grid !important;
+    gap                  : 25px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows   : 1fr 1fr;
+  }
+
+  img {
+    width        : 285px;
+    border-radius: 4px 4px 0 0;
+  }
+
+  u {
+    display    : block;
+    font-family: $action-font;
+    font-size  : 1rem;
+  }
+
+  figure {
+    background-color: white;
+    border-radius   : 4px;
+  }
+
+  figcaption {
+    font-family : $title-font;
+    font-size   : 1.25rem;
+    padding-left: .25rem;
+  }
+
+  a {
+    @extend .cta;
+    @extend .cta-secondary;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+}

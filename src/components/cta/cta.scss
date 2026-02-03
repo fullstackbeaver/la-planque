@@ -1,0 +1,95 @@
+@use "../../styles/colors.scss" as *;
+@use "../../styles/sizes.scss" as *;
+@use "../../styles/fonts.scss" as *;
+@use "../../styles/extenders.scss";
+
+$sizeIcon: 22px;
+$finalSize: calc(($padding-default * 2) + $sizeIcon + 2px); // le dernier 2 c'est la bordure
+
+button, .cta {
+  @extend .withBorder;
+
+  // sizes and positions
+  padding    : $padding-default;
+  cursor     : pointer;
+  transition : all 0.3s ease;
+  display    : inline-flex;
+  align-items: center;
+  gap        : 8px;
+  white-space: nowrap;
+  width      : fit-content;
+
+  // font
+  font-family   : $action-font;
+  font-weight   : 600;
+  font-style    : SemiBold;
+  font-size     : 1.125rem;      //18px;
+  line-height   : 100%;
+  letter-spacing: 0%;
+
+
+  /* Bouton primaire (rempli) */
+  background-color: $color-4;
+  color           : $color-13;
+  border-color    : $color-4;
+
+  &:hover:not(:disabled) {
+    background-color: highlighted-color($color-4);
+    border-color: highlighted-color($color-4);
+  }
+
+  &:disabled {
+    color: $color-6;
+    border: 1px solid;
+    cursor: not-allowed;
+  }
+
+  &[data-icon]::before {
+    /* Dimensions */
+    width     : $sizeIcon;
+    height    : $sizeIcon;
+    min-width : $sizeIcon;
+    min-height: $sizeIcon;
+
+    /* Flexbox */
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: center;
+    flex-shrink    : 0;
+
+    /* Contenu */
+    content          : '';
+    background-color : currentColor;
+    mask-size        : contain;
+    -webkit-mask-size: contain;
+
+    /* Accessibilité (ajout important) */
+    speak: none; // Empêche la lecture par les lecteurs d'écran
+  }
+
+  --email: url('/assets/icons/email.svg') no-repeat center;
+
+  /* Différentes icônes selon l'attribut */
+  &[data-icon="1"]::before {
+    -webkit-mask: var(--email);
+    mask: var(--email);
+  }
+
+  &:not(:first-of-type):not(:disabled):not(.cta-small) {
+    @extend .cta-secondary;
+  }
+}
+
+.cta-small {
+    // opacity: 0.8;
+  padding: $padding-s;
+}
+
+.cta-secondary {
+  background-color: transparent;
+  color           : $color-4;
+
+  &:hover {
+    background-color: highlighted-color($color-10);
+  }
+}

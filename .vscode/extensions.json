@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "akamud.vscode-theme-onedark",
+    "formulahendry.auto-close-tag",
+    "chouzz.vscode-better-align",
+    "oven.bun-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "vivaxy.vscode-conventional-commits",
+    "tobermory.es6-string-html",
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker-french",
+    "mhutchie.git-graph",
+    "pkief.material-icon-theme",
+    "henriiik.vscode-sort",
+    "fullstackbeaver.formatter-sort-align-imports",
+    "shardulm94.trailing-spaces"
+  ]
+}

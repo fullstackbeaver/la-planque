@@ -1,0 +1,74 @@
+@use "../announcementBar/announcementBar.scss" as *;
+@use "../card/card.scss";
+@use "../mainNav/mainNav.scss" as *;
+@use "../../styles/background.scss";
+@use "../../styles/colors.scss" as *;
+@use "../../styles/extenders.scss";
+@use "../../styles/fonts.scss" as *;
+@use "../../styles/sizes.scss" as *;
+
+.hero {
+
+  @extend .tear;
+  position: relative;
+
+  padding: 0 calc(((100vw - 1440px) / 2) + $section-spacing-h);
+}
+
+.hero.home{
+
+  @extend .jardin;
+
+  article {
+    @extend .cardHome;
+  }
+
+  div{
+    min-height     : calc((100vh - #{$navBarHeight}) - $announcementBarHeight);
+    padding-bottom : $section-spacing-v;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    gap            : $padding-xl;
+
+    & > p {
+      @extend .titleStyleShadow;
+      font-size  : 2rem;
+      line-height: 3rem;
+    }
+
+    nav:last-of-type {
+      @extend .cards;
+    }
+  }
+  & > nav{
+    @extend .mainNav;
+  }
+}
+
+.hero form{
+  @extend .withBorder;
+
+  background-color: rgba($color-10, 0.8);
+  border-color    : $color-10;
+  color           : $color-12;
+  display         : flex;
+  font-family     : $action-font;
+  padding         : $padding-l $padding-xl;
+  width           : fit-content;
+  align-items     : flex-end;
+
+  label {
+    display     : grid;
+    gap         : 0.5rem;
+    margin-right: 24px;
+
+    input, select {
+      @extend .inputForm;
+    }
+  }
+
+  button {
+    height: 60px;
+  }
+}

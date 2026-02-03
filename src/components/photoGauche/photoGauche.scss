@@ -1,0 +1,38 @@
+@use "../../styles/colors.scss" as *;
+@use "../../styles/extenders.scss";
+
+.photoGauche{
+
+  text-align: left !important;
+  display   : grid;
+  column-gap: 2rem;
+  grid :
+    "i h" 1fr
+    "i p" auto
+    "i n" 1fr
+    /auto auto;
+
+  h2 {
+    grid-area: h;
+    align-self: end;
+  }
+
+  p {
+    grid-area: p;
+    @extend .useAlbertMedium;
+  }
+
+  nav, & > a {
+    grid-area: n;
+    align-self: start;
+  }
+
+  img {
+    width: clamp(200px, calc(383px * 100vw / 1440px), 383px);
+    grid-area: i;
+  }
+
+  &.white{
+    background-color: $color-13;
+  }
+}

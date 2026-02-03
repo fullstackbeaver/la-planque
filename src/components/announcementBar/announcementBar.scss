@@ -1,0 +1,26 @@
+@use "../../styles/colors.scss" as *;
+@use "../../styles/sizes.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+$announcementBarHeight: calc(44px - ($padding-xs * 2));
+
+[role="top-banner"] {
+  background-color: $color-8;
+  color           : $color-13;
+  padding         : $padding-xs;
+  min-height      : $announcementBarHeight;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+
+  a {
+    text-decoration: underline;
+    margin: 0 .5rem;
+  }
+
+  @include jusque('tablet'){
+    flex-direction: column;
+  }
+
+}
+

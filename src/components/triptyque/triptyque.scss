@@ -1,0 +1,39 @@
+@use "../card/card.scss";
+@use "../cta/cta.scss";
+@use "../../styles/sizes.scss" as *;
+@use "../../styles/colors.scss" as *;
+@use "../../styles/fonts.scss" as *;
+
+
+$imageMainTriptyque:  clamp(200px, calc(640px * 100vw / 1440px), 640px);
+$imageSmallTriptyque: clamp(200px, calc(360px * 100vw / 1440px), 360px);
+$spaceImageTriptyque: clamp(5px,   calc(40px * 100vw / 1440px),  40px);
+
+.triptyque {
+  display: grid;
+  column-gap: $spaceImageTriptyque;
+  grid: ". iC ."
+    "iG iC iD"
+    ". iC ."
+    /$imageSmallTriptyque $imageMainTriptyque $imageSmallTriptyque;
+
+  img {
+    border-radius: 4px;
+    box-shadow: $shadow-size;
+
+    &:first-of-type {
+      grid-area: iG;
+      width: $imageSmallTriptyque;
+    }
+
+    &:nth-of-type(2) {
+      grid-area: iC;
+      width: $imageMainTriptyque;
+    }
+
+    &:nth-of-type(3) {
+      grid-area: iD;
+      width: $imageSmallTriptyque;
+    }
+  }
+}

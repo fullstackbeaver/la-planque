@@ -1,0 +1,98 @@
+<htmlHead>
+  <title>Variantes de boutons</title>
+  <style>
+    .container {
+      margin: 0 auto;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+
+
+    h3 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+  </style>
+</htmlHead>
+
+<body id="boutons">
+  <div class="container">
+    <h3>Boutons texte</h3>
+    <div class="button-group">
+      <cta>Mon bouton</cta>
+      <cta>Mon bouton</cta>
+      <cta disabled class="cta-secondary">Mon bouton</cta>
+    </div>
+
+    <div class="button-group">
+      <cta>Mon bouton</cta>
+      <cta disabled>Mon bouton</cta>
+    </div>
+
+    <div class="button-group">
+      <cta class="cta-small">Mon bouton</cta>
+      <cta class="cta-small">Mon bouton</cta>
+      <cta class="cta-small cta-secondary" disabled>Mon bouton</cta>
+    </div>
+
+    <div class="button-group">
+      <cta>Mon bouton</cta>
+      <cta disabled>Mon bouton</cta>
+    </div>
+
+    <h3>Boutons avec icône et texte</h3>
+    <div class="button-group">
+      <cta data-icon="1">Mon bouton</cta>
+      <cta data-icon="1">Mon bouton</cta>
+      <cta disabled data-icon="1" class="cta-secondary">Mon bouton</cta>
+    </div>
+
+    <div class="button-group">
+      <cta data-icon="1">Mon bouton</cta>
+      <cta disabled data-icon="1">Mon bouton</cta>
+    </div>
+
+    <div class="button-group">
+      <cta class="cta-small" data-icon="1">Mon bouton</cta>
+      <cta class="cta-small" data-icon="1">Mon bouton</cta>
+      <cta class="cta-small cta-secondary" disabled data-icon="1">Mon bouton</cta>
+    </div>
+
+    <div class="button-group">
+      <cta class="cta-small" data-icon="1">Mon bouton</cta>
+      <cta class="cta-small" disabled data-icon="1">Mon bouton</cta>
+    </div>
+    <h3>Boutons icône seule</h3>
+    <div class="button-group">
+      <cta data-icon="1"></cta>
+      <cta data-icon="1"></cta>
+      <cta disabled data-icon="1" class="cta-secondary"></cta>
+    </div>
+
+    <div class="button-group">
+      <cta data-icon="1"></cta>
+      <cta disabled data-icon="1"></cta>
+    </div>
+
+    <div class="button-group">
+      <cta class="cta-small" data-icon="1"></cta>
+      <cta class="cta-small" data-icon="1"></cta>
+      <cta class="cta-small cta-secondary" disabled data-icon="1"></cta>
+    </div>
+
+    <div class="button-group">
+      <cta class="cta-small" data-icon="1"></cta>
+      <cta class="cta-small" disabled data-icon="1"></cta>
+    </div>
+  </div>
+</body>
+
+</html>

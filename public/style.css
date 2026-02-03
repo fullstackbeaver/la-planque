@@ -1,0 +1,710 @@
+@charset "UTF-8";
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+@font-face {
+  font-family: "Montaga";
+  src: url("/assets/fonts/montaga-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Albert Sans";
+  src: url("/assets/fonts/AlbertSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Albert Sans";
+  src: url("/assets/fonts/AlbertSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Albert Sans";
+  src: url("/assets/fonts/AlbertSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+.withBorder, .hero form, button, .cta, footer form a, .photos4 a, .triptyque a:first-of-type, .triptyque a:nth-of-type(2), section:not([class*=hero]) nav a, section:not([class*=hero]) > a, .card, .cardHome, .hero.home article, section:not([class*=hero]) article, .inputForm, footer input, .hero form label input, .hero form label select {
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+.underline-short::after, .mainNav ul a:hover::after, .mainNav ul a[href="#"]::after, .hero.home > nav ul a:hover::after, .hero.home > nav ul a[href="#"]::after {
+  animation: underlineGrow 0.5s ease forwards;
+  background: rgb(228.27, 185.8876056338, 94.53);
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  width: 50%;
+}
+
+.titleStyleShadow, .hero.home div > p, .mainNav ul a, .hero.home > nav ul a, h1 {
+  font-family: Montaga;
+  color: #F4F1EF;
+  text-shadow: 0px 0px 4px rgba(41, 38, 31, 0.5);
+}
+
+.tear, .photos4, .hero {
+  --tear:
+    linear-gradient(white, white),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1972 82.5" preserveAspectRatio="none"><path fill="white" d="M1 36.5h17l21.5 4 19-2 20-6.5 26.5-1.5 17-3.5 42.5-1.5L186 22l22.5-2 21.5 8.5 39-5 21.5 5 19-8.5H332l20 7 19-5 25-2 20.5 2h20l20.5-4.5 21 6 21-3.5 19 5.5 22.5-2h23l17 10 25.5-3 21.5 6 10.5 9L700 62l64.5-6 21 6 18.5-2 19-4 25 6 27.5-6 24.5 8.5h20l20.5 7 22.5-7 19.5 2 24.5-2 20 2 20-4.5 22 6.5 62.5-14 47-3 29-9.5 28 1.5L1256 40l21-8 18.5-1.5 30.5 3 40.5-18 19-2 40.5 2 19-4h25l21-5.5 25.5 3 17.5-3 46 7.5 23.5-7.5 19-2 24.5 2 44.5 7.5L1714 6l20 7.5 24.5-2 19 2 48-2h43L1880 1l8 3h21l23.5-3 38.5 1.5v79H1v-45z"/></svg>');
+  position: relative;
+  mask-image: var(--tear);
+  -webkit-mask-image: --tear;
+  mask-position: 0 -2px, bottom;
+  -webkit-mask-position: 0 -2px, bottom;
+  mask-size: 100% 100%, 100% 30px;
+  -webkit-mask-size: 100% 100%, 100% 30px;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-composite: exclude;
+  -webkit-mask-composite: source-out;
+}
+
+@supports (-moz-appearance: none) {
+  .tear, .photos4, .hero {
+    mask-position: 0 0, bottom;
+  }
+}
+.cards, .hero.home div nav:last-of-type, section:not([class*=hero]) aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.useAlbertRegular, footer > nav, footer p {
+  font-family: Albert Sans;
+  font-weight: 400;
+}
+
+.useAlbertMedium, .testimonial p, .photoGauche p, .card p, .cardHome p, .hero.home article p, section:not([class*=hero]) article p {
+  font-family: Albert Sans;
+  font-weight: 500;
+}
+
+.useAlbertSemi, footer input {
+  font-family: Albert Sans;
+  font-weight: 600;
+}
+
+.inputForm, footer input, .hero form label input, .hero form label select {
+  background-color: #F4F1EF;
+  border-color: #B2B1AE;
+  border-style: solid;
+  color: #B2B1AE;
+  font-size: 1.25rem;
+  padding: 16px;
+}
+.inputForm:focus-visible, footer input:focus-visible, .hero form label input:focus-visible, .hero form label select:focus-visible {
+  outline: #B2B1AE auto 1px;
+}
+
+.card, section:not([class*=hero]) article, .cardHome, .hero.home article {
+  border-color: #FFFFFF;
+  background-color: #FFFFFF;
+  padding: 32px 32px;
+  width: clamp(200px, 26.5972222222vw, 383px);
+}
+.card h3, section:not([class*=hero]) article h3, .cardHome h3, .hero.home article h3 {
+  color: #BC8F35;
+}
+.card p, section:not([class*=hero]) article p, .cardHome p, .hero.home article p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.cardHome, .hero.home article {
+  display: grid;
+  gap: 0 21px;
+  grid: "img p" "img h2"/73px 1fr;
+  height: 121px;
+  padding: 24px 32px;
+  border-color: #F4F1EF;
+  background-color: #F4F1EF;
+}
+.cardHome img, .hero.home article img {
+  grid-area: img;
+}
+.cardHome p, .hero.home article p {
+  grid-area: p;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  display: flex;
+  align-self: self-end;
+}
+.cardHome h2, .hero.home article h2 {
+  grid-area: h2;
+  font-size: 1.5rem;
+}
+
+button, .cta, footer form a, .photos4 a, .triptyque a:first-of-type, .triptyque a:nth-of-type(2), section:not([class*=hero]) nav a, section:not([class*=hero]) > a {
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  width: fit-content;
+  font-family: Albert Sans;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 1.125rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  /* Bouton primaire (rempli) */
+  background-color: #AD3C05;
+  color: #FFFFFF;
+  border-color: #AD3C05;
+}
+button:hover:not(:disabled), .cta:hover:not(:disabled), footer form a:hover:not(:disabled), .photos4 a:hover:not(:disabled), .triptyque a:hover:not(:disabled):first-of-type, .triptyque a:hover:not(:disabled):nth-of-type(2), section:not([class*=hero]) nav a:hover:not(:disabled), section:not([class*=hero]) > a:hover:not(:disabled) {
+  background-color: rgb(205.8606741573, 70.9861958266, 5.3393258427);
+  border-color: rgb(205.8606741573, 70.9861958266, 5.3393258427);
+}
+button:disabled, .cta:disabled, footer form a:disabled, .photos4 a:disabled, .triptyque a:disabled:first-of-type, .triptyque a:disabled:nth-of-type(2), section:not([class*=hero]) nav a:disabled, section:not([class*=hero]) > a:disabled {
+  color: #CE8C8D;
+  border: 1px solid;
+  cursor: not-allowed;
+}
+button[data-icon]::before, .cta[data-icon]::before, footer form a[data-icon]::before, .photos4 a[data-icon]::before, .triptyque a[data-icon]:first-of-type::before, .triptyque a[data-icon]:nth-of-type(2)::before, section:not([class*=hero]) nav a[data-icon]::before, section:not([class*=hero]) > a[data-icon]::before {
+  /* Dimensions */
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  /* Flexbox */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* Contenu */
+  content: "";
+  background-color: currentColor;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  /* Accessibilité (ajout important) */
+  speak: none;
+}
+button, .cta, footer form a, .photos4 a, .triptyque a:first-of-type, .triptyque a:nth-of-type(2), section:not([class*=hero]) nav a, section:not([class*=hero]) > a {
+  --email: url('/assets/icons/email.svg') no-repeat center;
+  /* Différentes icônes selon l'attribut */
+}
+button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-icon="1"]::before, .photos4 a[data-icon="1"]::before, .triptyque a[data-icon="1"]:first-of-type::before, .triptyque a[data-icon="1"]:nth-of-type(2)::before, section:not([class*=hero]) nav a[data-icon="1"]::before, section:not([class*=hero]) > a[data-icon="1"]::before {
+  -webkit-mask: var(--email);
+  mask: var(--email);
+}
+.cta-small {
+  padding: 12px;
+}
+
+.cta-secondary, .photos4 a, button:not(:first-of-type):not(:disabled):not(.cta-small), .cta:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:not(:first-of-type):not(:disabled):not(.cta-small), .triptyque a:not(:first-of-type):not(:disabled):not(.cta-small):first-of-type, .triptyque a:not(:first-of-type):not(:disabled):not(.cta-small):nth-of-type(2), section:not([class*=hero]) nav a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class*=hero]) > a:not(:first-of-type):not(:disabled):not(.cta-small) {
+  background-color: transparent;
+  color: #AD3C05;
+}
+.cta-secondary:hover, .photos4 a:hover, button:hover:not(:first-of-type):not(:disabled):not(.cta-small), .cta:hover:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .triptyque a:hover:not(:first-of-type):not(:disabled):not(.cta-small):first-of-type, .triptyque a:hover:not(:first-of-type):not(:disabled):not(.cta-small):nth-of-type(2), section:not([class*=hero]) nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class*=hero]) > a:hover:not(:first-of-type):not(:disabled):not(.cta-small) {
+  background-color: rgb(246.09, 242.202, 239.61);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("/assets/images/papier.jpg");
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-size: 1440px;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: Montaga;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: Montaga;
+  font-size: 1.5rem;
+  color: #AD3C05;
+  font-weight: 400;
+}
+
+body > section:not([class*=hero]) {
+  padding: 60px 120px;
+}
+
+body > section:not([class*=hero]),
+body > aside:not([role=top-banner]),
+footer {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section:not([class*=hero]) {
+  text-align: center;
+  color: #29261F;
+}
+section:not([class*=hero]) aside {
+  padding-top: 32px;
+}
+section:not([class*=hero]) p + p {
+  margin-top: 24px;
+}
+section:not([class*=hero]) h2 + p {
+  margin-top: 32px;
+}
+section:not([class*=hero]) nav {
+  padding: 24px 0;
+}
+section:not([class*=hero]) > a {
+  margin: 24px 0;
+}
+section:not([class*=hero]) > *:last-child {
+  margin-bottom: 0;
+}
+section:not([class*=hero]) strong {
+  display: block;
+  font-weight: bold;
+  margin: 24px 0;
+}
+
+section + aside,
+section + section {
+  padding-top: 60px;
+}
+
+aside + section:not([class*=hero]) {
+  margin-top: 32px !important;
+}
+
+blockquote {
+  font-family: Montaga;
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  text-align: left;
+}
+
+a {
+  cursor: pointer;
+}
+
+.jardin, .hero.home {
+  background-size: cover;
+  background-image: url("/assets/images/la-planque-jardin-mobile.webp");
+}
+@media (min-width: 768px) {
+  .jardin, .hero.home {
+    background-position: bottom;
+    background-image: url("/assets/images/la-planque-jardin-desktop.webp");
+  }
+}
+
+[role=top-banner] {
+  background-color: #BC8F35;
+  color: #FFFFFF;
+  padding: 8px;
+  min-height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+[role=top-banner] a {
+  text-decoration: underline;
+  margin: 0 0.5rem;
+}
+@media (max-width: 767px) {
+  [role=top-banner] {
+    flex-direction: column;
+  }
+}
+
+.mainNav, .hero.home > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.mainNav ul, .hero.home > nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.mainNav ul a, .hero.home > nav ul a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.mainNav ul a:hover, .hero.home > nav ul a:hover {
+  color: rgb(228.27, 185.8876056338, 94.53);
+}
+.mainNav ul a[href="#"], .hero.home > nav ul a[href="#"] {
+  color: rgb(228.27, 185.8876056338, 94.53);
+}
+.mainNav img, .hero.home > nav img {
+  max-height: 150px;
+}
+
+.hero {
+  position: relative;
+  padding: 0 calc((100vw - 1440px) / 2 + 120px);
+}
+
+.hero.home div {
+  min-height: calc(100vh - 196px - 28px);
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+.hero.home div > p {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.hero form {
+  background-color: rgba(244, 241, 239, 0.8);
+  border-color: #F4F1EF;
+  color: #29261F;
+  display: flex;
+  font-family: Albert Sans;
+  padding: 24px 32px;
+  width: fit-content;
+  align-items: flex-end;
+}
+.hero form label {
+  display: grid;
+  gap: 0.5rem;
+  margin-right: 24px;
+}
+.hero form button {
+  height: 60px;
+}
+
+.triptyque {
+  display: grid;
+  width: 100%;
+  max-width: 1440px;
+  grid: ". . . iC iC iC iC iC iC . . ." "iG iG . iC iC iC iC iC iC . iD iD" ". . . iC iC iC iC iC iC . . ." ". h h h h h h h h h h ." ". p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 ." ". p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 ." ". . b1 b1 b1 b1 b2 b2 b2 b2 . ." ". c1 c1 c1 . c2 c2 . c3 c3 c3 ."/32px auto clamp(5px, 2.7777777778vw, 40px) auto auto auto auto auto auto clamp(5px, 2.7777777778vw, 40px) auto 32px;
+  text-align: center;
+  color: #29261F;
+  margin: 32px auto;
+}
+.triptyque > img {
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px rgba(41, 38, 31, 0.5);
+}
+.triptyque > img:first-of-type {
+  grid-area: iG;
+  width: clamp(200px, 25vw, 360px);
+}
+.triptyque > img:nth-of-type(2) {
+  grid-area: iC;
+  width: clamp(200px, 44.4444444444vw, 640px);
+}
+.triptyque > img:nth-of-type(3) {
+  grid-area: iD;
+  width: clamp(200px, 25vw, 360px);
+}
+.triptyque h2 {
+  grid-area: h;
+  padding: 32px 0;
+}
+.triptyque > p {
+  font-family: Albert Sans;
+}
+.triptyque > p:first-of-type {
+  grid-area: p1;
+}
+.triptyque > p:last-of-type {
+  grid-area: p2;
+  margin-bottom: 32px;
+}
+.triptyque a:first-of-type {
+  grid-area: b1;
+  justify-self: flex-end;
+  margin-right: 12px;
+}
+.triptyque a:nth-of-type(2) {
+  grid-area: b2;
+  justify-self: flex-start;
+  margin-left: 12px;
+}
+
+.photoGauche {
+  text-align: left !important;
+  display: grid;
+  column-gap: 2rem;
+  grid: "i h" 1fr "i p" auto "i n" 1fr/auto auto;
+}
+.photoGauche h2 {
+  grid-area: h;
+  align-self: end;
+}
+.photoGauche p {
+  grid-area: p;
+}
+.photoGauche nav, .photoGauche > a {
+  grid-area: n;
+  align-self: start;
+}
+.photoGauche img {
+  width: clamp(200px, 26.5972222222vw, 383px);
+  grid-area: i;
+}
+.photoGauche.white {
+  background-color: #FFFFFF;
+}
+
+.photos4 {
+  position: relative;
+  background-color: #DEB150;
+  display: flex;
+  gap: 1rem;
+  text-align: left !important;
+  margin-bottom: 60px;
+  padding-bottom: 90px !important;
+}
+.photos4 hgroup {
+  max-width: 50%;
+  align-self: center;
+}
+.photos4 aside {
+  padding: 0 !important;
+  max-width: 50%;
+  display: grid !important;
+  gap: 25px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.photos4 img {
+  width: 285px;
+  border-radius: 4px 4px 0 0;
+}
+.photos4 u {
+  display: block;
+  font-family: Albert Sans;
+  font-size: 1rem;
+}
+.photos4 figure {
+  background-color: white;
+  border-radius: 4px;
+}
+.photos4 figcaption {
+  font-family: Montaga;
+  font-size: 1.25rem;
+  padding-left: 0.25rem;
+}
+.photos4 p {
+  margin-bottom: 1rem;
+}
+
+logo {
+  --img: url('/assets/icons/logo.svg') no-repeat center / contain;
+  display: block;
+  mask: var(--img);
+  -webkit-mask: var(--img);
+}
+logo.light {
+  background-color: #FFFFFF;
+  width: 151px;
+  height: 148px;
+}
+logo.dark {
+  background-color: #29261F;
+  width: 179px;
+  height: 178px;
+}
+
+footer {
+  position: relative;
+  display: grid;
+  grid: "logo propos decouvrir form" "hr hr hr hr" "cp legal legal legal";
+  padding: 60px 120px 0 120px;
+}
+footer::after {
+  content: "";
+  background-image: url(/assets/icons/herbes.svg);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  top: -153px;
+  bottom: auto;
+  left: auto;
+  width: 362px;
+  height: 500px;
+  background-size: contain;
+  z-index: 0;
+}
+footer hr {
+  grid-area: hr;
+}
+footer aside {
+  grid-area: logo;
+}
+footer aside a {
+  background-color: #F4F1EF;
+  padding: 1rem;
+  margin: 1rem 8px;
+  border-radius: 50%;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+footer aside a:first-of-type {
+  margin-left: 0;
+}
+footer > nav:first-of-type {
+  grid-area: propos;
+}
+footer > nav:nth-of-type(2) {
+  grid-area: decouvrir;
+}
+footer > nav:last-of-type {
+  grid-area: legal;
+  font-weight: bold;
+  font-size: 1rem;
+  justify-self: end;
+  margin-bottom: 16px;
+  z-index: 1;
+}
+footer > nav:last-of-type li {
+  display: inline-flex;
+  margin: 0 0.5rem;
+}
+footer form {
+  grid-area: form;
+  display: grid;
+  grid: "h h" 32px "p p" 32px "i b" 48px "n n" 67px/auto 56px;
+  column-gap: 12px;
+  z-index: 1;
+}
+footer form h4 {
+  grid-area: h;
+}
+footer form p {
+  grid-area: p;
+}
+footer form nav {
+  grid-area: n;
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+footer form a {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+footer form button {
+  grid-area: b;
+  margin-left: 4px;
+}
+footer > p {
+  grid-area: cp;
+  font-weight: bold;
+  font-size: 1rem;
+}
+footer li {
+  list-style-type: none;
+  margin-top: 20px;
+}
+footer input {
+  font-size: 1rem;
+}
+
+.triptyque {
+  display: grid;
+  column-gap: clamp(5px, 2.7777777778vw, 40px);
+  grid: ". iC ." "iG iC iD" ". iC ."/clamp(200px, 25vw, 360px) clamp(200px, 44.4444444444vw, 640px) clamp(200px, 25vw, 360px);
+}
+.triptyque img {
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px rgba(41, 38, 31, 0.5);
+}
+.triptyque img:first-of-type {
+  grid-area: iG;
+  width: clamp(200px, 25vw, 360px);
+}
+.triptyque img:nth-of-type(2) {
+  grid-area: iC;
+  width: clamp(200px, 44.4444444444vw, 640px);
+}
+.triptyque img:nth-of-type(3) {
+  grid-area: iD;
+  width: clamp(200px, 25vw, 360px);
+}
+
+.testimonial {
+  display: grid;
+  grid: "h h h" "t1 t2 t3" "t4 t5 t6";
+  width: 100%;
+  row-gap: 24px;
+}
+.testimonial h2 {
+  grid-area: h;
+  text-align: left;
+}
+.testimonial article:nth-of-type(1) {
+  grid-area: t1;
+}
+.testimonial article:nth-of-type(2) {
+  grid-area: t2;
+}
+.testimonial article:nth-of-type(3) {
+  grid-area: t3;
+}
+.testimonial article:nth-of-type(4) {
+  grid-area: t4;
+}
+.testimonial article:nth-of-type(5) {
+  grid-area: t5;
+}
+.testimonial article:nth-of-type(6) {
+  grid-area: t6;
+}
+.testimonial p {
+  text-align: left;
+  color: #AD3C05;
+}

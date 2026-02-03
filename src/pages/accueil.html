@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Planque - Gîte en Ardèche</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C5A059;
+            --gold-dark: #A68544;
+            --dark: #2C2419;
+            --cream: #F9F7F2;
+            --white: #FFFFFF;
+            --text: #4A4036;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Source Sans 3', sans-serif;
+            --max-width: 1200px;
+            --radius: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--cream);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button, .btn {
+            background: var(--gold-dark);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            transition: opacity 0.2s;
+            display: inline-block;
+        }
+
+        button:hover, .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--gold-dark);
+            color: var(--gold-dark);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        .top-bar {
+            background: var(--gold);
+            color: var(--white);
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        header {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1200&auto=format&fit=crop') center/cover;
+            color: var(--white);
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            text-align: center;
+            flex: 1;
+        }
+
+        .logo small {
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            font-size: 0.95rem;
+        }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0 2rem;
+            opacity: 0.95;
+        }
+
+        .booking-form {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .booking-form > * {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .booking-form input, .booking-form select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .quick-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .quick-card {
+            background: var(--white);
+            color: var(--dark);
+            padding: 1.5rem 2rem;
+            border-radius: var(--radius);
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .quick-card svg {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 0.5rem;
+            stroke: var(--gold-dark);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .intro p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .wave {
+            height: 60px;
+            background: var(--cream);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 50% 100%, 0 0);
+            margin-top: -1px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature svg {
+            width: 48px;
+            height: 48px;
+            stroke: var(--gold-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .split-section img {
+            border-radius: var(--radius);
+            height: 100%;
+            object-fit: cover;
+            min-height: 400px;
+        }
+
+        .split-section.reverse {
+            direction: rtl;
+        }
+
+        .split-section.reverse > * {
+            direction: ltr;
+        }
+
+        .bg-mustard {
+            background: #D4A84B;
+            color: var(--white);
+        }
+
+        .bg-mustard h2, .bg-mustard h3 {
+            color: var(--white);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .activity-card {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+
+        .activity-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .activity-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .activity-card span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 2rem 1rem 1rem;
+            font-weight: 600;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            font-style: italic;
+        }
+
+        .testimonial strong {
+            display: block;
+            margin-top: 1rem;
+            font-style: normal;
+            color: var(--gold-dark);
+        }
+
+        footer {
+            background: var(--dark);
+            color: var(--cream);
+            padding: 4rem 0 2rem;
+            font-size: 0.9rem;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        footer h4 {
+            color: var(--gold);
+            font-family: var(--font-serif);
+            margin-bottom: 1rem;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer a:hover {
+            color: var(--gold);
+        }
+
+        .newsletter {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 0.5rem;
+            border: none;
+            border-radius: var(--radius);
+        }
+
+        .social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            .split-section {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+            .booking-form > * {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    Besoin d'un renseignement avant de réserver ? <a href="#contact" style="text-decoration: underline;">Contactez-nous</a>, nous sommes là pour vous !
+</div>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#planque">La Planque</a></li>
+            <li><a href="#fournil">Le Fournil</a></li>
+        </ul>
+        <div class="logo">
+            <small>Maison d'hôtes & Gîte</small>
+            La Planque
+        </div>
+        <ul>
+            <li><a href="#planques">Les planqués</a></li>
+            <li><a href="#activites">Les activités</a></li>
+            <li><a href="#seminaires">Les séminaires</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Respirez, vous êtes à la Planque !</h1>
+        <p>Une parenthèse au cœur de l'Ardèche pour déconnecter du quotidien et savourer le plaisir des choses simples en toute saison.</p>
+        
+        <form class="booking-form">
+            <div>
+                <label>Arrivée</label>
+                <input type="date" placeholder="Quand ?">
+            </div>
+            <div>
+                <label>Départ</label>
+                <input type="date" placeholder="Jusqu'au ?">
+            </div>
+            <div>
+                <label>Personnes</label>
+                <input type="number" min="1" max="12" value="2">
+            </div>
+            <div>
+                <label>Réservation</label>
+                <select>
+                    <option>Le gîte entier</option>
+                    <option>Chambre seule</option>
+                </select>
+            </div>
+            <button type="submit">Rechercher</button>
+        </form>
+
+        <div class="quick-links">
+            <a href="#maison" class="quick-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <div><strong>La Maison</strong><br><small>Réserver votre séjour</small></div>
+            </a>
+            <a href="#fournil" class="quick-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <div><strong>Le Fournil</strong><br><small>Commander votre pain</small></div>
+            </a>
+            <a href="#activites" class="quick-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                <div><strong>Les Activités</strong><br><small>Partager une expérience</small></div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<div class="wave"></div>
+
+<section id="planque">
+    <div class="container">
+        <div class="intro">
+            <h2>La Planque : un coin de tranquillité à 2h30 de Lyon</h2>
+            <p>Poussez les portes de notre maison centenaire et laissez-vous envelopper par son ambiance cosy et chaleureuse. Vous êtes ici, comme chez vous. À l'extérieur, 20 hectares de nature s'étendent à perte de vue. Un espace naturel qui vous invite à explorer les sentiers forestiers, à vous prélasser dans les prairies verdoyantes ou simplement à vous faire bercer par le chant des oiseaux.</p>
+            <p>La Planque est le lieu parfait pour les amoureux de la nature, les épicuriens et les personnes en quête de tranquillité. La maison peut accueillir jusqu'à 12 personnes. Ce qui en fait un endroit idéal pour des moments de partage, des escapades en groupe ou des séjours plus intimes.</p>
+            
+            <div class="actions">
+                <a href="#reserver" class="btn">Réserver votre séjour</a>
+                <a href="#decouvrir" class="btn btn-outline">Découvrir la Planque</a>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <h3>12 personnes</h3>
+                <p>Partage et convivialité</p>
+            </div>
+            <div class="feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h3>Pause digitale</h3>
+                <p>Wifi en fonction de la météo</p>
+            </div>
+            <div class="feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.7 1.7 2.3 3 2.3h1"></path><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.7-1.7 2.3-3 2.3h-1"></path><path d="M8 14v.5M16 14v.5M12 14v.5M12 19.5V22"></path></svg>
+                <h3>Dog friendly</h3>
+                <p>Liberté et sécurité</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="fournil" class="split-section">
+    <div>
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop" alt="Pain artisanal">
+    </div>
+    <div class="container" style="max-width: 500px;">
+        <h2>Notre fabrication artisanale de pains au levain et gourmandises</h2>
+        <p>Et si le chemin du bonheur commençait par la dégustation d'un bon pain artisanal !</p>
+        <p>Pétris à la main et cuits au feu de bois, nos pains sont élaborés à partir de farines biologiques, levain naturel et eau de source. Des saveurs authentiques, une qualité nutritionnelle garantie et une durée de conservation plus longue qu'un pain classique.</p>
+        <p>Pour les accompagner, laissez-vous tenter par nos gourmandises : pains d'épices, brioches, biscuits, tartes... Des douceurs irrésistibles pour satisfaire toutes vos envies. Le fournil est ouvert à tous !</p>
+        <a href="#commander" class="btn" style="margin-top: 1.5rem;">Commander le vôtre !</a>
+    </div>
+</section>
+
+<section id="activites" class="bg-mustard">
+    <div class="container">
+        <div class="split-section">
+            <div>
+                <h2>Besoin de calme<br>ou plutôt d'aventures ?</h2>
+                <p>Ici, tout est possible ! Siètes en lieire de forêt, randonnées, activités sportives, événements locaux, ateliers thématiques... Que vous choisissiez de rester sur place ou d'explorer les alentours, La Planque est le point de départ idéal pour vivre des expériences uniques en toute saison.</p>
+                <a href="#activites" class="btn btn-outline" style="border-color: white; color: white; margin-top: 1rem;">Découvrir les activités</a>
+            </div>
+            <div class="grid-2">
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&auto=format&fit=crop" alt="Randonnées">
+                    <span>La Planque en printemps<br>Randonnées et réveil de la nature</span>
+                </div>
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=400&auto=format&fit=crop" alt="Feu de camp">
+                    <span>La Planque en été<br>Sport outdoor, marchés et soirées barbecue</span>
+                </div>
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&auto=format&fit=crop" alt="Montagne">
+                    <span>La Planque en automne<br>Cueillettes et couleurs flamboyantes</span>
+                </div>
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1544207865-c8ade3fab870?w=400&auto=format&fit=crop" alt="Cocooning">
+                    <span>La Planque en hiver<br>Baquettes et soirées cocooning</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="seminaires">
+    <div class="container">
+        <div class="split-section reverse">
+            <div>
+                <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&auto=format&fit=crop" alt="Espace séminaire">
+            </div>
+            <div>
+                <h2>Envie de proposer un événement qui sort du cadre ?</h2>
+                <p>Loin des salles de réunion habituelles, La Planque vous offre un environnement idéal pour proposer des résidences d'artistes, des formations, des retraites dédiées au bien-être ou des séminaires d'entreprise.</p>
+                <p>En plus des espaces extérieurs, La Planque dispose d'un espace intérieur de 200 m².</p>
+                <p>Vous pouvez inclure l'hébergement et les repas dans la location. Avec sa capacité d'accueil de 14 personnes, La Planque est parfaite pour vous recentrer sur vos objectifs, renforcer la cohésion d'équipe ou offrir à vos participants une vraie parenthèse créative et apaisante.</p>
+                <div class="actions" style="justify-content: flex-start;">
+                    <a href="#devis" class="btn">Demander un devis</a>
+                    <a href="#agenda" class="btn btn-outline">Consulter l'agenda</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: var(--white);">
+    <div class="container">
+        <h2 style="text-align: center;">Ils en parlent mieux que nous</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                "Fantastique ! Un shoot de nature, une injection d'oxygène, un véritable retour aux sources dans un environnement à couper le souffle ou le reprendre... Le seul risque : se faire du bien..."
+                <strong>Marie</strong>
+            </div>
+            <div class="testimonial">
+                "Nous nous sommes sentis si bien accueillis, dorlotés et nourris. Votre joyeuse humeur communicative résonne dans ces vastes espaces vierges que vous façonnez avec amour."
+                <strong>Laurence</strong>
+            </div>
+            <div class="testimonial">
+                "Que du bonheur! Moment convivial partagé en votre compagnie. Super week-end, exceptionnel. Merci pour votre accueil, votre bonne humeur. Je suis vraiment heureuse. À bientôt !"
+                <strong>Christine</strong>
+            </div>
+            <div class="testimonial">
+                "Pour vivre heureux vivons planqués, cette pourrait être la devise de cette bâtisse bien cachée à l'abri des arbres, sous le regard du Mont-Gerbier des Joncs et du Mézenc."
+                <strong>Pascal</strong>
+            </div>
+            <div class="testimonial">
+                "Une parenthèse de bonheur et de fraîcheur. Des hôtes merveilleux. Un lieu paradisiaque. Notre séjour était juste trop court ! Nous y reviendrons pour goûter le pain maison."
+                <strong>Marie-Madeleine</strong>
+            </div>
+            <div class="testimonial">
+                "Enfin une chambre d'hôtes tout à fait à la hauteur de mes attentes ! L'ambiance est exceptionnelle. La restauration et l'animation sont au top ! Mille mercis et à bientôt pour une autre expérience aussi sensationnelle."
+                <strong>Andrée et Jean-Claude</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="planques">
+    <div class="container">
+        <div class="split-section">
+            <div>
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&auto=format&fit=crop" alt="Anthony et Julien - Les Planqués">
+            </div>
+            <div>
+                <h2>Les planqués</h2>
+                <p>Nous, c'est Anthony et Julien. Nous avions un rêve : créer un lieu qui nous ressemble.</p>
+                <p>En 2023, nous sommes tombés amoureux de cette maison cachée dans un environnement d'exception. Nous l'avons naturellement appelée « La Planque ». C'était l'endroit que nous cherchions, parfait pour tout ce que nous avions en tête.</p>
+                <p>Nous imaginons une maison chaleureuse pour accueillir nos hôtes comme des amis et leur faire découvrir les produits du terroir. Anthony se voit déjà animer des ateliers pour parler biodiversité et filer dans sa forêt comestible. Et bien sûr, il y a notre fournil pour régaler tout le monde avec de délicieux pains au levain et autres gourmandises. Ce rêve est devenu une réalité et nous sommes heureux de le partager avec vous.</p>
+                <p>Anthony, Julien et nos compagnons Jolie et Rob.</p>
+                <a href="#planques" class="btn" style="margin-top: 1rem;">Découvrir Les Planqués</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div>
+            <h4 style="font-family: var(--font-serif); font-size: 1.5rem;">La Planque</h4>
+            <p>Maison d'hôtes & Gîte</p>
+            <div class="social">
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            </div>
+        </div>
+        <div>
+            <h4>À propos</h4>
+            <ul>
+                <li><a href="#">La Maison</a></li>
+                <li><a href="#">Le concept</a></li>
+                <li><a href="#">Les Planqués</a></li>
+                <li><a href="#">Nos partenaires</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>À découvrir</h4>
+            <ul>
+                <li><a href="#">Le Fournil de Ma Mie Louise</a></li>
+                <li><a href="#">Les activités</a></li>
+                <li><a href="#">Les événements</a></li>
+                <li><a href="#">La région / Le village ?</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 style="color: #D4A84B;">Inscrivez-vous à la newsletter</h4>
+            <p>S'inscrire à la newsletter pour suivre notre actualité</p>
+            <form class="newsletter">
+                <input type="email" placeholder="Votre email">
+                <button type="submit">→</button>
+            </form>
+            <p style="margin-top: 1rem;"><small>© Copyright 2025 - La Planque</small></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
