@@ -13,6 +13,9 @@
   position: relative;
 
   padding: 0 calc(((100vw - 1440px) / 2) + $section-spacing-h);
+  & > nav{
+    @extend .mainNav;
+  }
 }
 
 .hero.home{
@@ -41,9 +44,6 @@
       @extend .cards;
     }
   }
-  & > nav{
-    @extend .mainNav;
-  }
 }
 
 .hero form{
@@ -71,4 +71,17 @@
   button {
     height: 60px;
   }
+}
+
+.hero:not(.home){
+  height: 358px;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.hero.contact{
+
+  @extend .jardin;
 }

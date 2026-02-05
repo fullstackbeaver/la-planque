@@ -4,7 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
+  <!-- <link rel="stylesheet" href="/style.css"> -->
+
+  <script>
+    document.write('<link rel="stylesheet" href="/style.css?' + Date.now() + '">');
+  </script>
 
   <title>Variantes de boutons</title>
   <style>
@@ -27,7 +31,7 @@
       margin-bottom: 15px;
       font-size: 16px;
     }
-  </style>
+  </style></slot>
 
 </head>
 
