@@ -12,15 +12,26 @@
   document.write('<link rel="stylesheet" href="/style.css?' + Date.now() + '">');
 </script>
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": []
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact - La Planque",
+    "description": "Page de contact du gîte La Planque en Ardèche",
+    "url": "https://laplanque-ardeche.fr/contact.html",
+    "mainEntity": {
+      "@type": "LodgingBusiness",
+      "name": "La Planque - Gîte en Ardèche",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR"
+      }
+    }
+  }
+  </script>
 </htmlHead>
 
 <body>
-  <hero class="contact">
+  <hero class="contact" aria-labelledby="titre-contact">
     <h1>Contactez-nous !</h1>
   </hero>
 

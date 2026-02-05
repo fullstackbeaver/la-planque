@@ -1,22 +1,23 @@
-<section class="contact">
+<section class="contact" action="#" method="POST" novalidate>
   <form>
     <label for="nom">Nom complet*
       <input type="text" id="nom" name="nom" required placeholder="Votre nom">
     </label>
 
     <label for="email">Email*
-      <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+      <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" autocomplete="email" aria-required="true" inputmode="email" required>
     </label>
 
 
     <label for="sujet">Sujet*
-      <input id="sujet" type="text" autocorrect="on" name="sujet" required />
+      <input id="sujet" type="text" autocorrect="on" name="sujet" required placeholder="Objet de votre message" aria-required="true"/>
     </label>
 
     <label for="message">Message*
-      <textarea id="message" name="message" required placeholder="Écrivez votre message ici..." rows="15" autocorrect="on"></textarea>
+      <textarea id="message" name="message" required placeholder="Écrivez votre message ici..." rows="15" autocorrect="on" aria-required="true"  aria-describedby="message-help"></textarea>
     </label>
 
     <button type="submit">Envoyer le message</button>
+    <p class="required-info" aria-hidden="true">Les champs marqués d'un <span aria-hidden="true">*</span> sont obligatoires.</p>
   </form>
 </section>
