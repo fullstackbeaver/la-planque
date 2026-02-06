@@ -107,6 +107,15 @@ section:not([class*="hero"]){
     font-weight: bold;
     margin: $padding-l 0;
   }
+
+  nav {
+    display: flex;
+    gap:$padding-default;
+
+    &:has(+ aside) {
+      justify-content: center;
+    }
+  }
 }
 section + aside,
 section + section {
