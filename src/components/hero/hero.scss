@@ -65,6 +65,8 @@
 
     input, select {
       @extend .inputForm;
+
+      color: inherit;
     }
   }
 
