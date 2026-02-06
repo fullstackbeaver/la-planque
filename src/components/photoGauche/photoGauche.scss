@@ -12,6 +12,16 @@
     "i n" 1fr
     /auto auto;
 
+  &:has(aside) {
+    grid :
+      "i h" 1fr
+      "i p" auto
+      "i n" 1fr
+      "a a" auto
+      /auto auto;
+  }
+
+
   h2 {
     grid-area: h;
     align-self: end;
@@ -30,6 +40,10 @@
   img {
     width: clamp(200px, calc(383px * 100vw / 1440px), 383px);
     grid-area: i;
+  }
+
+  aside {
+    grid-area: a;
   }
 
   &.white{
