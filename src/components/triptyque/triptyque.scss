@@ -17,8 +17,6 @@ $spaceImageTriptyque: clamp(5px,   calc(40px * 100vw / 1440px),  40px);
     ". iC ."
     /$imageSmallTriptyque $imageMainTriptyque $imageSmallTriptyque;
 
-  overflow-x: hidden;
-
   img {
     border-radius: 4px;
     box-shadow: $shadow-size;
