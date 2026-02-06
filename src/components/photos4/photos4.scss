@@ -46,14 +46,15 @@
   }
 
   figcaption {
-    font-family : $title-font;
-    font-size   : 1.25rem;
-    padding-left: .25rem;
+    font-family: $title-font;
+    font-size  : 1.25rem;
+    padding    : .75rem;
   }
 
   a {
     @extend .cta;
     @extend .cta-secondary;
+    @extend .cta-hover-mustard;
   }
 
   p {

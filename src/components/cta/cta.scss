@@ -44,28 +44,28 @@ button, .cta {
     cursor: not-allowed;
   }
 
-  &[data-icon]::before {
-    /* Dimensions */
-    width     : $sizeIcon;
-    height    : $sizeIcon;
-    min-width : $sizeIcon;
-    min-height: $sizeIcon;
+  // &[data-icon]::before {
+  //   /* Dimensions */
+  //   width     : $sizeIcon;
+  //   height    : $sizeIcon;
+  //   min-width : $sizeIcon;
+  //   min-height: $sizeIcon;
 
-    /* Flexbox */
-    display        : inline-flex;
-    align-items    : center;
-    justify-content: center;
-    flex-shrink    : 0;
+  //   /* Flexbox */
+  //   display        : inline-flex;
+  //   align-items    : center;
+  //   justify-content: center;
+  //   flex-shrink    : 0;
 
-    /* Contenu */
-    content          : '';
-    background-color : currentColor;
-    mask-size        : contain;
-    -webkit-mask-size: contain;
+  //   /* Contenu */
+  //   content          : '';
+  //   background-color : currentColor;
+  //   mask-size        : contain;
+  //   -webkit-mask-size: contain;
 
-    /* Accessibilité (ajout important) */
-    speak: none; // Empêche la lecture par les lecteurs d'écran
-  }
+  //   /* Accessibilité (ajout important) */
+  //   speak: none; // Empêche la lecture par les lecteurs d'écran
+  // }
 
   --email: url('/assets/icons/email.svg') no-repeat center;
 
@@ -91,5 +91,13 @@ button, .cta {
 
   &:hover {
     background-color: highlighted-color($color-10);
+  }
+}
+
+.cta-hover-mustard {
+
+  &:hover {
+    color:$color-10;
+    border-color: $color-10;
   }
 }
