@@ -8,13 +8,14 @@ $finalSize: calc(($padding-default * 2) + $sizeIcon + 2px); // le dernier 2 c'es
 
 button, .cta {
   @extend .withBorder;
+  @extend .flexCentered;
 
   // sizes and positions
   padding    : $padding-default;
   cursor     : pointer;
   transition : all 0.3s ease;
-  display    : inline-flex;
-  align-items: center;
+  // display    : inline-flex;
+  // align-items: center;
   gap        : 8px;
   white-space: nowrap;
   width      : fit-content;

@@ -89,3 +89,9 @@
     outline: $color-11 auto 1px;
   }
 }
+
+.flexCentered{
+  display         : inline-flex !important;
+  justify-content : center;
+  align-items     : center;
+}

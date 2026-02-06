@@ -13,19 +13,19 @@ footer {
   padding: $section-spacing-v $section-spacing-h 0 $section-spacing-h;
 
   &::after {
-content: "";
+    content         : "";
     background-image: url(/assets/icons/herbes.svg);
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    top: -153px;
-    bottom: auto;
-    left: auto;
-    width: 362px;
-    height: 500px;
-    background-size: contain;
-    z-index: 0;
+    display         : block;
+    position        : absolute;
+    right           : 0;
+    top             : 0;
+    top             : -153px;
+    bottom          : auto;
+    left            : auto;
+    width           : 362px;
+    height          : 500px;
+    background-size : contain;
+    z-index         : 0;
   }
 
   hr {
@@ -36,6 +36,8 @@ content: "";
     grid-area: logo;
 
     a {
+      @extend .flexCentered;
+
       background-color: $color-10;
       padding         : 1rem;
       margin          : 1rem $padding-xs;
@@ -43,11 +45,21 @@ content: "";
       display         : inline-block;
       width           : 48px;
       height          : 48px;
+      border          : 3px solid transparent;
+      transition      : border-color .3s ease-in-out;
 
       &:first-of-type{
         margin-left: 0;
       }
+
+      &:hover{
+        border-color: $color-4;
+      }
     }
+  }
+
+  nav a:hover{
+    color: $color-4;
   }
 
   & > nav, p {
