@@ -5,6 +5,10 @@
 @use "../components/card/card.scss";
 @use "../components/cta/cta.scss";
 
+:root {
+  --bg: url("/assets/images/papier.jpg");
+}
+
 * {
   box-sizing: border-box;
   margin    : 0;
@@ -18,7 +22,7 @@ a {
 
 body {
   min-height           : 100vh;
-  background-image     : url("/assets/images/papier.jpg");
+  background-image     : var(--bg);
   background-repeat    : repeat;
   background-attachment: fixed;;
   max-width            : 100vw;
