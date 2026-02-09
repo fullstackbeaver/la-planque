@@ -1,0 +1,16 @@
+@use "./fonts.scss" as *;
+
+.useAlbertRegular {
+  font-family: $action-font;
+  font-weight: 400;
+}
+
+.useAlbertMedium {
+  font-family: $action-font;
+  font-weight: 500;
+}
+
+.useAlbertSemi {
+  font-family: $action-font;
+  font-weight: 600;
+}

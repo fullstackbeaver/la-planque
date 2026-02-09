@@ -1,7 +1,8 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/sizes.scss" as *;
 @use "../../styles/fonts.scss" as *;
-@use "../../styles/extenders.scss";
+@use "../../styles/extendLayout.scss";
+@use "../../styles/extendSurface.scss";
 
 $sizeIcon: 22px;
 $finalSize: calc(($padding-default * 2) + $sizeIcon + 2px); // le dernier 2 c'est la bordure
@@ -14,8 +15,6 @@ button, .cta {
   padding    : $padding-default;
   cursor     : pointer;
   transition : all 0.3s ease;
-  // display    : inline-flex;
-  // align-items: center;
   gap        : 8px;
   white-space: nowrap;
   width      : fit-content;

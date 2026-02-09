@@ -1,7 +1,12 @@
 @use "../../styles/colors.scss" as *;
-@use "../../styles/extenders.scss";
+@use "../../styles/extendBlock.scss";
+@use "../../styles/extendLayout.scss";
+@use "../../styles/extendTypo.scss";
 
 .photoGauche{
+
+  @extend .sectionWithCards;
+  @extend .sectionBase;
 
   text-align: left !important;
   display   : grid;
@@ -21,7 +26,6 @@
       /auto auto;
   }
 
-
   h2 {
     grid-area: h;
     align-self: end;
@@ -37,16 +41,22 @@
     align-self: start;
   }
 
-  img {
-    width: clamp(200px, calc(383px * 100vw / 1440px), 383px);
+  & > img {
+    @extend .refWidth;
+
     grid-area: i;
   }
 
   aside {
     grid-area: a;
-  }
 
-  &.white{
-    background-color: $color-13;
+    h3 {
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
   }
 }

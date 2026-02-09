@@ -1,0 +1,94 @@
+@use "./colors.scss" as *;
+@use "./fonts.scss" as *;
+@use "./sizes.scss" as *;
+@use "./extendLayout.scss";
+@use "../components/card/card.scss";
+@use "../components/cta/cta.scss";
+
+
+.inputForm {
+  @extend .withBorder;
+
+  background-color: $color-10;
+  border-color: $color-11;
+  border-style: solid;
+  color: $color-11;
+  font-size: 1.25rem;
+  padding: $padding-default;
+
+  &:focus-visible {
+    outline: $color-11 auto 1px;
+  }
+}
+
+.sectionWithCards {
+  @extend .block;
+
+  aside {
+    @extend .cards;
+  }
+
+  article {
+    @extend .card;
+  }
+
+  nav {
+    display: flex;
+    gap: $padding-default;
+  }
+}
+
+.sectionBase {
+  text-align: center;
+  color: $color-12;
+
+  aside {
+    @extend .cards;
+
+    padding-top: $padding-xl;
+  }
+
+  p+p {
+    margin-top: $padding-l;
+  }
+
+  h2+p {
+    margin-top: $padding-xl;
+  }
+
+  nav {
+    @extend .nav;
+  }
+
+  &>a {
+    @extend .cta;
+
+    margin: $padding-l 0;
+  }
+
+  &>*:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    display: block;
+    // font-weight: 700;
+    // font-style: Bold;
+    font-weight: bold;
+    margin: $padding-l 0;
+  }
+
+  nav {
+    &:has(+ aside) {
+      justify-content: center;
+    }
+  }
+}
+
+.nav {
+  padding: $padding-l 0;
+
+  a {
+    @extend .cta;
+  }
+}

@@ -1,5 +1,5 @@
 @use "./colors.scss" as *;
-@use "./extenders.scss";
+@use "./extendBlock.scss";
 @use "./fonts.scss" as *;
 @use "./sizes.scss" as *;
 @use "../components/card/card.scss";
@@ -43,6 +43,13 @@ h2 {
   font-weight: 400;
 }
 
+h3 {
+  font-family: $title-font;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+
 h4 {
   font-family: $title-font;
   font-size:1.5rem;
@@ -50,8 +57,9 @@ h4 {
   font-weight: 400;
 }
 
-body > section:not([class*="hero"]){ //TODO vérifier que j'ai des section imbriquer sinon simplifier la condition (dans bloc plus bas)
-  padding: $section-spacing-v $section-spacing-h;
+section:not([class]) {
+  @extend .sectionBase;
+  @extend .sectionWithCards;
 }
 
 body > section:not([class*="hero"]),
@@ -62,61 +70,6 @@ footer {
   margin: 0 auto;
 }
 
-section:not([class*="hero"]){
-  text-align: center;
-  color: $color-12;
-  aside {
-    @extend .cards;
-    padding-top: $padding-xl;
-  }
-
-  p + p {
-    margin-top: $padding-l;
-  }
-
-  h2 + p {
-    margin-top: $padding-xl;
-  }
-
-  article {
-    @extend .card;
-  }
-
-  nav {
-    padding: $padding-l 0;
-
-    a {
-      @extend .cta;
-    }
-  }
-
-  & > a{
-    @extend .cta;
-
-    margin: $padding-l 0;
-  }
-
-  & > *:last-child {
-    margin-bottom: 0;
-  }
-
-  strong {
-    display: block;
-    // font-weight: 700;
-    // font-style: Bold;
-    font-weight: bold;
-    margin: $padding-l 0;
-  }
-
-  nav {
-    display: flex;
-    gap:$padding-default;
-
-    &:has(+ aside) {
-      justify-content: center;
-    }
-  }
-}
 section + aside,
 section + section {
   padding-top: $section-spacing-v;

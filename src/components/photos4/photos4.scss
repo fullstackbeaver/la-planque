@@ -1,11 +1,13 @@
 @use "../../styles/colors.scss" as *;
-@use "../../styles/extenders.scss";
+@use "../../styles/extendBlock.scss";
+@use "../../styles/extendSurface.scss";
 @use "../../styles/fonts.scss" as *;
 @use "../../styles/sizes.scss" as *;
 @use "../cta/cta.scss" as *;
 
 .photos4 {
   @extend .tear;
+  @extend .sectionWithCards;
 
   position        : relative;
   background-color: $color-7;
@@ -41,7 +43,7 @@
   }
 
   figure {
-    background-color: white;
+    background-color: $color-13;
     border-radius   : 4px;
   }
 

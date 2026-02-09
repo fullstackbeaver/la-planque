@@ -1,8 +1,13 @@
 @use "../../styles/colors.scss" as * ;
 @use "../../styles/sizes.scss" as * ;
-@use "../../styles/extenders.scss" as *;
+@use "../../styles/extendTypo.scss";
+@use "../../styles/extendBlock.scss";
+
 
 .testimonial {
+  @extend .sectionWithCards;
+  @extend .sectionBase;
+
   display: grid;
   grid: "h h h"
    "t1 t2 t3"

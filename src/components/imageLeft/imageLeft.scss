@@ -1,34 +1,66 @@
-@use "../../styles/extenders.scss";
+// @use "../../styles/extendSurface.scss";
 @use "../../styles/colors.scss" as *;
+@use "../../styles/extendBlock.scss";
 @use "../../styles/sizes.scss" as *;
 
-.imageLeft{
-  @extend .tear;
+.imageLeft {
 
   display: grid;
   grid:
     "h i"
     "p i"
     /1fr 1fr;
-  background-color: $color-4;
-  padding: 0 !important;
 
-  p, h2 {
-    padding: 0 $section-spacing-v 0 $section-spacing-h;
-    color: $color-13;
+  padding-bottom: $section-spacing-v;
+
+  &[class*="bgCol4"] {
+
+    p,
+    h2 {
+      color: $color-13;
+    }
   }
 
-  img{
+  &[class*="tear"] {
+    padding: 0;
+  }
+
+  &:has(nav) {
+    grid:
+      "h i" 1fr
+      "p i" 1fr
+      "n i" 1fr
+      /1fr 1fr;
+
+    p {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  p,
+  h2,
+  nav {
+    padding: 0 $section-spacing-v $padding-xl $section-spacing-h;
+    // color: $color-13;
+  }
+
+  img {
     grid-area: i;
   }
 
-  p{
+  p {
     grid-area: p;
     align-self: self-start;
   }
 
-  h2{
+  h2 {
     grid-area: h;
     align-self: self-end;
+  }
+
+  nav {
+    @extend .nav;
+
+    grid-area: n;
   }
 }

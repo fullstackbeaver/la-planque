@@ -1,7 +1,7 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/sizes.scss" as *;
 @use "../../styles/fonts.scss" as *;
-@use "../../styles/extenders.scss";
+@use "../../styles/extendSurface.scss";
 
 $navBarHeight: 196px;
 
@@ -39,6 +39,19 @@ $navBarHeight: 196px;
   img {
     max-height: 150px;
   }
+}
+
+.underline-short::after {
+  animation: underlineGrow 0.5s ease forwards;
+  background: $link-color;
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  width: 50%;
 }
 
 // .logo {

@@ -1,0 +1,15 @@
+@use "./sizes.scss" as *;
+
+.flexCentered {
+  display        : inline-flex !important;
+  justify-content: center;
+  align-items    : center;
+}
+
+.refWidth {
+  width: clamp(200px, calc(383px * 100vw / 1440px), 383px);
+}
+
+.block {
+  padding: $section-spacing-v $section-spacing-h;
+}

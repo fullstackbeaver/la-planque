@@ -11,13 +11,10 @@
   <script>
     document.write('<link rel="stylesheet" href="/style.css?' + Date.now() + '">');
   </script>
-  <script type="application/ld+json">
-  {
-  }
-  </script>
 </htmlHead>
 
 <body>
+  <announcementBar></announcementBar>
   <hero class="contact">
     <h1>Bienvenue à la maison !</h1>
   </hero>
@@ -52,7 +49,7 @@
     </aside>
   </section>
 
-  <imageLeft>
+  <imageLeft class="tear bgCol4">
 
     <h2>Un havre de nature et de calme</h2>
     <p>Dès que vous empruntez notre petite route privative, le spectacle commence : 20 hectares de nature sauvage
@@ -79,26 +76,100 @@
 
     <aside>
       <card>
-        <img src="/assets/icons/personnes.svg" loading="lazy" alt="icône de nombreuses personnes">
-        <h3>12 personnes</h3>
-        <p>Partage et convivialité</p>
+        <img src="/assets/icons/electro.svg" loading="lazy" alt="icône d'appareils électro-ménager">
+        <h3>Cuisine, électro-ménager</h3>
+        <ul>
+          <li>Cuisine équipée (gazinière, four, micro-ondes, vaisselle, ustensiles…)</li>
+          <li>Machine à laver</li>
+          <li>Lave-vaisselle</li>
+        </ul>
       </card>
       <card>
-        <img src="/assets/icons/wifi.svg" loading="lazy" alt=" icône réseau wifi">
-        <h3>Pause digitale</h3>
-        <p>Wifi en fonction de la météo</p>
+        <img src="/assets/icons/ameublement.svg" loading="lazy"
+          alt=" icône présentant un canapé, un luminaire et une armoire">
+        <h3>Confort, bien-être</h3>
+        <ul>
+          <li>Sèche-cheveux</li>
+          <li>Shampoing et savon écologiques</li>
+          <li>Linge de maison fourni (draps, serviettes)</li>
+          <li>Bois pour le poêle</li>
+        </ul>
       </card>
       <card>
-        <img src="/assets/icons/chien.svg" loading="lazy" alt="icône d'une patte de chien">
-        <h3>Dog friendly</h3>
-        <p>Liberté et sécurité</p>
+        <img src="/assets/icons/barbecue.svg" loading="lazy" alt="icône d'un barbecue">
+        <h3>Extérieur, loisirs</h3>
+        <ul>
+          <li>Piscine</li>
+          <li>Barbecue,</li>
+          <li>Mobilier extérieur (hamac, chaises longues...)</li>
+          <li>Jeux de société</li>
+          <li>Boules de pétanque</li>
+        </ul>
       </card>
     </aside>
   </photoGauche>
 
-  <section>
+  <produits>
+    <h2>Les chambres</h2>
+    <article>
+      <img src="/assets/images/ch1.webp" alt="un lit et une décoration simple et minimaliste">
+      <h3>
+        La chambre verte
+      </h3>
+      <p>Cette chambre de 15m² vous séduira par sa vue panoramique sur la vallée. Spacieuse et lumineuse, elle offre un
+        lit double et un lit simple, ainsi qu'une salle de bain privative.</p>
+    </article>
 
-  </section>
+    <article>
+      <img src="/assets/images/ch2.webp" alt="un lit et une décoration simple et minimaliste">
+      <h3>La chambre beige</h3>
+      <p>Nichée côté lisière de forêt, cette chambre de 13,5m² offre une atmosphère naturellement fraîche et reposante.
+        Elle est équipée d'un lit double et d'un lit simple. La salle de bain partagée est accessible dans le couloir à
+        proximité immédiate.</p>
+    </article>
+
+    <article>
+      <img src="/assets/images/ch3.webp" alt="un lit et une décoration simple et minimaliste">
+      <h3>La chambre terracotta</h3>
+      <p>Avec ses teintes chaudes et sa décoration épurée, cette chambre de 13,5m² située côté forêt vous invite à la
+        sérénité. Son grand lit double (160x200cm) promet des nuits paisibles. La salle de bain partagée est accessible
+        dans le couloir à proximité immédiate.</p>
+    </article>
+
+    <article>
+      <img src="/assets/images/ch4.webp" alt="un lit et une décoration simple et minimaliste">
+      <h3>La chambre jaune</h3>
+      <p>Avec vue sur la vallée, cette chambre de 15m² est la plus lumineuse de la maison. Elle comprend un lit double
+        et deux lits simples (pouvant être rapprochés selon vos préférences). La salle de bain partagée est accessible
+        dans le couloir à proximité immédiate.</p>
+    </article>
+
+    <article>
+      <img src="/assets/images/alcove.webp" alt="un ours en peluche devant une fenêtre">
+      <h3>L'alcôve</h3>
+      <p>Cet espace de 15m² attenant à la salle de séjour offre deux lits simples. Parfaite pour des adolescents ou de
+        courts séjours.</p>
+    </article>
+  </produits>
+
+  <tarifs></tarifs>
+
+  <imageLeft>
+
+    <h2>Le plan de la maison</h2>
+    <p>Découvrez le plan de La Planque pour mieux vous projeter dans votre futur séjour. Nos hôtes apprécient toujours
+      de pouvoir visualiser les espaces et s'organiser avant leur arrivée : qui dormira dans quelle chambre, où se
+      retrouver pour les moments partagés...<br><br>Voici donc un aperçu de votre havre de paix pour commencer à rêver à
+      vos vacances !</p>
+
+    <img src="/assets/images/plan.webp" alt="le plan de la maison">
+
+    <nav aria-label="Réservation et plus d'informations">
+      <a href="#dispo">Voir les disponibilités</a>
+      <a href="#louer">Louer la maison</a>
+    </nav>
+
+  </imageLeft>
 
   <lesPlanques></lesPlanques>
 

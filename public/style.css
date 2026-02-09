@@ -27,30 +27,9 @@
   font-style: normal;
   font-display: swap;
 }
-@keyframes underlineGrow {
-  from {
-    width: 0;
-  }
-  to {
-    width: 50%;
-  }
-}
-.withBorder, .hero form, .contact form label input, .contact form label textarea, button, .cta, footer form a, .photos4 a, section:not([class*=hero]) nav a, section:not([class*=hero]) > a, .card, .cardHome, .hero.home article, section:not([class*=hero]) aside article, .inputForm, .hero form label input, .hero form label select, footer input {
+.withBorder, .contact form label input, .contact form label textarea, .hero form, button, .cta, .inputForm, footer input, .hero form label input, .hero form label select, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .imageLeft nav a, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
   border: 2px solid;
   border-radius: 4px;
-}
-
-.underline-short::after, .mainNav ul a:hover::after, .mainNav ul a[href="#"]::after, .hero > nav ul a:hover::after, .hero > nav ul a[href="#"]::after {
-  animation: underlineGrow 0.5s ease forwards;
-  background: rgb(228.27, 185.8876056338, 94.53);
-  bottom: -3px;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: relative;
-  transform: translateX(-50%);
-  width: 50%;
 }
 
 .titleStyleShadow, .hero.home div > p, .mainNav ul a, .hero > nav ul a, h1 {
@@ -59,32 +38,40 @@
   text-shadow: 0px 0px 4px rgba(41, 38, 31, 0.5);
 }
 
-.tear, .hero, .imageLeft, .photos4 {
-  --tear:
-    linear-gradient(white, white),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1972 82.5" preserveAspectRatio="none"><path fill="white" d="M1 36.5h17l21.5 4 19-2 20-6.5 26.5-1.5 17-3.5 42.5-1.5L186 22l22.5-2 21.5 8.5 39-5 21.5 5 19-8.5H332l20 7 19-5 25-2 20.5 2h20l20.5-4.5 21 6 21-3.5 19 5.5 22.5-2h23l17 10 25.5-3 21.5 6 10.5 9L700 62l64.5-6 21 6 18.5-2 19-4 25 6 27.5-6 24.5 8.5h20l20.5 7 22.5-7 19.5 2 24.5-2 20 2 20-4.5 22 6.5 62.5-14 47-3 29-9.5 28 1.5L1256 40l21-8 18.5-1.5 30.5 3 40.5-18 19-2 40.5 2 19-4h25l21-5.5 25.5 3 17.5-3 46 7.5 23.5-7.5 19-2 24.5 2 44.5 7.5L1714 6l20 7.5 24.5-2 19 2 48-2h43L1880 1l8 3h21l23.5-3 38.5 1.5v79H1v-45z"/></svg>');
+.tear, .photos4, .hero {
   position: relative;
+  overflow: hidden;
+  --tear: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1972 82.5" preserveAspectRatio="none"><path fill="white" d="M1 36.5h17l21.5 4 19-2 20-6.5 26.5-1.5 17-3.5 42.5-1.5L186 22l22.5-2 21.5 8.5 39-5 21.5 5 19-8.5H332l20 7 19-5 25-2 20.5 2h20l20.5-4.5 21 6 21-3.5 19 5.5 22.5-2h23l17 10 25.5-3 21.5 6 10.5 9L700 62l64.5-6 21 6 18.5-2 19-4 25 6 27.5-6 24.5 8.5h20l20.5 7 22.5-7 19.5 2 24.5-2 20 2 20-4.5 22 6.5 62.5-14 47-3 29-9.5 28 1.5L1256 40l21-8 18.5-1.5 30.5 3 40.5-18 19-2 40.5 2 19-4h25l21-5.5 25.5 3 17.5-3 46 7.5 23.5-7.5 19-2 24.5 2 44.5 7.5L1714 6l20 7.5 24.5-2 19 2 48-2h43L1880 1l8 3h21l23.5-3 38.5 1.5v79H1v-45z"/></svg>');
+}
+.tear::after, .photos4::after, .hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+  right: 0;
+  height: 40px;
+  background-image: var(--bg);
+  z-index: 1;
   mask-image: var(--tear);
-  -webkit-mask-image: --tear;
-  mask-position: 0 -2px, bottom;
-  -webkit-mask-position: 0 -2px, bottom;
-  mask-size: 100% 100%, 100% 30px;
-  -webkit-mask-size: 100% 100%, 100% 30px;
   mask-repeat: no-repeat;
+  mask-size: 100.5% 102%;
+  -webkit-mask-image: var(--tear);
   -webkit-mask-repeat: no-repeat;
-  mask-composite: exclude;
-  -webkit-mask-composite: source-out;
+  -webkit-mask-size: 100.5% 102%;
 }
 
-@supports (-moz-appearance: none) {
-  .tear, .hero, .imageLeft, .photos4 {
-    mask-position: 0 0, bottom;
-  }
+.flexCentered, footer aside a:not(:first-of-type), button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .imageLeft nav a {
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
 }
-.cards, .hero.home div nav:last-of-type, section:not([class*=hero]) aside {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+.refWidth, .produits img, .photoGauche > img, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
+  width: clamp(200px, 26.5972222222vw, 383px);
+}
+
+.block, .tarifs, .produits, .sectionWithCards, .testimonial, .photos4, .photoGauche, section:not([class]) {
+  padding: 60px 120px;
 }
 
 .useAlbertRegular, footer > nav, footer p {
@@ -92,7 +79,7 @@
   font-weight: 400;
 }
 
-.useAlbertMedium, .testimonial p, .photoGauche p, .card p, .cardHome p, .hero.home article p, section:not([class*=hero]) aside article p {
+.useAlbertMedium, .testimonial p, .produits p, .photoGauche p, .card p, .card li, .sectionWithCards article p, .photos4 article p, section:not([class]) article p, .sectionWithCards article li, .testimonial article li, .photos4 article li, .photoGauche article li, section:not([class]) article li {
   font-family: Albert Sans;
   font-weight: 500;
 }
@@ -102,63 +89,39 @@
   font-weight: 600;
 }
 
-.inputForm, .hero form label input, .hero form label select, footer input {
-  background-color: #F4F1EF;
-  border-color: #B2B1AE;
-  border-style: solid;
-  color: #B2B1AE;
-  font-size: 1.25rem;
-  padding: 16px;
-}
-.inputForm:focus-visible, .hero form label input:focus-visible, .hero form label select:focus-visible, footer input:focus-visible {
-  outline: #B2B1AE auto 1px;
-}
-
-.card, section:not([class*=hero]) aside article, .cardHome, .hero.home article {
+.card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
   border-color: #FFFFFF;
   background-color: #FFFFFF;
   padding: 32px 32px;
-  width: clamp(200px, 26.5972222222vw, 383px);
 }
-.card h3, section:not([class*=hero]) aside article h3, .cardHome h3, .hero.home article h3 {
+.card h3, .sectionWithCards article h3, .testimonial article h3, .photos4 article h3, .photoGauche article h3, section:not([class]) article h3 {
   color: #BC8F35;
 }
-.card p, section:not([class*=hero]) aside article p, .cardHome p, .hero.home article p {
+.card p, .sectionWithCards article p, .testimonial article p, .photos4 article p, .photoGauche article p, section:not([class]) article p {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.card ul, .sectionWithCards article ul, .testimonial article ul, .photos4 article ul, .photoGauche article ul, section:not([class]) article ul {
+  padding-inline-start: 1rem;
+}
+.card li, .sectionWithCards article li, .testimonial article li, .photos4 article li, .photoGauche article li, section:not([class]) article li {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.card:has(ul) h3, .sectionWithCards article:has(ul) h3, .testimonial article:has(ul) h3, .photos4 article:has(ul) h3, .photoGauche article:has(ul) h3, section:not([class]) article:has(ul) h3 {
+  margin: 16px 0;
+}
 
-.cardHome, .hero.home article {
-  display: grid;
-  gap: 0 21px;
-  grid: "img p" "img h2"/73px 1fr;
-  height: 121px;
-  padding: 24px 32px;
-  border-color: #F4F1EF;
-  background-color: #F4F1EF;
-}
-.cardHome img, .hero.home article img {
-  grid-area: img;
-}
-.cardHome p, .hero.home article p {
-  grid-area: p;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.2rem;
+.cards, .hero.home div nav:last-of-type, .sectionWithCards aside, .sectionBase aside, .testimonial aside, .photos4 aside, .photoGauche aside, section:not([class]) aside {
   display: flex;
-  align-self: self-end;
-}
-.cardHome h2, .hero.home article h2 {
-  grid-area: h2;
-  font-size: 1.5rem;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-button, .cta, footer form a, .photos4 a, section:not([class*=hero]) nav a, section:not([class*=hero]) > a {
+button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .imageLeft nav a {
   padding: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
   gap: 8px;
   white-space: nowrap;
   width: fit-content;
@@ -173,39 +136,20 @@ button, .cta, footer form a, .photos4 a, section:not([class*=hero]) nav a, secti
   color: #FFFFFF;
   border-color: #AD3C05;
 }
-button:hover:not(:disabled), .cta:hover:not(:disabled), footer form a:hover:not(:disabled), .photos4 a:hover:not(:disabled), section:not([class*=hero]) nav a:hover:not(:disabled), section:not([class*=hero]) > a:hover:not(:disabled) {
+button:hover:not(:disabled), .cta:hover:not(:disabled), footer form a:hover:not(:disabled), .photos4 a:hover:not(:disabled), .sectionBase > a:hover:not(:disabled), .nav a:hover:not(:disabled), .sectionBase nav a:hover:not(:disabled), .testimonial > a:hover:not(:disabled), .photoGauche > a:hover:not(:disabled), section:not([class]) > a:hover:not(:disabled), .testimonial nav a:hover:not(:disabled), .photoGauche nav a:hover:not(:disabled), section:not([class]) nav a:hover:not(:disabled), .imageLeft nav a:hover:not(:disabled) {
   background-color: rgb(205.8606741573, 70.9861958266, 5.3393258427);
   border-color: rgb(205.8606741573, 70.9861958266, 5.3393258427);
 }
-button:disabled, .cta:disabled, footer form a:disabled, .photos4 a:disabled, section:not([class*=hero]) nav a:disabled, section:not([class*=hero]) > a:disabled {
+button:disabled, .cta:disabled, footer form a:disabled, .photos4 a:disabled, .sectionBase > a:disabled, .nav a:disabled, .sectionBase nav a:disabled, .testimonial > a:disabled, .photoGauche > a:disabled, section:not([class]) > a:disabled, .testimonial nav a:disabled, .photoGauche nav a:disabled, section:not([class]) nav a:disabled, .imageLeft nav a:disabled {
   color: #CE8C8D;
   border: 1px solid;
   cursor: not-allowed;
 }
-button[data-icon]::before, .cta[data-icon]::before, footer form a[data-icon]::before, .photos4 a[data-icon]::before, section:not([class*=hero]) nav a[data-icon]::before, section:not([class*=hero]) > a[data-icon]::before {
-  /* Dimensions */
-  width: 22px;
-  height: 22px;
-  min-width: 22px;
-  min-height: 22px;
-  /* Flexbox */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  /* Contenu */
-  content: "";
-  background-color: currentColor;
-  mask-size: contain;
-  -webkit-mask-size: contain;
-  /* Accessibilité (ajout important) */
-  speak: none;
-}
-button, .cta, footer form a, .photos4 a, section:not([class*=hero]) nav a, section:not([class*=hero]) > a {
+button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .imageLeft nav a {
   --email: url('/assets/icons/email.svg') no-repeat center;
   /* Différentes icônes selon l'attribut */
 }
-button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-icon="1"]::before, .photos4 a[data-icon="1"]::before, section:not([class*=hero]) nav a[data-icon="1"]::before, section:not([class*=hero]) > a[data-icon="1"]::before {
+button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-icon="1"]::before, .photos4 a[data-icon="1"]::before, .sectionBase > a[data-icon="1"]::before, .nav a[data-icon="1"]::before, .sectionBase nav a[data-icon="1"]::before, .testimonial > a[data-icon="1"]::before, .photoGauche > a[data-icon="1"]::before, section:not([class]) > a[data-icon="1"]::before, .testimonial nav a[data-icon="1"]::before, .photoGauche nav a[data-icon="1"]::before, section:not([class]) nav a[data-icon="1"]::before, .imageLeft nav a[data-icon="1"]::before {
   -webkit-mask: var(--email);
   mask: var(--email);
 }
@@ -213,12 +157,69 @@ button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-i
   padding: 12px;
 }
 
-.cta-secondary, .photos4 a, button:not(:first-of-type):not(:disabled):not(.cta-small), .cta:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class*=hero]) nav a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class*=hero]) > a:not(:first-of-type):not(:disabled):not(.cta-small) {
+.cta-secondary, .photos4 a, button:not(:first-of-type):not(:disabled):not(.cta-small), .cta:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase > a:not(:first-of-type):not(:disabled):not(.cta-small), .nav a:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase nav a:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial > a:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche > a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) > a:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial nav a:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche nav a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) nav a:not(:first-of-type):not(:disabled):not(.cta-small), .imageLeft nav a:not(:first-of-type):not(:disabled):not(.cta-small) {
   background-color: transparent;
   color: #AD3C05;
 }
-.cta-secondary:hover, .photos4 a:hover, button:hover:not(:first-of-type):not(:disabled):not(.cta-small), .cta:hover:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class*=hero]) nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class*=hero]) > a:hover:not(:first-of-type):not(:disabled):not(.cta-small) {
+.cta-secondary:hover, .photos4 a:hover, button:hover:not(:first-of-type):not(:disabled):not(.cta-small), .cta:hover:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .imageLeft nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small) {
   background-color: rgb(246.09, 242.202, 239.61);
+}
+
+.cta-hover-mustard:hover, .photos4 a:hover {
+  color: #F4F1EF;
+  border-color: #F4F1EF;
+}
+
+.inputForm, footer input, .hero form label input, .hero form label select {
+  background-color: #F4F1EF;
+  border-color: #B2B1AE;
+  border-style: solid;
+  color: #B2B1AE;
+  font-size: 1.25rem;
+  padding: 16px;
+}
+.inputForm:focus-visible, footer input:focus-visible, .hero form label input:focus-visible, .hero form label select:focus-visible {
+  outline: #B2B1AE auto 1px;
+}
+
+.sectionWithCards nav, .testimonial nav, .photos4 nav, .photoGauche nav, section:not([class]) nav {
+  display: flex;
+  gap: 16px;
+}
+
+.sectionBase, .testimonial, .photoGauche, section:not([class]) {
+  text-align: center;
+  color: #29261F;
+}
+.sectionBase aside, .testimonial aside, .photoGauche aside, section:not([class]) aside {
+  padding-top: 32px;
+}
+.sectionBase p + p, .testimonial p + p, .photoGauche p + p, section:not([class]) p + p {
+  margin-top: 24px;
+}
+.sectionBase h2 + p, .testimonial h2 + p, .photoGauche h2 + p, section:not([class]) h2 + p {
+  margin-top: 32px;
+}
+.sectionBase > a, .testimonial > a, .photoGauche > a, section:not([class]) > a {
+  margin: 24px 0;
+}
+.sectionBase > *:last-child, .testimonial > *:last-child, .photoGauche > *:last-child, section:not([class]) > *:last-child {
+  margin-bottom: 0;
+}
+.sectionBase strong, .testimonial strong, .photoGauche strong, section:not([class]) strong {
+  display: block;
+  font-weight: bold;
+  margin: 24px 0;
+}
+.sectionBase nav:has(+ aside), .testimonial nav:has(+ aside), .photoGauche nav:has(+ aside), section:not([class]) nav:has(+ aside) {
+  justify-content: center;
+}
+
+.nav, .imageLeft nav, .sectionBase nav, .testimonial nav, .photoGauche nav, section:not([class]) nav {
+  padding: 24px 0;
+}
+:root {
+  --bg: url("/assets/images/papier.jpg");
 }
 
 * {
@@ -234,11 +235,9 @@ a {
 
 body {
   min-height: 100vh;
-  background-image: url("/assets/images/papier.jpg");
-  background-repeat: repeat-y;
+  background-image: var(--bg);
+  background-repeat: repeat;
   background-attachment: fixed;
-  background-position-x: center;
-  background-size: 1440px;
   max-width: 100vw;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
@@ -256,15 +255,17 @@ h2 {
   font-weight: 400;
 }
 
+h3 {
+  font-family: Montaga;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 h4 {
   font-family: Montaga;
   font-size: 1.5rem;
   color: #AD3C05;
   font-weight: 400;
-}
-
-body > section:not([class*=hero]) {
-  padding: 60px 120px;
 }
 
 body > section:not([class*=hero]),
@@ -273,34 +274,6 @@ footer {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-}
-
-section:not([class*=hero]) {
-  text-align: center;
-  color: #29261F;
-}
-section:not([class*=hero]) aside {
-  padding-top: 32px;
-}
-section:not([class*=hero]) p + p {
-  margin-top: 24px;
-}
-section:not([class*=hero]) h2 + p {
-  margin-top: 32px;
-}
-section:not([class*=hero]) nav {
-  padding: 24px 0;
-}
-section:not([class*=hero]) > a {
-  margin: 24px 0;
-}
-section:not([class*=hero]) > *:last-child {
-  margin-bottom: 0;
-}
-section:not([class*=hero]) strong {
-  display: block;
-  font-weight: bold;
-  margin: 24px 0;
 }
 
 section + aside,
@@ -327,6 +300,14 @@ a {
   cursor: pointer;
 }
 
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
 .jardin, .hero.home, .hero.contact {
   background-size: cover;
   background-image: url("/assets/images/la-planque-jardin-mobile.webp");
@@ -336,6 +317,195 @@ a {
     background-position: bottom;
     background-image: url("/assets/images/la-planque-jardin-desktop.webp");
   }
+}
+
+.bgCol4 {
+  background-color: #AD3C05;
+}
+
+.bgCol13 {
+  background-color: #FFFFFF;
+}
+
+[role=top-banner] {
+  background-color: #BC8F35;
+  color: #FFFFFF;
+  padding: 8px;
+  min-height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+[role=top-banner] a {
+  text-decoration: underline;
+  margin: 0 0.5rem;
+}
+@media (max-width: 767px) {
+  [role=top-banner] {
+    flex-direction: column;
+  }
+}
+
+.mainNav, .hero > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.mainNav ul, .hero > nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.mainNav ul a, .hero > nav ul a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.mainNav ul a:hover, .hero > nav ul a:hover {
+  color: rgb(228.27, 185.8876056338, 94.53);
+}
+.mainNav ul a[href="#"], .hero > nav ul a[href="#"] {
+  color: rgb(228.27, 185.8876056338, 94.53);
+}
+.mainNav img, .hero > nav img {
+  max-height: 150px;
+}
+
+.underline-short::after, .mainNav ul a:hover::after, .hero > nav ul a:hover::after, .mainNav ul a[href="#"]::after, .hero > nav ul a[href="#"]::after {
+  animation: underlineGrow 0.5s ease forwards;
+  background: rgb(228.27, 185.8876056338, 94.53);
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  width: 50%;
+}
+
+.hero {
+  position: relative;
+  padding: 0 calc((100vw - 1440px) / 2 + 120px);
+}
+.hero.home article {
+  display: grid;
+  gap: 0 21px;
+  grid: "img p" "img h2"/73px 1fr;
+  height: fit-content(128px);
+  padding: 24px 32px !important;
+  border-color: #F4F1EF;
+  background-color: #F4F1EF;
+  border: 4px solid transparent;
+  transition: border-color 0.5s ease-in-out, border-radius 0.3s ease-in-out;
+}
+.hero.home article img {
+  grid-area: img;
+}
+.hero.home article p {
+  grid-area: p;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  display: flex;
+  align-self: self-end;
+  white-space: nowrap;
+}
+.hero.home article h2 {
+  grid-area: h2;
+  font-size: 1.5rem;
+}
+.hero.home div {
+  min-height: calc(100vh - 196px - 28px);
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+.hero.home div > p {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.hero.home div nav:last-of-type {
+  display: flex;
+}
+.hero.home a:hover article {
+  border-radius: 24px;
+}
+.hero.home a:nth-of-type(1):hover article {
+  border-color: #AD3C05;
+}
+.hero.home a:hover:nth-of-type(2) article {
+  border-color: #BC8F35;
+}
+.hero.home a:hover:nth-of-type(3) article {
+  border-color: #1F4839;
+}
+
+.hero form {
+  background-color: rgba(244, 241, 239, 0.8);
+  border-color: #F4F1EF;
+  color: #29261F;
+  display: flex;
+  font-family: Albert Sans;
+  padding: 24px 32px;
+  width: fit-content;
+  align-items: flex-end;
+}
+.hero form label {
+  display: grid;
+  gap: 0.5rem;
+  margin-right: 24px;
+}
+.hero form label input, .hero form label select {
+  color: inherit;
+}
+.hero form button {
+  height: 60px;
+}
+
+.hero:not(.home) {
+  height: 358px;
+}
+.hero:not(.home) h1 {
+  text-align: center;
+}
+
+.photoGauche {
+  text-align: left !important;
+  display: grid;
+  column-gap: 2rem;
+  grid: "i h" 1fr "i p" auto "i n" 1fr/auto auto;
+}
+.photoGauche:has(aside) {
+  grid: "i h" 1fr "i p" auto "i n" 1fr "a a" auto/auto auto;
+}
+.photoGauche h2 {
+  grid-area: h;
+  align-self: end;
+}
+.photoGauche p {
+  grid-area: p;
+}
+.photoGauche nav, .photoGauche > a {
+  grid-area: n;
+  align-self: start;
+}
+.photoGauche > img {
+  grid-area: i;
+}
+.photoGauche aside {
+  grid-area: a;
+}
+.photoGauche aside h3 {
+  text-align: center;
+}
+.photoGauche aside img {
+  display: block;
+  margin: 0 auto;
 }
 
 .photos4 {
@@ -369,16 +539,71 @@ a {
   font-size: 1rem;
 }
 .photos4 figure {
-  background-color: white;
+  background-color: #FFFFFF;
   border-radius: 4px;
 }
 .photos4 figcaption {
   font-family: Montaga;
   font-size: 1.25rem;
-  padding-left: 0.25rem;
+  padding: 0.75rem;
 }
 .photos4 p {
   margin-bottom: 1rem;
+}
+
+.imageLeft {
+  display: grid;
+  grid: "h i" "p i"/1fr 1fr;
+  padding-bottom: 60px;
+}
+.imageLeft[class*=bgCol4] p,
+.imageLeft[class*=bgCol4] h2 {
+  color: #FFFFFF;
+}
+.imageLeft[class*=tear] {
+  padding: 0;
+}
+.imageLeft:has(nav) {
+  grid: "h i" 1fr "p i" 1fr "n i" 1fr/1fr 1fr;
+}
+.imageLeft:has(nav) p {
+  padding-bottom: 0 !important;
+}
+.imageLeft p,
+.imageLeft h2,
+.imageLeft nav {
+  padding: 0 60px 32px 120px;
+}
+.imageLeft img {
+  grid-area: i;
+}
+.imageLeft p {
+  grid-area: p;
+  align-self: self-start;
+}
+.imageLeft h2 {
+  grid-area: h;
+  align-self: self-end;
+}
+.imageLeft nav {
+  grid-area: n;
+}
+
+logo {
+  --img: url('/assets/icons/logo.svg') no-repeat center / contain;
+  display: block;
+  mask: var(--img);
+  -webkit-mask: var(--img);
+}
+logo.light {
+  background-color: #FFFFFF;
+  width: 151px;
+  height: 148px;
+}
+logo.dark {
+  background-color: #29261F;
+  width: 179px;
+  height: 178px;
 }
 
 .contact form {
@@ -429,46 +654,35 @@ a {
   justify-self: center;
 }
 
-[role=top-banner] {
-  background-color: #BC8F35;
-  color: #FFFFFF;
-  padding: 8px;
-  min-height: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-[role=top-banner] a {
-  text-decoration: underline;
-  margin: 0 0.5rem;
-}
-@media (max-width: 767px) {
-  [role=top-banner] {
-    flex-direction: column;
-  }
-}
-
-.triptyque {
+.produits {
   display: grid;
-  column-gap: clamp(5px, 2.7777777778vw, 40px);
-  grid: ". iC ." "iG iC iD" ". iC ."/clamp(200px, 25vw, 360px) clamp(200px, 44.4444444444vw, 640px) clamp(200px, 25vw, 360px);
-  overflow-x: hidden;
+  grid: "h h h" "a1 a2 a3" "a4 a5 .";
+  width: 100%;
+  gap: 24px;
 }
-.triptyque img {
-  border-radius: 4px;
-  box-shadow: 0px 0px 4px rgba(41, 38, 31, 0.5);
+.produits h2 {
+  grid-area: h;
 }
-.triptyque img:first-of-type {
-  grid-area: iG;
-  width: clamp(200px, 25vw, 360px);
+.produits h3 {
+  margin: 24px 0;
 }
-.triptyque img:nth-of-type(2) {
-  grid-area: iC;
-  width: clamp(200px, 44.4444444444vw, 640px);
+.produits article:nth-of-type(1) {
+  grid-area: a1;
 }
-.triptyque img:nth-of-type(3) {
-  grid-area: iD;
-  width: clamp(200px, 25vw, 360px);
+.produits article:nth-of-type(2) {
+  grid-area: a2;
+}
+.produits article:nth-of-type(3) {
+  grid-area: a3;
+}
+.produits article:nth-of-type(4) {
+  grid-area: a4;
+}
+.produits article:nth-of-type(5) {
+  grid-area: a5;
+}
+.produits p {
+  text-align: initial;
 }
 
 footer {
@@ -497,18 +711,38 @@ footer hr {
 }
 footer aside {
   grid-area: logo;
+  display: grid;
+  grid: "l l" "a1 a2";
+  width: 178px;
+  margin-bottom: 16px;
+  gap: 16px;
 }
-footer aside a {
+footer aside a:not(:first-of-type) {
   background-color: #F4F1EF;
   padding: 1rem;
-  margin: 1rem 8px;
   border-radius: 50%;
   display: inline-block;
   width: 48px;
   height: 48px;
+  border: 3px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+footer aside a:not(:first-of-type):hover {
+  border-color: #AD3C05;
+}
+footer aside a:not(:first-of-type):nth-of-type(2) {
+  grid-area: a1;
+  justify-self: end;
+}
+footer aside a:not(:first-of-type):last-of-type {
+  grid-area: a2;
+  justify-self: start;
 }
 footer aside a:first-of-type {
-  margin-left: 0;
+  grid-area: l;
+}
+footer nav a:hover {
+  color: #AD3C05;
 }
 footer > nav:first-of-type {
   grid-area: propos;
@@ -557,6 +791,10 @@ footer form button {
   grid-area: b;
   margin-left: 4px;
 }
+footer form label {
+  display: none;
+  grid-area: i;
+}
 footer > p {
   grid-area: cp;
   font-weight: bold;
@@ -570,143 +808,87 @@ footer input {
   font-size: 1rem;
 }
 
-.imageLeft {
+.triptyque {
   display: grid;
-  grid: "h i" "p i"/1fr 1fr;
-  background-color: #AD3C05;
-  padding: 0 !important;
+  column-gap: clamp(5px, 2.7777777778vw, 40px);
+  grid: ". iC ." "iG iC iD" ". iC ."/clamp(200px, 25vw, 360px) clamp(200px, 44.4444444444vw, 640px) clamp(200px, 25vw, 360px);
 }
-.imageLeft p, .imageLeft h2 {
-  padding: 0 60px 0 120px;
-  color: #FFFFFF;
+.triptyque img {
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px rgba(41, 38, 31, 0.5);
 }
-.imageLeft img {
-  grid-area: i;
+.triptyque img:first-of-type {
+  grid-area: iG;
+  width: clamp(200px, 25vw, 360px);
 }
-.imageLeft p {
-  grid-area: p;
-  align-self: self-start;
+.triptyque img:nth-of-type(2) {
+  grid-area: iC;
+  width: clamp(200px, 44.4444444444vw, 640px);
 }
-.imageLeft h2 {
-  grid-area: h;
-  align-self: self-end;
-}
-
-logo {
-  --img: url('/assets/icons/logo.svg') no-repeat center / contain;
-  display: block;
-  mask: var(--img);
-  -webkit-mask: var(--img);
-}
-logo.light {
-  background-color: #FFFFFF;
-  width: 151px;
-  height: 148px;
-}
-logo.dark {
-  background-color: #29261F;
-  width: 179px;
-  height: 178px;
+.triptyque img:nth-of-type(3) {
+  grid-area: iD;
+  width: clamp(200px, 25vw, 360px);
 }
 
-.photoGauche {
-  text-align: left !important;
+.tarifs {
   display: grid;
-  column-gap: 2rem;
-  grid: "i h" 1fr "i p" auto "i n" 1fr/auto auto;
+  grid: "h h" "t1 r" "t2 r" "a a"/60% 40%;
+  gap: 24px;
 }
-.photoGauche:has(aside) {
-  grid: "i h" 1fr "i p" auto "i n" 1fr "a a" auto/auto auto;
+.tarifs > * {
+  text-align: initial;
 }
-.photoGauche h2 {
+.tarifs h2 {
   grid-area: h;
-  align-self: end;
 }
-.photoGauche p {
-  grid-area: p;
-}
-.photoGauche nav, .photoGauche > a {
-  grid-area: n;
-  align-self: start;
-}
-.photoGauche img {
-  width: clamp(200px, 26.5972222222vw, 383px);
-  grid-area: i;
-}
-.photoGauche aside {
-  grid-area: a;
-}
-.photoGauche.white {
-  background-color: #FFFFFF;
-}
-
-.mainNav, .hero > nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.mainNav ul, .hero > nav ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-.mainNav ul a, .hero > nav ul a {
+.tarifs p {
+  font-family: Montaga;
   font-size: 1.5rem;
-  text-decoration: none;
+  font-weight: 400;
 }
-.mainNav ul a:hover, .hero > nav ul a:hover {
-  color: rgb(228.27, 185.8876056338, 94.53);
+.tarifs span {
+  display: block;
 }
-.mainNav ul a[href="#"], .hero > nav ul a[href="#"] {
-  color: rgb(228.27, 185.8876056338, 94.53);
+.tarifs article, .tarifs aside {
+  background-color: #FFFFFF;
+  padding: 32px;
 }
-.mainNav img, .hero > nav img {
-  max-height: 150px;
+.tarifs article::before {
+  top: 32px;
+  left: 0;
+}
+.tarifs aside p:first-of-type::before {
+  top: 0;
+  left: -32px;
+}
+.tarifs article:first-of-type {
+  grid-area: t1;
+}
+.tarifs article:last-of-type {
+  grid-area: t2;
+}
+.tarifs aside {
+  grid-area: r;
+  flex-direction: column !important;
+}
+.tarifs a {
+  grid-area: a;
+  color: #AD3C05;
+  text-decoration: underline;
 }
 
-.hero {
+.arrow, .tarifs article, .tarifs aside p:first-of-type {
   position: relative;
-  padding: 0 calc((100vw - 1440px) / 2 + 120px);
+  width: 100%;
 }
-.hero.home div {
-  min-height: calc(100vh - 196px - 28px);
-  padding-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 32px;
-}
-.hero.home div > p {
-  font-size: 2rem;
-  line-height: 3rem;
-}
-.hero form {
-  background-color: rgba(244, 241, 239, 0.8);
-  border-color: #F4F1EF;
-  color: #29261F;
-  display: flex;
-  font-family: Albert Sans;
-  padding: 24px 32px;
-  width: fit-content;
-  align-items: flex-end;
-}
-.hero form label {
-  display: grid;
-  gap: 0.5rem;
-  margin-right: 24px;
-}
-.hero form button {
-  height: 60px;
-}
-
-.hero:not(.home) {
-  height: 358px;
-}
-.hero:not(.home) h1 {
-  text-align: center;
+.arrow::before, .tarifs article::before, .tarifs aside p:first-of-type::before {
+  content: "";
+  background-image: url(/assets/icons/arrow.svg);
+  background-size: cover;
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
 }
 
 .testimonial {
