@@ -1,9 +1,12 @@
 <footer>
   <aside>
-    <logo class="dark" role="img" aria-label="La Planque"></logo>
-    <a href="#" aria-hidden="true" aria-label="Suivez-nous sur facebook"><img loading="lazy" src="/assets/icons/fb.svg" alt=""></a>
-    <a href="#" aria-hidden="true" aria-label="Suivez-nous sur instagram"><img loading="lazy" src="/assets/icons/insta.svg" alt=""></a>
-    <a href="#" aria-hidden="true" aria-label="Suivez-nous sur youtube"><img loading="lazy" src="/assets/icons/yt.svg" alt=""></a>
+    <a href="/">
+      <logo class="dark" role="img" aria-label="La Planque"></logo>
+    </a>
+    <a href="#" aria-hidden="true" aria-label="Suivez-nous sur facebook"><img loading="lazy" src="/assets/icons/fb.svg"
+        alt=""></a>
+    <a href="#" aria-hidden="true" aria-label="Suivez-nous sur instagram"><img loading="lazy"
+        src="/assets/icons/insta.svg" alt=""></a>
   </aside>
   <nav>
     <h4>À propos</h4>
@@ -23,11 +26,15 @@
       <li><a href="#">La région / Le village ?</a></li>
     </ul>
   </nav>
+
   <form>
     <h4>Inscrivez-vous à la newsletter</h4>
     <p>S'inscrire à la newsletter pour suivre notre actualité</p>
-    <input type="email" placeholder="Votre email">
-    <button type="submit" class="cta-small"><img loading="lazy" src="/assets/icons/submit.svg" alt="icône pour envoyer le formulaire"></button>
+    <label for="newsletter-email" class="visually-hidden">Votre adresse email</label>
+    <input type="email" id="newsletter-email" placeholder="exemple@email.com" required aria-required="true">
+    <button type="submit" class="cta-small" aria-label="S'inscrire à la newsletter">
+      <img loading="lazy" src="/assets/icons/submit.svg" alt="" aria-hidden="true">
+    </button>
     <nav aria-hidden="true" aria-label="plus d'informations">
       <a class="cta-small" data-icon="1" href="#devis">nous contacter</a>
       <a class="cta-small" data-icon="1" href="#">FAQ</a>

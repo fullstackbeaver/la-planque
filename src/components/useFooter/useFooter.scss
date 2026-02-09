@@ -1,5 +1,7 @@
 @use "../../styles/colors.scss" as *;
-@use "../../styles/extenders.scss";
+@use "../../styles/extendBlock.scss";
+@use "../../styles/extendLayout.scss";
+@use "../../styles/extendTypo.scss";
 @use "../../styles/sizes.scss" as *;
 @use "../cta/cta.scss" as *;
 
@@ -34,13 +36,19 @@ footer {
 
   aside {
     grid-area: logo;
+    display: grid;
+    grid:
+      "l l"
+      "a1 a2";
+    width: 178px;
+    margin-bottom: $padding-default;
+    gap:$padding-default;
 
-    a {
+    a:not(:first-of-type) {
       @extend .flexCentered;
 
       background-color: $color-10;
       padding         : 1rem;
-      margin          : 1rem $padding-xs;
       border-radius   : 50%;
       display         : inline-block;
       width           : 48px;
@@ -48,13 +56,22 @@ footer {
       border          : 3px solid transparent;
       transition      : border-color .3s ease-in-out;
 
-      &:first-of-type{
-        margin-left: 0;
-      }
-
       &:hover{
         border-color: $color-4;
       }
+
+      &:nth-of-type(2){
+        grid-area: a1;
+      justify-self: end;
+      }
+
+      &:last-of-type{
+        grid-area: a2;
+      justify-self: start;
+      }
+    }
+    a:first-of-type {
+      grid-area: l;
     }
   }
 
@@ -126,6 +143,10 @@ footer {
     button {
       grid-area: b;
       margin-left: 4px;
+    }
+    label {
+      display: none;
+      grid-area: i;
     }
   }
 
