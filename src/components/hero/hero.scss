@@ -12,15 +12,16 @@
 .hero {
   @extend .tear;
 
-  position: relative;
+  position       : relative;
+  padding        : 0 calc(((100vw - 1440px) / 2) + $section-spacing-h);
+  background-size: cover;
 
-  padding: 0 calc(((100vw - 1440px) / 2) + $section-spacing-h);
-  & > nav{
+  &>nav {
     @extend .mainNav;
   }
 }
 
-.hero.home{
+.hero.home {
   @extend .jardin;
 
   article {
@@ -30,12 +31,13 @@
     gap    : 0 $spacing ;
     grid   :
       "img p"
-      "img h2" / $iconSize 1fr;
+      "img h2"
+      / $iconSize 1fr;
     height          : fit-content(128px);
     padding         : $padding-l $padding-xl !important;
     border-color    : $color-10;
     background-color: $color-10;
-    border-color: transparent;
+    border-color    : transparent;
     transition      : border-color 0.5s ease-in-out;
 
     img {
@@ -58,7 +60,7 @@
     }
   }
 
-  div{
+  div {
     min-height     : calc((100vh - #{$navBarHeight}) - $announcementBarHeight);
     padding-bottom : $section-spacing-v;
     display        : flex;
@@ -66,7 +68,7 @@
     justify-content: center;
     gap            : $padding-xl;
 
-    & > p {
+    &>p {
       @extend .titleStyleShadow;
       font-size  : 2rem;
       line-height: 3rem;
@@ -79,20 +81,22 @@
     }
   }
 
-  a{
-    &:nth-of-type(1):hover article{
+  a {
+    &:nth-of-type(1):hover article {
       border-color: $color-4;
     }
-    &:hover:nth-of-type(2) article{
+
+    &:hover:nth-of-type(2) article {
       border-color: $color-8;
     }
-    &:hover:nth-of-type(3) article{
+
+    &:hover:nth-of-type(3) article {
       border-color: $color-1;
     }
   }
 }
 
-.hero form{
+.hero form {
   @extend .withBorder;
 
   background-color: rgba($color-10, 0.8);
@@ -109,10 +113,23 @@
     gap         : 0.5rem;
     margin-right: 24px;
 
-    input, select {
+    input,
+    select {
       @extend .inputForm;
 
       color: inherit;
+
+      // Spécifique au select pour Safari à tester
+      &[name="booking-type"] {
+        appearance         : none;
+        -webkit-appearance : none;
+        background-image   : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+        background-repeat  : no-repeat;
+        background-position: right 0.75rem center;
+        padding-right      : 2.5rem;
+        min-height         : calc(1.25rem + #{$padding-default} * 2 + 2px);
+        line-height        : 1.25rem;
+      }
     }
   }
 
@@ -121,7 +138,7 @@
   }
 }
 
-.hero:not(.home){
+.hero:not(.home) {
   height: 358px;
 
   h1 {
@@ -129,6 +146,6 @@
   }
 }
 
-.hero.contact{
+.hero.contact {
   @extend .jardin;
 }

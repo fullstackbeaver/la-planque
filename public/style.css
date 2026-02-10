@@ -27,7 +27,8 @@
   font-style: normal;
   font-display: swap;
 }
-.withBorder, .contact form label input, .contact form label textarea, .hero.home article, .hero form, button, .cta, .inputForm, footer input, .hero form label input, .hero form label select, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .imageLeft nav a, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
+.withBorder, .contact form label input, .contact form label textarea, .hero.home article, .hero form, button, .cta, .inputForm, footer input, .hero form label input,
+.hero form label select, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
   border: 2px solid;
   border-radius: 4px;
 }
@@ -60,7 +61,7 @@
   -webkit-mask-size: 100.5% 102%;
 }
 
-.flexCentered, footer aside a:not(:first-of-type), button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .imageLeft nav a {
+.flexCentered, footer aside a:not(:first-of-type), button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
   display: inline-flex !important;
   justify-content: center;
   align-items: center;
@@ -79,7 +80,8 @@
   font-weight: 400;
 }
 
-.useAlbertMedium, .testimonial p, .produits p, .photoGauche p, .card p, .card li, .sectionWithCards article p, .photos4 article p, section:not([class]) article p, .sectionWithCards article li, .testimonial article li, .photos4 article li, .photoGauche article li, section:not([class]) article li {
+.useAlbertMedium, .testimonial p, .valeurs p,
+.valeurs ul, .produits p, .photoGauche p, .card p, .card li, .sectionWithCards article p, .photos4 article p, section:not([class]) article p, .sectionWithCards article li, .testimonial article li, .photos4 article li, .photoGauche article li, section:not([class]) article li {
   font-family: Albert Sans;
   font-weight: 500;
 }
@@ -118,7 +120,7 @@
   justify-content: space-between;
 }
 
-button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .imageLeft nav a {
+button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
   padding: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -136,20 +138,20 @@ button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase 
   color: #FFFFFF;
   border-color: #AD3C05;
 }
-button:hover:not(:disabled), .cta:hover:not(:disabled), footer form a:hover:not(:disabled), .photos4 a:hover:not(:disabled), .sectionBase > a:hover:not(:disabled), .nav a:hover:not(:disabled), .sectionBase nav a:hover:not(:disabled), .testimonial > a:hover:not(:disabled), .photoGauche > a:hover:not(:disabled), section:not([class]) > a:hover:not(:disabled), .testimonial nav a:hover:not(:disabled), .photoGauche nav a:hover:not(:disabled), section:not([class]) nav a:hover:not(:disabled), .imageLeft nav a:hover:not(:disabled) {
+button:hover:not(:disabled), .cta:hover:not(:disabled), footer form a:hover:not(:disabled), .photos4 a:hover:not(:disabled), .sectionBase > a:hover:not(:disabled), .nav a:hover:not(:disabled), .sectionBase nav a:hover:not(:disabled), .testimonial > a:hover:not(:disabled), .photoGauche > a:hover:not(:disabled), section:not([class]) > a:hover:not(:disabled), .testimonial nav a:hover:not(:disabled), .photoGauche nav a:hover:not(:disabled), section:not([class]) nav a:hover:not(:disabled), .photoDroite nav a:hover:not(:disabled) {
   background-color: rgb(205.8606741573, 70.9861958266, 5.3393258427);
   border-color: rgb(205.8606741573, 70.9861958266, 5.3393258427);
 }
-button:disabled, .cta:disabled, footer form a:disabled, .photos4 a:disabled, .sectionBase > a:disabled, .nav a:disabled, .sectionBase nav a:disabled, .testimonial > a:disabled, .photoGauche > a:disabled, section:not([class]) > a:disabled, .testimonial nav a:disabled, .photoGauche nav a:disabled, section:not([class]) nav a:disabled, .imageLeft nav a:disabled {
+button:disabled, .cta:disabled, footer form a:disabled, .photos4 a:disabled, .sectionBase > a:disabled, .nav a:disabled, .sectionBase nav a:disabled, .testimonial > a:disabled, .photoGauche > a:disabled, section:not([class]) > a:disabled, .testimonial nav a:disabled, .photoGauche nav a:disabled, section:not([class]) nav a:disabled, .photoDroite nav a:disabled {
   color: #CE8C8D;
   border: 1px solid;
   cursor: not-allowed;
 }
-button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .imageLeft nav a {
+button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
   --email: url('/assets/icons/email.svg') no-repeat center;
   /* Différentes icônes selon l'attribut */
 }
-button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-icon="1"]::before, .photos4 a[data-icon="1"]::before, .sectionBase > a[data-icon="1"]::before, .nav a[data-icon="1"]::before, .sectionBase nav a[data-icon="1"]::before, .testimonial > a[data-icon="1"]::before, .photoGauche > a[data-icon="1"]::before, section:not([class]) > a[data-icon="1"]::before, .testimonial nav a[data-icon="1"]::before, .photoGauche nav a[data-icon="1"]::before, section:not([class]) nav a[data-icon="1"]::before, .imageLeft nav a[data-icon="1"]::before {
+button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-icon="1"]::before, .photos4 a[data-icon="1"]::before, .sectionBase > a[data-icon="1"]::before, .nav a[data-icon="1"]::before, .sectionBase nav a[data-icon="1"]::before, .testimonial > a[data-icon="1"]::before, .photoGauche > a[data-icon="1"]::before, section:not([class]) > a[data-icon="1"]::before, .testimonial nav a[data-icon="1"]::before, .photoGauche nav a[data-icon="1"]::before, section:not([class]) nav a[data-icon="1"]::before, .photoDroite nav a[data-icon="1"]::before {
   -webkit-mask: var(--email);
   mask: var(--email);
 }
@@ -157,11 +159,11 @@ button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-i
   padding: 12px;
 }
 
-.cta-secondary, .photos4 a, button:not(:first-of-type):not(:disabled):not(.cta-small), .cta:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase > a:not(:first-of-type):not(:disabled):not(.cta-small), .nav a:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase nav a:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial > a:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche > a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) > a:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial nav a:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche nav a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) nav a:not(:first-of-type):not(:disabled):not(.cta-small), .imageLeft nav a:not(:first-of-type):not(:disabled):not(.cta-small) {
+.cta-secondary, .photos4 a, button:not(:first-of-type):not(:disabled):not(.cta-small), .cta:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase > a:not(:first-of-type):not(:disabled):not(.cta-small), .nav a:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase nav a:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial > a:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche > a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) > a:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial nav a:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche nav a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) nav a:not(:first-of-type):not(:disabled):not(.cta-small), .photoDroite nav a:not(:first-of-type):not(:disabled):not(.cta-small) {
   background-color: transparent;
   color: #AD3C05;
 }
-.cta-secondary:hover, .photos4 a:hover, button:hover:not(:first-of-type):not(:disabled):not(.cta-small), .cta:hover:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .imageLeft nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small) {
+.cta-secondary:hover, .photos4 a:hover, button:hover:not(:first-of-type):not(:disabled):not(.cta-small), .cta:hover:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoDroite nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small) {
   background-color: rgb(246.09, 242.202, 239.61);
 }
 
@@ -170,7 +172,8 @@ button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-i
   border-color: #F4F1EF;
 }
 
-.inputForm, footer input, .hero form label input, .hero form label select {
+.inputForm, footer input, .hero form label input,
+.hero form label select {
   background-color: #F4F1EF;
   border-color: #B2B1AE;
   border-style: solid;
@@ -178,7 +181,8 @@ button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-i
   font-size: 1.25rem;
   padding: 16px;
 }
-.inputForm:focus-visible, footer input:focus-visible, .hero form label input:focus-visible, .hero form label select:focus-visible {
+.inputForm:focus-visible, footer input:focus-visible, .hero form label input:focus-visible,
+.hero form label select:focus-visible {
   outline: #B2B1AE auto 1px;
 }
 
@@ -215,7 +219,7 @@ button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-i
   justify-content: center;
 }
 
-.nav, .imageLeft nav, .sectionBase nav, .testimonial nav, .photoGauche nav, section:not([class]) nav {
+.nav, .photoDroite nav, .sectionBase nav, .testimonial nav, .photoGauche nav, section:not([class]) nav {
   padding: 24px 0;
 }
 :root {
@@ -309,7 +313,6 @@ a {
   }
 }
 .jardin, .hero.home, .hero.contact {
-  background-size: cover;
   background-image: url("/assets/images/la-planque-jardin-mobile.webp");
 }
 @media (min-width: 768px) {
@@ -319,11 +322,19 @@ a {
   }
 }
 
+.laPlanque {
+  background-image: url("/assets/images/la-planque-header-desktop.webp");
+}
+
+.lesPlanques {
+  background-image: url("/assets/images/les-planques-header-desktop.webp");
+}
+
 .bgCol4 {
   background-color: #AD3C05;
 }
 
-.bgCol13 {
+.bgCol13, .valeurs section {
   background-color: #FFFFFF;
 }
 
@@ -389,6 +400,7 @@ a {
 .hero {
   position: relative;
   padding: 0 calc((100vw - 1440px) / 2 + 120px);
+  background-size: cover;
 }
 .hero.home article {
   display: grid;
@@ -457,8 +469,20 @@ a {
   gap: 0.5rem;
   margin-right: 24px;
 }
-.hero form label input, .hero form label select {
+.hero form label input,
+.hero form label select {
   color: inherit;
+}
+.hero form label input[name=booking-type],
+.hero form label select[name=booking-type] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+  min-height: calc(1.25rem + 16px * 2 + 2px);
+  line-height: 1.25rem;
 }
 .hero form button {
   height: 60px;
@@ -505,6 +529,59 @@ a {
   margin: 0 auto;
 }
 
+.photoDroite {
+  display: grid;
+  grid: "h i" "p i"/1fr 1fr;
+  padding-bottom: 60px;
+}
+.photoDroite[class*=bgCol4] p,
+.photoDroite[class*=bgCol4] h2, .photoDroite[class*=bgCol4] li {
+  color: #FFFFFF;
+}
+.photoDroite[class*=tear] {
+  padding: 0;
+}
+.photoDroite:has(nav) {
+  grid: "h i" 1fr "p i" 1fr "n i" 1fr/1fr 1fr;
+}
+.photoDroite:has(nav) p {
+  padding-bottom: 0 !important;
+}
+.photoDroite:has(ul) {
+  grid: "h i" auto "p i" auto "n i" auto/1fr 1fr;
+}
+.photoDroite:has(ul) h2 {
+  margin-top: 60px;
+}
+.photoDroite p,
+.photoDroite h2,
+.photoDroite nav,
+.photoDroite ul {
+  padding: 0 60px 32px 120px;
+}
+.photoDroite img,
+.photoDroite logo {
+  grid-area: i;
+}
+.photoDroite p {
+  grid-area: p;
+  align-self: self-start;
+}
+.photoDroite h2 {
+  grid-area: h;
+  align-self: self-end;
+}
+.photoDroite nav, .photoDroite ul {
+  grid-area: n;
+}
+.photoDroite ul {
+  margin-bottom: 60px;
+  padding-left: calc(120px + 1.5rem);
+}
+.photoDroite logo {
+  margin-top: -32px;
+}
+
 .photos4 {
   position: relative;
   background-color: #DEB150;
@@ -548,44 +625,6 @@ a {
   margin-bottom: 1rem;
 }
 
-.imageLeft {
-  display: grid;
-  grid: "h i" "p i"/1fr 1fr;
-  padding-bottom: 60px;
-}
-.imageLeft[class*=bgCol4] p,
-.imageLeft[class*=bgCol4] h2 {
-  color: #FFFFFF;
-}
-.imageLeft[class*=tear] {
-  padding: 0;
-}
-.imageLeft:has(nav) {
-  grid: "h i" 1fr "p i" 1fr "n i" 1fr/1fr 1fr;
-}
-.imageLeft:has(nav) p {
-  padding-bottom: 0 !important;
-}
-.imageLeft p,
-.imageLeft h2,
-.imageLeft nav {
-  padding: 0 60px 32px 120px;
-}
-.imageLeft img {
-  grid-area: i;
-}
-.imageLeft p {
-  grid-area: p;
-  align-self: self-start;
-}
-.imageLeft h2 {
-  grid-area: h;
-  align-self: self-end;
-}
-.imageLeft nav {
-  grid-area: n;
-}
-
 logo {
   --img: url('/assets/icons/logo.svg') no-repeat center / contain;
   display: block;
@@ -601,6 +640,11 @@ logo.dark {
   background-color: #29261F;
   width: 179px;
   height: 178px;
+}
+logo.big {
+  width: 80%;
+  height: 80%;
+  align-self: center;
 }
 
 .contact form {
@@ -825,6 +869,50 @@ footer input {
 .triptyque img:nth-of-type(3) {
   grid-area: iD;
   width: clamp(200px, 25vw, 360px);
+}
+
+.valeurs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 0 60px 0;
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+}
+.valeurs section {
+  display: block;
+  column-count: 2;
+  column-gap: 3rem;
+  column-fill: auto;
+  max-height: 415px;
+}
+.valeurs h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  color: #AD3C05;
+  column-span: all;
+  padding-top: 60px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+.valeurs section:first-of-type h2 {
+  background-image: url(/assets/icons/kern.svg);
+}
+.valeurs section:last-of-type h2 {
+  background-image: url(/assets/icons/3epis.svg);
+}
+.valeurs p,
+.valeurs ul {
+  text-align: initial;
+  break-inside: avoid;
+}
+.valeurs p {
+  margin-top: 0 !important;
+}
+.valeurs ul {
+  padding-left: 1.5rem;
 }
 
 .tarifs {

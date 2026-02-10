@@ -2,7 +2,6 @@
 @use "./colors.scss" as *;
 
 .jardin {
-  background-size    : cover;
   background-image: url('/assets/images/la-planque-jardin-mobile.webp');
 
   @include aPartir('tablet'){
@@ -10,6 +9,15 @@
     background-image: url('/assets/images/la-planque-jardin-desktop.webp');
   }
 }
+
+.laPlanque{
+  background-image: url('/assets/images/la-planque-header-desktop.webp');
+}
+
+.lesPlanques{
+  background-image: url('/assets/images/les-planques-header-desktop.webp');
+}
+
 
 .bgCol4{
   background-color: $color-4;

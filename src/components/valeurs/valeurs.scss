@@ -1,0 +1,66 @@
+@use "../../styles/background.scss";
+@use "../../styles/extendBlock.scss";
+@use "../../styles/extendTypo.scss";
+@use "../../styles/colors.scss" as *;
+@use "../../styles/sizes.scss" as *;
+
+.valeurs {
+  max-width: calc(1440px - ($section-spacing-h * 2));
+  margin: 0 auto;
+  padding: $padding-xl 0 $section-spacing-v 0;
+
+
+  display: flex;
+  gap: $padding-xl;
+  flex-direction: column;
+
+  section {
+    @extend .bgCol13;
+    // @extend .sectionBase;
+
+    display: block;
+    column-count: 2;
+    column-gap: 3rem;
+    column-fill: auto;
+    max-height: 415px;
+
+    // margin-bottom: 3rem;
+  }
+
+  h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    color: $color-4;
+    column-span: all;
+    padding-top: $section-spacing-v;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+  }
+
+  section:first-of-type h2 {
+    background-image: url(/assets/icons/kern.svg);
+  }
+
+  section:last-of-type h2 {
+    background-image: url(/assets/icons/3epis.svg);
+  }
+
+  p,
+  ul {
+    @extend .useAlbertMedium;
+
+    text-align: initial;
+    break-inside: avoid;
+  }
+
+  p {
+    margin-top: 0 !important;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+  }
+
+}

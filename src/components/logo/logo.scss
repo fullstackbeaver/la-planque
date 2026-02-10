@@ -1,4 +1,5 @@
 @use "../../styles/colors.scss" as *;
+@use "../../styles/sizes.scss" as *;
 
 logo {
   --img       : url('/assets/icons/logo.svg') no-repeat center / contain;
@@ -16,5 +17,11 @@ logo {
     background-color: $color-12;
     width           : 179px;
     height          : 178px;
+  }
+
+  &.big{
+    width : 80%;
+    height : 80%;
+    align-self: center;
   }
 }

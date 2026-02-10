@@ -24,7 +24,7 @@ body {
   min-height           : 100vh;
   background-image     : var(--bg);
   background-repeat    : repeat;
-  background-attachment: fixed;;
+  background-attachment: fixed;
   max-width            : 100vw;
   overflow-x           : hidden;
   font-family          : $default-font;
@@ -32,7 +32,7 @@ body {
 
 h1 {
   @extend .titleStyleShadow;
-  font-size: 3.5rem;
+  font-size  : 3.5rem;
   font-weight: 400;
 }
 
@@ -45,15 +45,15 @@ h2 {
 
 h3 {
   font-family: $title-font;
-  font-size: 2rem;
+  font-size  : 2rem;
   font-weight: 400;
 }
 
 
 h4 {
   font-family: $title-font;
-  font-size:1.5rem;
-  color: $color-4;
+  font-size  : 1.5rem;
+  color      : $color-4;
   font-weight: 400;
 }
 
@@ -66,8 +66,8 @@ body > section:not([class*="hero"]),
 body > aside:not([role="top-banner"]),
 footer {
   max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
+  width    : 100%;
+  margin   : 0 auto;
 }
 
 section + aside,
