@@ -1,4 +1,4 @@
-@use "../announcementBar/announcementBar.scss" as *;
+// @use "../announcementBar/announcementBar.scss" as *;
 @use "../card/card.scss" as *;
 @use "../mainNav/mainNav.scss" as *;
 @use "../../styles/animations.scss";
@@ -26,6 +26,7 @@
 
   article {
     @extend .withBorder;
+    @extend .dw383;
 
     display: grid;
     gap    : 0 $spacing ;
@@ -33,7 +34,6 @@
       "img p"
       "img h2"
       / $iconSize 1fr;
-    height          : fit-content(128px);
     padding         : $size-24 $size-32 !important;
     border-color    : $color-10;
     background-color: $color-10;
@@ -61,7 +61,8 @@
   }
 
   div {
-    min-height     : calc((100vh - #{$navBarHeight}) - $announcementBarHeight);
+    // min-height     : calc((100vh - #{$navBarHeight}) - $announcementBarHeight);
+    min-height     : calc(100vh - #{$navBarHeight});
     padding-bottom : $size-60;
     display        : flex;
     flex-direction : column;

@@ -3,6 +3,7 @@
 @use "../../styles/sizes.scss" as *;
 @use "../../styles/colors.scss" as *;
 @use "../../styles/fonts.scss" as *;
+@use "../../styles/extendSurface.scss" as *;
 
 
 $imageMainTriptyque:  clamp(200px, calc(640px * 100vw / $desktopRef), 640px);
@@ -18,7 +19,7 @@ $spaceImageTriptyque: clamp(5px,   calc(40px * 100vw / $desktopRef),  40px);
     /$imageSmallTriptyque $imageMainTriptyque $imageSmallTriptyque;
 
   img {
-    @extend .shadow;
+    box-shadow: $shadow;
     border-radius: 4px;
 
     &:first-of-type {

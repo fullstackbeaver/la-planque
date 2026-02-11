@@ -2,14 +2,17 @@
 @use "./fonts.scss" as *;
 @use "./sizes.scss" as *;
 
+
+$shadow : 0px 0px 4px #{$color-12};
+
+
 .withBorder {
   border: 2px solid;
   border-radius: 4px;
 }
 
 .titleStyleShadow {
-  @extend .shadow;
-
+  text-shadow: $shadow;
   font-family: $title-font;
   color      : $color-10;
 }
@@ -36,9 +39,4 @@
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 100.5% 102%;
   }
-}
-
-
-.shadow {
-  box-shadow: 0px 0px 4px rgba($color-12, 0.5);
 }

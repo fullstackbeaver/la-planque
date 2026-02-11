@@ -1,55 +1,67 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/sizes.scss" as *;
 @use "../../styles/fonts.scss" as *;
-@use "../../styles/extendSurface.scss";
+@use "../../styles/extendSurface.scss" as *;
+@use "../logo/logo.scss";
 
 $navBarHeight: 196px;
 
 .mainNav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--s-20);
-  flex-wrap: wrap;
-  gap: var(--s-16);
+  width: 100%;
 
-  & ul {
-    display: flex;
-    gap: var(--s-32);
-    list-style: none;
+  ul {
+    width          : 100%;
+    height         : $navBarHeight;
+    display        : flex;
+    justify-content: space-evenly;
+    align-items    : center;
+    flex-wrap      : wrap;
+    padding        : var(--s-20);
+    gap            : var(--s-16);
+    // gap            : var(--s-32);
+    list-style     : none;
+    filter         : drop-shadow($shadow);
+  }
 
-    a {
-      @extend .titleStyleShadow;
+  a {
+    @extend .titleStyleShadow;
 
-      font-size: var(--sf-20);
-      text-decoration: none;
+    font-size      : var(--sf-20);
+    text-decoration: none;
 
-      &:hover {
-        @extend .underline-short;
-        color: $link-color;
-      }
+    &::after {
 
-      &[href="#"] {
-        color: $link-color;
-        @extend .underline-short;
-      }
+      bottom  : -3px;
+      content : "";
+      display : block;
+      height  : 2px;
+      left    : 50%;
+      position: relative;
+
+      width: 50%;
+    }
+
+    &:hover {
+      @extend .underline-short;
+      color: $link-color;
+    }
+
+    &[href="#"] {
+      color: $link-color;
+      @extend .underline-short;
     }
   }
 
-  img {
-    max-height: 150px;
+  logo {
+    --size: calc(.8 * #{$navBarHeight});
+    width : var(--size);
+    height : var(--size);
+    align-self: center;
   }
 }
 
 .underline-short::after {
-  animation: underlineGrow 0.5s ease forwards;
+  animation : underlineGrow 0.5s ease forwards;
   background: $link-color;
-  bottom: -3px;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: relative;
-  transform: translateX(-50%);
-  width: 50%;
+  transform : translateX(-50%);
 }
