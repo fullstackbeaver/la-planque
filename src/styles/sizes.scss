@@ -1,13 +1,50 @@
-@use "./colors.scss" as *;
+//screen resolution
+$desktopRef: 1440px;
 
-$padding-xs     : 8px;
-$padding-s      : 12px;
-$padding-default: 16px;
-$padding-l      : 24px;
-$padding-xl     : 32px;
+// graphical sizes, gap, etc.
+$size-8  : 8px;
+$size-12 : 12px;
+$size-16 : 16px;
+$size-24 : 24px;
+$size-32 : 32px;
+$size-40 : 40px;
+$size-60 : 60px;
+$size-120: 120px;
 
-$section-spacing-h: 120px;
-$section-spacing-v: 60px;
+// font and line sizes
+$sizeF-8 : .5rem;
+$sizeF-12: .75rem;
+$sizeF-16: 1rem;
+$sizeF-18: 1.125rem;
+$sizeF-20: 1.25rem;
+$sizeF-28: 1.75rem;
+$sizeF-32: 2rem;
+$sizeF-40: 2.5rem;
+$sizeF-48: 3rem;
+$sizeF-56: 3.5rem;
+
+// responsive images sizes
+$desktopWidth383px: clamp(200px, calc(383px * 100vw / $desktopRef), 383px);
 
 
-$shadow-size: 0px 0px 4px rgba($color-12, 0.5);
+// export for css
+.root {
+  --s-8  : $size-8;
+  --s-12 : $size-12;
+  --s-16 : $size-16;
+  --s-24 : $size-24;
+  --s-32 : $size-32;
+  --s-40 : $size-40;
+  --s-60 : $size-60;
+  --s-120: $size-120;
+
+  --sf-8 : $sizeF-8;
+  --sf-12: $sizeF-12;
+  --sf-16: $sizeF-16;
+  --sf-18: $sizeF-18;
+  --sf-20: $sizeF-20;
+  --sf-32: $sizeF-32;
+  --sf-40: $sizeF-40;
+  --sf-48: $sizeF-48;
+  --sf-56: $sizeF-56;
+}

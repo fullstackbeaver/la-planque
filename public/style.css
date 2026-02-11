@@ -27,6 +27,26 @@
   font-style: normal;
   font-display: swap;
 }
+.root {
+  --s-8: $size-8;
+  --s-12: $size-12;
+  --s-16: $size-16;
+  --s-24: $size-24;
+  --s-32: $size-32;
+  --s-40: $size-40;
+  --s-60: $size-60;
+  --s-120: $size-120;
+  --sf-8: $sizeF-8;
+  --sf-12: $sizeF-12;
+  --sf-16: $sizeF-16;
+  --sf-18: $sizeF-18;
+  --sf-20: $sizeF-20;
+  --sf-32: $sizeF-32;
+  --sf-40: $sizeF-40;
+  --sf-48: $sizeF-48;
+  --sf-56: $sizeF-56;
+}
+
 .withBorder, .contact form label input, .contact form label textarea, .hero.home article, .hero form, button, .cta, .inputForm, footer input, .hero form label input,
 .hero form label select, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
   border: 2px solid;
@@ -36,7 +56,6 @@
 .titleStyleShadow, .hero.home div > p, .mainNav ul a, .hero > nav ul a, h1 {
   font-family: Montaga;
   color: #F4F1EF;
-  text-shadow: 0px 0px 4px rgba(41, 38, 31, 0.5);
 }
 
 .tear, .photos4, .hero {
@@ -61,18 +80,28 @@
   -webkit-mask-size: 100.5% 102%;
 }
 
+.shadow, .triptyque img, .titleStyleShadow, .hero.home div > p, .mainNav ul a, .hero > nav ul a, h1 {
+  box-shadow: 0px 0px 4px rgba(41, 38, 31, 0.5);
+}
+
 .flexCentered, footer aside a:not(:first-of-type), button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
   display: inline-flex !important;
   justify-content: center;
   align-items: center;
 }
 
-.refWidth, .produits img, .photoGauche > img, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
+.dw383, .produits img, .photoGauche > img, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
   width: clamp(200px, 26.5972222222vw, 383px);
 }
 
 .block, .tarifs, .produits, .sectionWithCards, .testimonial, .photos4, .photoGauche, section:not([class]) {
   padding: 60px 120px;
+}
+
+.baseGrid, .contact form label, .hero form label {
+  display: grid;
+  gap: var(--s-8);
+  margin-right: var(--s-24);
 }
 
 .useAlbertRegular, footer > nav, footer p {
@@ -81,14 +110,20 @@
 }
 
 .useAlbertMedium, .testimonial p, .valeurs p,
-.valeurs ul, .produits p, .photoGauche p, .card p, .card li, .sectionWithCards article p, .photos4 article p, section:not([class]) article p, .sectionWithCards article li, .testimonial article li, .photos4 article li, .photoGauche article li, section:not([class]) article li {
+.valeurs ul, .produits p, .photoGauche p, .useAlbertMedium20, .card p, .card li, .sectionWithCards article p, .photos4 article p, section:not([class]) article p, .sectionWithCards article li, .testimonial article li, .photos4 article li, .photoGauche article li, section:not([class]) article li {
   font-family: Albert Sans;
   font-weight: 500;
 }
 
-.useAlbertSemi, footer input {
+.useAlbertSemi, footer input, button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
   font-family: Albert Sans;
   font-weight: 600;
+  font-style: SemiBold;
+}
+
+.useAlbertMedium20, .card p, .card li, .sectionWithCards article p, .testimonial article p, .photos4 article p, .photoGauche article p, section:not([class]) article p, .sectionWithCards article li, .testimonial article li, .photos4 article li, .photoGauche article li, section:not([class]) article li {
+  font-size: var(--sf-20);
+  line-height: var(--sf-28);
 }
 
 .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
@@ -99,16 +134,8 @@
 .card h3, .sectionWithCards article h3, .testimonial article h3, .photos4 article h3, .photoGauche article h3, section:not([class]) article h3 {
   color: #BC8F35;
 }
-.card p, .sectionWithCards article p, .testimonial article p, .photos4 article p, .photoGauche article p, section:not([class]) article p {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
 .card ul, .sectionWithCards article ul, .testimonial article ul, .photos4 article ul, .photoGauche article ul, section:not([class]) article ul {
-  padding-inline-start: 1rem;
-}
-.card li, .sectionWithCards article li, .testimonial article li, .photos4 article li, .photoGauche article li, section:not([class]) article li {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  padding-inline-start: var(--s-16);
 }
 .card:has(ul) h3, .sectionWithCards article:has(ul) h3, .testimonial article:has(ul) h3, .photos4 article:has(ul) h3, .photoGauche article:has(ul) h3, section:not([class]) article:has(ul) h3 {
   margin: 16px 0;
@@ -124,13 +151,10 @@ button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase 
   padding: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  gap: 8px;
+  gap: var(--s-8);
   white-space: nowrap;
   width: fit-content;
-  font-family: Albert Sans;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 1.125rem;
+  font-size: var(--sf-18);
   line-height: 100%;
   letter-spacing: 0%;
   /* Bouton primaire (rempli) */
@@ -178,7 +202,7 @@ button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-i
   border-color: #B2B1AE;
   border-style: solid;
   color: #B2B1AE;
-  font-size: 1.25rem;
+  font-size: var(--sf-20);
   padding: 16px;
 }
 .inputForm:focus-visible, footer input:focus-visible, .hero form label input:focus-visible,
@@ -248,26 +272,26 @@ body {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: var(--sf-56);
   font-weight: 400;
 }
 
 h2 {
   font-family: Montaga;
-  line-height: 3rem;
-  font-size: 2.5rem;
+  line-height: var(--sf-48);
+  font-size: var(--sf-40);
   font-weight: 400;
 }
 
 h3 {
   font-family: Montaga;
-  font-size: 2rem;
+  font-size: var(--sf-32);
   font-weight: 400;
 }
 
 h4 {
   font-family: Montaga;
-  font-size: 1.5rem;
+  font-size: var(--sf-20);
   color: #AD3C05;
   font-weight: 400;
 }
@@ -291,7 +315,7 @@ aside + section:not([class*=hero]) {
 
 blockquote {
   font-family: Montaga;
-  font-size: 1.5rem;
+  font-size: var(--sf-20);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -349,7 +373,7 @@ a {
 }
 [role=top-banner] a {
   text-decoration: underline;
-  margin: 0 0.5rem;
+  margin: 0 var(--s-8);
 }
 @media (max-width: 767px) {
   [role=top-banner] {
@@ -361,17 +385,17 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: var(--s-20);
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--s-16);
 }
 .mainNav ul, .hero > nav ul {
   display: flex;
-  gap: 2rem;
+  gap: var(--s-32);
   list-style: none;
 }
 .mainNav ul a, .hero > nav ul a {
-  font-size: 1.5rem;
+  font-size: var(--sf-20);
   text-decoration: none;
 }
 .mainNav ul a:hover, .hero > nav ul a:hover {
@@ -418,16 +442,16 @@ a {
 }
 .hero.home article p {
   grid-area: p;
-  font-size: 1rem;
+  font-size: var(--sf-16);
   font-weight: 400;
-  line-height: 1.2rem;
+  line-height: var(--s-20);
   display: flex;
   align-self: self-end;
   white-space: nowrap;
 }
 .hero.home article h2 {
   grid-area: h2;
-  font-size: 1.5rem;
+  font-size: var(--sf-20);
 }
 .hero.home div {
   min-height: calc(100vh - 196px - 28px);
@@ -438,8 +462,8 @@ a {
   gap: 32px;
 }
 .hero.home div > p {
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: var(--sf-32);
+  line-height: var(--sf-48);
 }
 .hero.home div nav:last-of-type {
   display: flex;
@@ -464,11 +488,6 @@ a {
   width: fit-content;
   align-items: flex-end;
 }
-.hero form label {
-  display: grid;
-  gap: 0.5rem;
-  margin-right: 24px;
-}
 .hero form label input,
 .hero form label select {
   color: inherit;
@@ -479,13 +498,13 @@ a {
   -webkit-appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  padding-right: 2.5rem;
-  min-height: calc(1.25rem + 16px * 2 + 2px);
-  line-height: 1.25rem;
+  background-position: right var(--s-12) center;
+  padding-right: var(--s-40);
+  min-height: calc(var(--s-20) + var(--s-16) * 2 + 2px);
+  line-height: var(--sf-20);
 }
 .hero form button {
-  height: 60px;
+  height: var(--s-60);
 }
 
 .hero:not(.home) {
@@ -498,7 +517,7 @@ a {
 .photoGauche {
   text-align: left !important;
   display: grid;
-  column-gap: 2rem;
+  column-gap: var(--s-32);
   grid: "i h" 1fr "i p" auto "i n" 1fr/auto auto;
 }
 .photoGauche:has(aside) {
@@ -576,7 +595,7 @@ a {
 }
 .photoDroite ul {
   margin-bottom: 60px;
-  padding-left: calc(120px + 1.5rem);
+  padding-left: calc(120px + var(--sf-20));
 }
 .photoDroite logo {
   margin-top: -32px;
@@ -586,7 +605,7 @@ a {
   position: relative;
   background-color: #DEB150;
   display: flex;
-  gap: 1rem;
+  gap: var(--s-16);
   text-align: left !important;
   margin-bottom: 60px;
   padding-bottom: 90px !important;
@@ -599,7 +618,7 @@ a {
   padding: 0 !important;
   max-width: 50%;
   display: grid !important;
-  gap: 25px;
+  gap: var(--s-24);
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
@@ -610,7 +629,7 @@ a {
 .photos4 u {
   display: block;
   font-family: Albert Sans;
-  font-size: 1rem;
+  font-size: var(--sf-16);
 }
 .photos4 figure {
   background-color: #FFFFFF;
@@ -618,11 +637,11 @@ a {
 }
 .photos4 figcaption {
   font-family: Montaga;
-  font-size: 1.25rem;
-  padding: 0.75rem;
+  font-size: var(--sf-20);
+  padding: var(--s-12);
 }
 .photos4 p {
-  margin-bottom: 1rem;
+  margin-bottom: var(--sf-16);
 }
 
 logo {
@@ -659,11 +678,6 @@ logo.big {
   width: 100%;
   row-gap: 32px;
 }
-.contact form label {
-  display: grid;
-  gap: 0.5rem;
-  margin-right: 24px;
-}
 .contact form label:nth-of-type(1) {
   grid-area: n;
 }
@@ -681,7 +695,7 @@ logo.big {
   border-color: #B2B1AE;
   border-style: solid;
   color: #B2B1AE;
-  font-size: 1.25rem;
+  font-size: var(--sf-20);
   padding: 16px;
   font-family: Albert Sans;
 }
@@ -689,7 +703,7 @@ logo.big {
   outline: #B2B1AE auto 1px;
 }
 .contact form button {
-  height: 60px;
+  height: var(--s-60);
   margin-top: 32px;
   grid-area: b;
   justify-self: center;
@@ -760,7 +774,7 @@ footer aside {
 }
 footer aside a:not(:first-of-type) {
   background-color: #F4F1EF;
-  padding: 1rem;
+  padding: var(--s-16);
   border-radius: 50%;
   display: inline-block;
   width: 48px;
@@ -794,19 +808,19 @@ footer > nav:nth-of-type(2) {
 footer > nav:last-of-type {
   grid-area: legal;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: var(--sf-16);
   justify-self: end;
   margin-bottom: 16px;
   z-index: 1;
 }
 footer > nav:last-of-type li {
   display: inline-flex;
-  margin: 0 0.5rem;
+  margin: 0 var(--s-8);
 }
 footer form {
   grid-area: form;
   display: grid;
-  grid: "h h" 32px "p p" 32px "i b" 48px "n n" 67px/auto 56px;
+  grid: "h h" 32px "p p" 32px "i b" 48px "n n" 67px/auto calc(var(--s-16) * 2 + 22px + 2px);
   column-gap: 12px;
   z-index: 1;
 }
@@ -839,14 +853,14 @@ footer form label {
 footer > p {
   grid-area: cp;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: var(--sf-16);
 }
 footer li {
   list-style-type: none;
   margin-top: 20px;
 }
 footer input {
-  font-size: 1rem;
+  font-size: var(--sf-16);
 }
 
 .triptyque {
@@ -856,7 +870,6 @@ footer input {
 }
 .triptyque img {
   border-radius: 4px;
-  box-shadow: 0px 0px 4px rgba(41, 38, 31, 0.5);
 }
 .triptyque img:first-of-type {
   grid-area: iG;
@@ -882,20 +895,20 @@ footer input {
 .valeurs section {
   display: block;
   column-count: 2;
-  column-gap: 3rem;
+  column-gap: var(--sf-48);
   column-fill: auto;
   max-height: 415px;
 }
 .valeurs h2 {
   text-align: center;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: var(--s-32);
   color: #AD3C05;
   column-span: all;
-  padding-top: 60px;
+  padding-top: var(--s-60);
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 40px;
+  background-size: var(--s-40);
 }
 .valeurs section:first-of-type h2 {
   background-image: url(/assets/icons/kern.svg);
@@ -912,7 +925,7 @@ footer input {
   margin-top: 0 !important;
 }
 .valeurs ul {
-  padding-left: 1.5rem;
+  padding-left: var(--s-20);
 }
 
 .tarifs {
@@ -928,7 +941,7 @@ footer input {
 }
 .tarifs p {
   font-family: Montaga;
-  font-size: 1.5rem;
+  font-size: var(--sf-20);
   font-weight: 400;
 }
 .tarifs span {

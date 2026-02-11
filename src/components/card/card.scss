@@ -2,7 +2,6 @@
 @use "../../styles/extendLayout.scss";
 @use "../../styles/extendSurface.scss";
 @use "../../styles/extendTypo.scss";
-@use "../../styles/fonts.scss" as *;
 @use "../../styles/sizes.scss" as *;
 
 $iconSize: 73px;
@@ -10,98 +9,33 @@ $spacing : 21px;
 
 .card {
   @extend .withBorder;
-  @extend .refWidth;
+  @extend .dw383;
 
   border-color    : $color-13;
   background-color: $color-13;
-  padding         : $padding-xl $padding-xl;
+  padding         : $size-32 $size-32;
 
   h3 {
     color: $color-8;
   }
 
   p, li {
-    @extend .useAlbertMedium;
-  }
-
-  p{
-    font-size  : 1.25rem;
-    line-height: 1.75rem;
+    @extend .useAlbertMedium20;
   }
 
   ul {
-    padding-inline-start: 1rem;
-  }
-
-  li {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    padding-inline-start: var(--s-16);
   }
 
   &:has(ul){
     h3 {
-      margin: $padding-default 0;
+      margin: $size-16 0;
     }
   }
 }
-
-// .cardHome {
-
-//   // @extend .card;
-
-//   display   : grid;
-//   gap       : 0 $spacing ;
-//   grid      :
-//     "img p"
-//     "img h2" / $iconSize 1fr;
-//   // grid-auto-rows: min-content;
-
-//   // height: calc($iconSize + ($padding-l *2 ));
-//   height: fit-content(2000px);
-//   padding         : $padding-l $padding-xl;
-//   border-color    : $color-10;
-//   background-color: $color-10;
-
-
-//   img {
-//     grid-area: img;
-//   }
-
-//   p {
-//     grid-area  : p;
-//     // max-width  : 439px;
-//     font-size  : 1rem;
-//     font-weight: 400;
-//     line-height: 1.2rem;
-//     // font-family: $action-font;
-//     display: flex;
-//     align-self: self-end;
-//   }
-
-//   h2 {
-//     grid-area: h2;
-//     font-size: 1.5rem;
-//   }
-// }
 
 .cards {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
-
-  // article {
-  //   @extend .card;
-  // }
 }
-
-// .cardTriptyque {
-
-//   margin-top: $section-spacing;
-  
-//   article {
-//     @extend .card;
-//     display: grid;
-//     justify-items: center;
-//   }
-// }

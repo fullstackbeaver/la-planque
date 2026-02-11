@@ -3,27 +3,26 @@
 @use "../../styles/fonts.scss" as *;
 @use "../../styles/extendLayout.scss";
 @use "../../styles/extendSurface.scss";
+@use "../../styles/extendTypo.scss";
 
 $sizeIcon: 22px;
-$finalSize: calc(($padding-default * 2) + $sizeIcon + 2px); // le dernier 2 c'est la bordure
+$finalSize: calc((var(--s-16) * 2) + $sizeIcon + 2px); // le dernier 2 c'est la bordure
 
 button, .cta {
   @extend .withBorder;
   @extend .flexCentered;
+  @extend .useAlbertSemi;
 
   // sizes and positions
-  padding    : $padding-default;
+  padding    : $size-16;
   cursor     : pointer;
   transition : all 0.3s ease;
-  gap        : 8px;
+  gap        : var(--s-8);
   white-space: nowrap;
   width      : fit-content;
 
   // font
-  font-family   : $action-font;
-  font-weight   : 600;
-  font-style    : SemiBold;
-  font-size     : 1.125rem;      //18px;
+  font-size     : var(--sf-18);
   line-height   : 100%;
   letter-spacing: 0%;
 
@@ -82,7 +81,7 @@ button, .cta {
 
 .cta-small {
     // opacity: 0.8;
-  padding: $padding-s;
+  padding: $size-12;
 }
 
 .cta-secondary {

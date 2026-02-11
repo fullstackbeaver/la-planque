@@ -5,13 +5,13 @@
 @use "../../styles/sizes.scss" as *;
 
 .valeurs {
-  max-width: calc(1440px - ($section-spacing-h * 2));
+  max-width: calc($desktopRef - ($size-120 * 2));
   margin: 0 auto;
-  padding: $padding-xl 0 $section-spacing-v 0;
+  padding: $size-32 0 $size-60 0;
 
 
   display: flex;
-  gap: $padding-xl;
+  gap: $size-32;
   flex-direction: column;
 
   section {
@@ -20,23 +20,21 @@
 
     display: block;
     column-count: 2;
-    column-gap: 3rem;
+    column-gap: var(--sf-48);
     column-fill: auto;
     max-height: 415px;
-
-    // margin-bottom: 3rem;
   }
 
   h2 {
     text-align: center;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: var(--s-32);
     color: $color-4;
     column-span: all;
-    padding-top: $section-spacing-v;
+    padding-top: var(--s-60);
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 40px;
+    background-size: var(--s-40);
   }
 
   section:first-of-type h2 {
@@ -60,7 +58,7 @@
   }
 
   ul {
-    padding-left: 1.5rem;
+    padding-left: var(--s-20);
   }
 
 }

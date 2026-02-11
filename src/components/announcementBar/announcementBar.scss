@@ -2,12 +2,12 @@
 @use "../../styles/sizes.scss" as *;
 @use "../../styles/mixins.scss" as *;
 
-$announcementBarHeight: calc(44px - ($padding-xs * 2));
+$announcementBarHeight: calc(44px - ($size-8 * 2));
 
 [role="top-banner"] {
   background-color: $color-8;
   color           : $color-13;
-  padding         : $padding-xs;
+  padding         : $size-8;
   min-height      : $announcementBarHeight;
   display         : flex;
   justify-content : center;
@@ -15,7 +15,7 @@ $announcementBarHeight: calc(44px - ($padding-xs * 2));
 
   a {
     text-decoration: underline;
-    margin: 0 .5rem;
+    margin: 0 var(--s-8);
   }
 
   @include jusque('tablet'){

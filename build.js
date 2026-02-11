@@ -299,10 +299,10 @@ async function build() {
     const tempScss =[
       ...await collectComponentStyles("src/styles/"),
       ...await collectComponentStyles("src/components/*/"),
-      ...await collectComponentStyles("src/pages/*/"),
-      "src/main.scss"]
-        .map(file => `@use '${file}' as *;`)
-        .join("\n");
+      ...await collectComponentStyles("src/pages/*/")
+    ]
+      .map(file => `@use '${file}' as *;`)
+      .join("\n");
 
     console.log(tempScss)
     await write('temp-styles.scss', tempScss);

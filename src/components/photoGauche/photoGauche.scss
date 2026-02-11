@@ -10,7 +10,7 @@
 
   text-align: left !important;
   display   : grid;
-  column-gap: 2rem;
+  column-gap: var(--s-32);
   grid :
     "i h" 1fr
     "i p" auto
@@ -42,7 +42,7 @@
   }
 
   & > img {
-    @extend .refWidth;
+    @extend .dw383;
 
     grid-area: i;
   }

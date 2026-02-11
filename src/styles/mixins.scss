@@ -1,10 +1,11 @@
 @use "sass:map";
+@use "./sizes.scss" as *;
 
 $breakpoints: (
   'mobile':    576px,
   'tablet':    768px,
   'desktop':   1024px,
-  'desktopXl': 1440px
+  'desktopXl': $desktopRef
 );
 
 @mixin aPartir($breakpoint) {

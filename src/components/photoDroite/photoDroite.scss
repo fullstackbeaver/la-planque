@@ -10,7 +10,7 @@
     "h i"
     "p i"
     /1fr 1fr;
-  padding-bottom: $section-spacing-v;
+  padding-bottom: $size-60;
 
   &[class*="bgCol4"] {
     p,
@@ -43,7 +43,7 @@
       /1fr 1fr;
 
     h2 {
-      margin-top: $section-spacing-v;
+      margin-top: $size-60;
     }
   }
 
@@ -51,7 +51,7 @@
   h2,
   nav,
   ul{
-    padding: 0 $section-spacing-v $padding-xl $section-spacing-h;
+    padding: 0 $size-60 $size-32 $size-120;
   }
 
   img,
@@ -77,11 +77,11 @@
     grid-area: n;
   }
   ul {
-    margin-bottom: $section-spacing-v;
-    padding-left: calc($section-spacing-h + 1.5rem);
+    margin-bottom: $size-60;
+    padding-left: calc($size-120 + var(--sf-20));
   }
 
   logo{
-    margin-top: -$padding-xl;
+    margin-top: -$size-32;
   }
 }

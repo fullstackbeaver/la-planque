@@ -13,7 +13,7 @@
     "t2 r"
     "a a"
     / 60% 40%;
-  gap: $padding-l;
+  gap: $size-24;
 
   &>* {
     text-align: initial;
@@ -30,7 +30,7 @@
 
   p {
     font-family: $title-font;
-    font-size  : 1.5rem;
+    font-size  : var(--sf-20);
     font-weight: 400;
   }
 
@@ -40,7 +40,7 @@
 
   article, aside {
     background-color: $color-13;
-    padding: $padding-xl;
+    padding: $size-32;
 
   }
 
@@ -49,14 +49,14 @@
   }
 
   article::before{
-    top: $padding-xl;
+    top: $size-32;
     left: 0;
   }
 
   aside p:first-of-type::before {
     // display: block;
     top:0;
-    left: -$padding-xl;
+    left: -$size-32;
   }
 
   article:first-of-type{
@@ -88,8 +88,8 @@
     background-image: url(/assets/icons/arrow.svg);
     background-size : cover;
     display         : block;
-    width           : $padding-xl;
-    height          : $padding-xl;
+    width           : $size-32;
+    height          : $size-32;
     position        : absolute;
   }
 }

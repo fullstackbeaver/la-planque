@@ -13,4 +13,13 @@
 .useAlbertSemi {
   font-family: $action-font;
   font-weight: 600;
+  font-style : SemiBold;
+}
+
+
+.useAlbertMedium20{
+  @extend .useAlbertMedium;
+
+  font-size  : var(--sf-20);
+  line-height: var(--sf-28);
 }

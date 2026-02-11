@@ -13,7 +13,7 @@
   @extend .tear;
 
   position       : relative;
-  padding        : 0 calc(((100vw - 1440px) / 2) + $section-spacing-h);
+  padding        : 0 calc(((100vw - $desktopRef) / 2) + $size-120);
   background-size: cover;
 
   &>nav {
@@ -34,7 +34,7 @@
       "img h2"
       / $iconSize 1fr;
     height          : fit-content(128px);
-    padding         : $padding-l $padding-xl !important;
+    padding         : $size-24 $size-32 !important;
     border-color    : $color-10;
     background-color: $color-10;
     border-color    : transparent;
@@ -46,9 +46,9 @@
 
     p {
       grid-area  : p;
-      font-size  : 1rem;
+      font-size  : var(--sf-16);
       font-weight: 400;
-      line-height: 1.2rem;
+      line-height: var(--s-20);
       display    : flex;
       align-self : self-end;
       white-space: nowrap;
@@ -56,22 +56,22 @@
 
     h2 {
       grid-area: h2;
-      font-size: 1.5rem;
+      font-size: var(--sf-20);
     }
   }
 
   div {
     min-height     : calc((100vh - #{$navBarHeight}) - $announcementBarHeight);
-    padding-bottom : $section-spacing-v;
+    padding-bottom : $size-60;
     display        : flex;
     flex-direction : column;
     justify-content: center;
-    gap            : $padding-xl;
+    gap            : $size-32;
 
     &>p {
       @extend .titleStyleShadow;
-      font-size  : 2rem;
-      line-height: 3rem;
+      font-size  : var(--sf-32);
+      line-height: var(--sf-48);
     }
 
     nav:last-of-type {
@@ -104,14 +104,12 @@
   color           : $color-12;
   display         : flex;
   font-family     : $action-font;
-  padding         : $padding-l $padding-xl;
+  padding         : $size-24 $size-32;
   width           : fit-content;
   align-items     : flex-end;
 
   label {
-    display     : grid;
-    gap         : 0.5rem;
-    margin-right: 24px;
+    @extend .baseGrid;
 
     input,
     select {
@@ -125,16 +123,16 @@
         -webkit-appearance : none;
         background-image   : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
         background-repeat  : no-repeat;
-        background-position: right 0.75rem center;
-        padding-right      : 2.5rem;
-        min-height         : calc(1.25rem + #{$padding-default} * 2 + 2px);
-        line-height        : 1.25rem;
+        background-position: right var(--s-12) center;
+        padding-right      : var(--s-40);
+        min-height         : calc(var(--s-20) + var(--s-16) * 2 + 2px);
+        line-height        : var(--sf-20);
       }
     }
   }
 
   button {
-    height: 60px;
+    height: var(--s-60);
   }
 }
 

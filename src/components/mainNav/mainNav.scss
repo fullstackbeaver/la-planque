@@ -9,19 +9,19 @@ $navBarHeight: 196px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: var(--s-20);
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--s-16);
 
   & ul {
     display: flex;
-    gap: 2rem;
+    gap: var(--s-32);
     list-style: none;
 
     a {
       @extend .titleStyleShadow;
 
-      font-size: 1.5rem;
+      font-size: var(--sf-20);
       text-decoration: none;
 
       &:hover {
@@ -53,17 +53,3 @@ $navBarHeight: 196px;
   transform: translateX(-50%);
   width: 50%;
 }
-
-// .logo {
-//   font-family: var(--font-serif);
-//   font-size  : 1.5rem;
-//   text-align : center;
-//   flex       : 1;
-// }
-
-// .logo small {
-//   display       : block;
-//   font-size     : 0.7rem;
-//   letter-spacing: 2px;
-//   text-transform: uppercase;
-// }

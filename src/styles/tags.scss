@@ -32,27 +32,27 @@ body {
 
 h1 {
   @extend .titleStyleShadow;
-  font-size  : 3.5rem;
+  font-size  : var(--sf-56);
   font-weight: 400;
 }
 
 h2 {
   font-family: $title-font;
-  line-height: 3rem;
-  font-size  : 2.5rem;
+  line-height: var(--sf-48);
+  font-size  : var(--sf-40);
   font-weight: 400;
 }
 
 h3 {
   font-family: $title-font;
-  font-size  : 2rem;
+  font-size  : var(--sf-32);
   font-weight: 400;
 }
 
 
 h4 {
   font-family: $title-font;
-  font-size  : 1.5rem;
+  font-size  : var(--sf-20);
   color      : $color-4;
   font-weight: 400;
 }
@@ -65,23 +65,23 @@ section:not([class]) {
 body > section:not([class*="hero"]),
 body > aside:not([role="top-banner"]),
 footer {
-  max-width: 1440px;
+  max-width: $desktopRef;
   width    : 100%;
   margin   : 0 auto;
 }
 
 section + aside,
 section + section {
-  padding-top: $section-spacing-v;
+  padding-top: $size-60;
 }
 
 aside + section:not([class*="hero"]) {
-  margin-top: $padding-xl !important;
+  margin-top: $size-32 !important;
 }
 
 blockquote {
   font-family       : $title-font;
-  font-size         : 1.5rem;
+  font-size         : var(--sf-20);
   overflow          : hidden;
   text-overflow     : ellipsis;
   display           : -webkit-box;

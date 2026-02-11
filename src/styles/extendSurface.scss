@@ -8,9 +8,10 @@
 }
 
 .titleStyleShadow {
+  @extend .shadow;
+
   font-family: $title-font;
-  color: $color-10;
-  text-shadow: $shadow-size;
+  color      : $color-10;
 }
 
 .tear {
@@ -35,4 +36,9 @@
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 100.5% 102%;
   }
+}
+
+
+.shadow {
+  box-shadow: 0px 0px 4px rgba($color-12, 0.5);
 }

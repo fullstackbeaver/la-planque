@@ -12,9 +12,9 @@
   position        : relative;
   background-color: $color-7;
   display         : flex;
-  gap             : 1rem;
+  gap             : var(--s-16);
   text-align      : left !important;
-  margin-bottom   : $section-spacing-v;
+  margin-bottom   : $size-60;
   padding-bottom  : 90px !important;           //à cause de la déchirure
 
   hgroup {
@@ -26,7 +26,7 @@
     padding              : 0 !important;
     max-width            : 50%;
     display              : grid !important;
-    gap                  : 25px;
+    gap                  : var(--s-24);
     grid-template-columns: 1fr 1fr;
     grid-template-rows   : 1fr 1fr;
   }
@@ -39,7 +39,7 @@
   u {
     display    : block;
     font-family: $action-font;
-    font-size  : 1rem;
+    font-size  : var(--sf-16);
   }
 
   figure {
@@ -49,8 +49,8 @@
 
   figcaption {
     font-family: $title-font;
-    font-size  : 1.25rem;
-    padding    : .75rem;
+    font-size  : var(--sf-20);
+    padding    : var(--s-12);
   }
 
   a {
@@ -60,7 +60,7 @@
   }
 
   p {
-    margin-bottom: 1rem;
+    margin-bottom: var(--sf-16);
   }
 
 }

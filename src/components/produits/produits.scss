@@ -15,18 +15,18 @@
     "a1 a2 a3"
     "a4 a5 .";
   width: 100%;
-  gap:$padding-l;
+  gap:$size-24;
 
   h2 {
     grid-area: h;
   }
 
   h3 {
-    margin: $padding-l 0;
+    margin: $size-24 0;
   }
 
   img {
-    @extend .refWidth;
+    @extend .dw383;
   }
 
   article:nth-of-type(1) {

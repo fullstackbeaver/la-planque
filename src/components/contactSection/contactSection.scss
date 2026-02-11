@@ -1,11 +1,11 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/fonts.scss" as *;
 @use "../../styles/sizes.scss" as *;
+@use "../../styles/extendLayout.scss";
 @use "../../styles/extendSurface.scss";
 
 .contact form {
 
-  // border-color: $color-10;
   color       : $color-12;
   display     : grid;
   grid        :
@@ -14,18 +14,16 @@
     "m m"
     "b b";
   font-family: $action-font;
-  padding    : $padding-l $padding-xl;
+  padding    : $size-24 $size-32;
   width      : fit-content;
   align-items: flex-end;
   text-align : left;
   width      : 100%;
-  row-gap    : $padding-xl;
+  row-gap    : $size-32;
 
 
   label {
-    display     : grid;
-    gap         : 0.5rem;
-    margin-right: 24px;
+    @extend .baseGrid;
 
     &:nth-of-type(1){
       grid-area: n;
@@ -50,8 +48,8 @@
       border-color    : $color-11;
       border-style    : solid;
       color           : $color-11;
-      font-size       : 1.25rem;
-      padding         : $padding-default;
+      font-size       : var(--sf-20);
+      padding         : $size-16;
       font-family: $action-font;
 
       &:focus-visible {
@@ -61,8 +59,8 @@
   }
 
   button {
-    height    : 60px;
-    margin-top: $padding-xl;
+    height    : var(--s-60);
+    margin-top: $size-32;
     grid-area : b;
     justify-self: center;
   }

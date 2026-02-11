@@ -13,8 +13,8 @@
   border-color: $color-11;
   border-style: solid;
   color: $color-11;
-  font-size: 1.25rem;
-  padding: $padding-default;
+  font-size: var(--sf-20);
+  padding: $size-16;
 
   &:focus-visible {
     outline: $color-11 auto 1px;
@@ -34,7 +34,7 @@
 
   nav {
     display: flex;
-    gap: $padding-default;
+    gap: $size-16;
   }
 }
 
@@ -45,15 +45,15 @@
   aside {
     @extend .cards;
 
-    padding-top: $padding-xl;
+    padding-top: $size-32;
   }
 
   p+p {
-    margin-top: $padding-l;
+    margin-top: $size-24;
   }
 
   h2+p {
-    margin-top: $padding-xl;
+    margin-top: $size-32;
   }
 
   nav {
@@ -63,7 +63,7 @@
   &>a {
     @extend .cta;
 
-    margin: $padding-l 0;
+    margin: $size-24 0;
   }
 
   &>*:last-child {
@@ -75,7 +75,7 @@
     // font-weight: 700;
     // font-style: Bold;
     font-weight: bold;
-    margin: $padding-l 0;
+    margin: $size-24 0;
   }
 
   nav {
@@ -86,7 +86,7 @@
 }
 
 .nav {
-  padding: $padding-l 0;
+  padding: $size-24 0;
 
   a {
     @extend .cta;

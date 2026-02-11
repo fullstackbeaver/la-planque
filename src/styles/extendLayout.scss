@@ -6,10 +6,16 @@
   align-items    : center;
 }
 
-.refWidth {
-  width: clamp(200px, calc(383px * 100vw / 1440px), 383px);
+.dw383 {
+  width: $desktopWidth383px;
 }
 
 .block {
-  padding: $section-spacing-v $section-spacing-h;
+  padding: $size-60 $size-120;
+}
+
+.baseGrid{
+  display     : grid;
+  gap         : var(--s-8);
+  margin-right: var(--s-24);
 }
