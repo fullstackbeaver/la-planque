@@ -80,8 +80,11 @@
 
     article {
       padding: $size-16;
-      max-width: 80%;
+      max-width: calc(100% - ($size-16 * 2));
       margin: 0 auto;
+    }
+    ul {
+      text-align: initial;
     }
   }
   .photoGauche, .photoGauche nav {

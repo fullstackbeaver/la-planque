@@ -98,7 +98,6 @@
       "h"
       "i"
       "p";
-    // padding-bottom: $size-60;
 
 
     &:has(nav) {
@@ -107,10 +106,6 @@
         "i"
         "p"
         "n";
-
-      // p {
-      //   padding-bottom: 0 !important;
-      // }
     }
     img {
       width: 100vw;
@@ -120,8 +115,16 @@
       padding: 0 $size-32;
     }
 
-    p {
-      margin-bottom: $size-40;
+    &:not(:has(nav)){
+      p {
+        margin-bottom: $size-40;
+      }
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: $size-16;
+      padding: 0 $size-32;
     }
   }
 }

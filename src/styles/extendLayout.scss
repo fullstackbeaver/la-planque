@@ -21,7 +21,7 @@
 .block {
   padding: $size-60 $size-120;
   @include jusque("tablet"){
-    padding: $size-24 $size-40;
+    padding: $size-40 $size-24;
   }
 
   @include jusque("desktopXl"){

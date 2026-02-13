@@ -98,6 +98,8 @@
 
 @include jusque("tablet") {
   .tarifs {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: $size-16;
   }
 }

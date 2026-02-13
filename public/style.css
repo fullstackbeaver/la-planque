@@ -101,7 +101,7 @@
 }
 @media (max-width: 767px) {
   .block, .tarifs, .produits, .sectionWithCards, .testimonial, .photos4, .photoGauche, section:not([class]) {
-    padding: 24px 40px;
+    padding: 40px 24px;
   }
 }
 .baseGrid, .contact form label, .hero form label {
@@ -739,8 +739,11 @@ logo.big {
   }
   .photoGauche article {
     padding: 16px;
-    max-width: 80%;
+    max-width: calc(100% - 32px);
     margin: 0 auto;
+  }
+  .photoGauche ul {
+    text-align: initial;
   }
   .photoGauche, .photoGauche nav {
     display: flex;
@@ -819,8 +822,14 @@ logo.big {
     text-align: initial;
     padding: 0 32px;
   }
-  .photoDroite p {
+  .photoDroite:not(:has(nav)) p {
     margin-bottom: 40px;
+  }
+  .photoDroite nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 32px;
   }
 }
 .photos4 {
@@ -1257,7 +1266,9 @@ footer input {
 
 @media (max-width: 767px) {
   .tarifs {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 }
 .testimonial {
