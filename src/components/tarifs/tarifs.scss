@@ -1,13 +1,14 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/extendLayout.scss";
 @use "../../styles/fonts.scss" as *;
+@use "../../styles/mixins.scss" as *;
 @use "../../styles/sizes.scss" as *;
 
 .tarifs {
   @extend .block;
 
   display: grid;
-  grid   : 
+  grid   :
     "h h"
     "t1 r"
     "t2 r"
@@ -91,5 +92,12 @@
     width           : $size-32;
     height          : $size-32;
     position        : absolute;
+  }
+}
+
+
+@include jusque("tablet") {
+  .tarifs {
+    display: block;
   }
 }

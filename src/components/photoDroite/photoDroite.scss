@@ -1,6 +1,7 @@
 // @use "../../styles/extendSurface.scss";
 @use "../../styles/colors.scss" as *;
 @use "../../styles/extendBlock.scss";
+@use "../../styles/mixins.scss" as *;
 @use "../../styles/sizes.scss" as *;
 
 .photoDroite {
@@ -83,5 +84,44 @@
 
   logo{
     margin-top: -$size-32;
+  }
+}
+
+
+
+@include jusque("tablet") {
+  .photoDroite {
+
+    padding-top: $size-32 !important;
+    gap: $size-32;
+    grid:
+      "h"
+      "i"
+      "p";
+    // padding-bottom: $size-60;
+
+
+    &:has(nav) {
+      grid:
+        "h"
+        "i"
+        "p"
+        "n";
+
+      // p {
+      //   padding-bottom: 0 !important;
+      // }
+    }
+    img {
+      width: 100vw;
+    }
+    h2, p {
+      text-align: initial;
+      padding: 0 $size-32;
+    }
+
+    p {
+      margin-bottom: $size-40;
+    }
   }
 }

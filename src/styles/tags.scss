@@ -1,6 +1,7 @@
 @use "./colors.scss" as *;
 @use "./extendBlock.scss";
 @use "./fonts.scss" as *;
+@use "./settings.scss" as *;
 @use "./sizes.scss" as *;
 @use "../components/card/card.scss";
 @use "../components/cta/cta.scss";
@@ -65,7 +66,7 @@ section:not([class]) {
 body > section:not([class*="hero"]),
 body > aside:not([role="top-banner"]),
 footer {
-  max-width: $desktopRef;
+  max-width: $desktopLargeRef;
   width    : 100%;
   margin   : 0 auto;
 }

@@ -4,37 +4,64 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/fonts.scss" as *;
 @use "../../styles/extendSurface.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/sizes.scss" as *;
+@use "../../styles/settings.scss" as *;
 
-
-$imageMainTriptyque:  clamp(200px, calc(640px * 100vw / $desktopRef), 640px);
-$imageSmallTriptyque: clamp(200px, calc(360px * 100vw / $desktopRef), 360px);
-$spaceImageTriptyque: clamp(5px,   calc(40px * 100vw / $desktopRef),  40px);
 
 .triptyque {
   display: grid;
-  column-gap: $spaceImageTriptyque;
+
+  --imageMainTriptyque: #{fluid(200px, 640px, $desktopLargeRef)};
+  --imageSmallTriptyque: #{fluid(200px, 360px, $desktopLargeRef)};
+  --spaceImageTriptyque: #{fluid(5px,   40px, $desktopLargeRef)};
+
   grid: ". iC ."
     "iG iC iD"
     ". iC ."
-    /$imageSmallTriptyque $imageMainTriptyque $imageSmallTriptyque;
+    / var(--imageSmallTriptyque) var(--imageMainTriptyque) var(--imageSmallTriptyque);
 
   img {
     box-shadow: $shadow;
+  }
+
+
+  column-gap: var(--spaceImageTriptyque);
+
+  img {
     border-radius: 4px;
 
     &:first-of-type {
       grid-area: iG;
-      width: $imageSmallTriptyque;
+      width: var(--imageSmallTriptyque);
     }
 
     &:nth-of-type(2) {
       grid-area: iC;
-      width: $imageMainTriptyque;
+      width: var(--imageMainTriptyque);
     }
 
     &:nth-of-type(3) {
       grid-area: iD;
-      width: $imageSmallTriptyque;
+      width: var(--imageSmallTriptyque);
+    }
+  }
+}
+
+@include jusque("tablet") {
+  .triptyque {
+    grid:
+      "iC iC"
+      "iG iD";
+
+    --imageMainTriptyque: 100vw;
+    --imageSmallTriptyque: 50vw;
+    --spaceImageTriptyque: 0;
+    padding: $size-32 0 0 0;
+
+    img {
+      box-shadow: initial;
+      border-radius: 0;
     }
   }
 }

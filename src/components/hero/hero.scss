@@ -1,4 +1,4 @@
-// @use "../announcementBar/announcementBar.scss" as *;
+@use "../announcementBar/announcementBar.scss" as *;
 @use "../card/card.scss" as *;
 @use "../mainNav/mainNav.scss" as *;
 @use "../../styles/animations.scss";
@@ -7,13 +7,15 @@
 @use "../../styles/extendBlock.scss";
 @use "../../styles/extendSurface.scss";
 @use "../../styles/fonts.scss" as *;
+@use "../../styles/settings.scss" as *;
 @use "../../styles/sizes.scss" as *;
+@use "../../styles/mixins.scss" as *;
 
 .hero {
   @extend .tear;
 
   position       : relative;
-  padding        : 0 calc(((100vw - $desktopRef) / 2) + $size-120);
+  padding        : 0 calc(((100vw - $desktopLargeRef) / 2) + $size-120);
   background-size: cover;
 
   &>nav {
@@ -48,7 +50,7 @@
       grid-area  : p;
       font-size  : var(--sf-16);
       font-weight: 400;
-      line-height: var(--s-20);
+      line-height: $size-20;
       display    : flex;
       align-self : self-end;
       white-space: nowrap;
@@ -61,8 +63,8 @@
   }
 
   div {
-    // min-height     : calc((100vh - #{$navBarHeight}) - $announcementBarHeight);
-    min-height     : calc(100vh - #{$navBarHeight});
+    min-height     : calc((100vh - #{$navBarHeight}) - $announcementBarHeight);
+    // min-height     : calc(100vh - #{$navBarHeight});
     padding-bottom : $size-60;
     display        : flex;
     flex-direction : column;
@@ -75,10 +77,10 @@
       line-height: var(--sf-48);
     }
 
-    nav:last-of-type {
+    nav {
       @extend .cards;
 
-      display: flex;
+      // display: flex;
     }
   }
 
@@ -107,7 +109,7 @@
   font-family     : $action-font;
   padding         : $size-24 $size-32;
   width           : fit-content;
-  align-items     : flex-end;
+  // align-items     : flex-end;
 
   label {
     @extend .baseGrid;
@@ -124,16 +126,20 @@
         -webkit-appearance : none;
         background-image   : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
         background-repeat  : no-repeat;
-        background-position: right var(--s-12) center;
+        background-position: right $size-12 center;
         padding-right      : var(--s-40);
-        min-height         : calc(var(--s-20) + var(--s-16) * 2 + 2px);
+        min-height         : calc($size-20 + $size-16 * 2 + 2px);
         line-height        : var(--sf-20);
       }
     }
   }
 
   button {
-    height: var(--s-60);
+    height: $size-60;
+  }
+
+  @include aPartir('tablet') {
+    align-items     : flex-end;
   }
 }
 
@@ -147,4 +153,46 @@
 
 .hero.contact {
   @extend .jardin;
+}
+
+
+@include jusque("tablet"){
+  .hero {
+    padding: $size-32;
+  }
+  .hero.home{
+    div nav {
+      // display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      a {
+        display: block;
+      }
+    }
+
+    form {
+      margin: 0 auto;
+    }
+
+    p {
+      white-space: initial;
+    }
+  }
+}
+
+@include jusque("tablet"){
+  .hero form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero:not(.home) {
+    height: 220px;
+  }
+
+}
+
+@include jusque("desktopXl"){
+
 }

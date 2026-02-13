@@ -3,16 +3,17 @@
 @use "../../styles/extendTypo.scss";
 @use "../../styles/colors.scss" as *;
 @use "../../styles/sizes.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/settings.scss" as *;
 
 .valeurs {
-  max-width: calc($desktopRef - ($size-120 * 2));
+  @extend .flexCol;
+
+  max-width: calc($desktopLargeRef - ($size-120 * 2));
   margin: 0 auto;
-  padding: $size-32 0 $size-60 0;
+  padding: $size-32 0 $size-16 0;
 
-
-  display: flex;
   gap: $size-32;
-  flex-direction: column;
 
   section {
     @extend .bgCol13;
@@ -22,16 +23,19 @@
     column-count: 2;
     column-gap: var(--sf-48);
     column-fill: auto;
-    max-height: 415px;
+
+    @include aPartir('desktopXl'){
+      max-height: 415px;
+    }
   }
 
   h2 {
     text-align: center;
     width: 100%;
-    margin-bottom: var(--s-32);
+    margin-bottom: $size-32;
     color: $color-4;
     column-span: all;
-    padding-top: var(--s-60);
+    padding-top: $size-60;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: var(--s-40);
@@ -58,7 +62,7 @@
   }
 
   ul {
-    padding-left: var(--s-20);
+    padding-left: $size-20;
   }
 
 }

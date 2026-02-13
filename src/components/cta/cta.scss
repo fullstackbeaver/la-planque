@@ -1,12 +1,13 @@
 @use "../../styles/colors.scss" as *;
-@use "../../styles/sizes.scss" as *;
-@use "../../styles/fonts.scss" as *;
 @use "../../styles/extendLayout.scss";
 @use "../../styles/extendSurface.scss";
 @use "../../styles/extendTypo.scss";
+@use "../../styles/fonts.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/sizes.scss" as *;
 
 $sizeIcon: 22px;
-$finalSize: calc((var(--s-16) * 2) + $sizeIcon + 2px); // le dernier 2 c'est la bordure
+$finalSize: calc(($size-16 * 2) + $sizeIcon + 2px); // le dernier 2 c'est la bordure
 
 button, .cta {
   @extend .withBorder;
@@ -17,7 +18,7 @@ button, .cta {
   padding    : $size-16;
   cursor     : pointer;
   transition : all 0.3s ease;
-  gap        : var(--s-8);
+  gap        : $size-8;
   white-space: nowrap;
   width      : fit-content;
 
@@ -96,7 +97,15 @@ button, .cta {
 .cta-hover-mustard {
 
   &:hover {
-    color:$color-10;
-    border-color: $color-10;
+    color:$color-10 !important;
+    border-color: $color-10 !important;
+  }
+}
+
+
+
+@include jusque("tablet") {
+  .cta {
+    width: initial;
   }
 }

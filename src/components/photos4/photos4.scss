@@ -3,6 +3,7 @@
 @use "../../styles/extendSurface.scss";
 @use "../../styles/fonts.scss" as *;
 @use "../../styles/sizes.scss" as *;
+@use "../../styles/mixins.scss" as *;
 @use "../cta/cta.scss" as *;
 
 .photos4 {
@@ -12,10 +13,10 @@
   position        : relative;
   background-color: $color-7;
   display         : flex;
-  gap             : var(--s-16);
+  gap             : $size-16;
   text-align      : left !important;
   margin-bottom   : $size-60;
-  padding-bottom  : 90px !important;           //à cause de la déchirure
+  padding-bottom  : var(--s-90) !important;           //à cause de la déchirure
 
   hgroup {
     max-width : 50%;
@@ -26,7 +27,7 @@
     padding              : 0 !important;
     max-width            : 50%;
     display              : grid !important;
-    gap                  : var(--s-24);
+    gap                  : $size-24;
     grid-template-columns: 1fr 1fr;
     grid-template-rows   : 1fr 1fr;
   }
@@ -50,7 +51,7 @@
   figcaption {
     font-family: $title-font;
     font-size  : var(--sf-20);
-    padding    : var(--s-12);
+    padding    : $size-12;
   }
 
   a {
@@ -63,4 +64,30 @@
     margin-bottom: var(--sf-16);
   }
 
+}
+
+
+@include jusque("tablet"){
+  .photos4{
+    flex-direction: column;
+    padding-top: $size-60;
+    gap: $size-32;
+
+    hgroup {
+      max-width: unset;
+    }
+
+    h2 {
+      margin-bottom: $size-32;
+    }
+
+    aside {
+      max-width: unset;
+      display: flex !important;
+      flex-direction: column;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }

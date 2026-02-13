@@ -15,7 +15,7 @@ $announcementBarHeight: calc(44px - ($size-8 * 2));
 
   a {
     text-decoration: underline;
-    margin: 0 var(--s-8);
+    margin: 0 $size-8;
   }
 
   @include jusque('tablet'){

@@ -59,9 +59,15 @@
   }
 
   button {
-    height    : var(--s-60);
+    height    : $size-60;
     margin-top: $size-32;
     grid-area : b;
     justify-self: center;
   }
 }
+
+// @include jusque("tablet") {
+//   .contact form {
+//     width: fit-content;
+//   }
+// }

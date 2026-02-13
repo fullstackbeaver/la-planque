@@ -2,6 +2,7 @@
 @use "../../styles/sizes.scss" as * ;
 @use "../../styles/extendTypo.scss";
 @use "../../styles/extendBlock.scss";
+@use "../../styles/mixins.scss" as *;
 
 
 .testimonial {
@@ -56,4 +57,29 @@
     color     : $color-4;
   }
 
+}
+@include jusque("tablet"){
+  .testimonial{
+    display: flex;
+    flex-direction: column;
+
+    gap: $size-32;
+
+    article {
+      width: 100%;
+    }
+
+    // hgroup {
+    //   max-width: unset;
+    // }
+
+    // aside {
+    //   max-width: unset;
+    //   display: flex !important;
+    //   flex-direction: column;
+    // }
+    // img {
+    //   width: 100%;
+    // }
+  }
 }

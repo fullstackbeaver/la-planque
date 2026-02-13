@@ -2,6 +2,8 @@
 @use "../../styles/extendBlock.scss";
 @use "../../styles/extendLayout.scss";
 @use "../../styles/extendTypo.scss";
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/sizes.scss" as *;
 
 .photoGauche{
 
@@ -10,7 +12,7 @@
 
   text-align: left !important;
   display   : grid;
-  column-gap: var(--s-32);
+  column-gap: $size-32;
   grid :
     "i h" 1fr
     "i p" auto
@@ -58,5 +60,36 @@
       display: block;
       margin: 0 auto;
     }
+  }
+}
+
+@include jusque("tablet"){
+  .photoGauche {
+    padding: $size-32 0;
+    // gap: $size-32;
+    h2, p, nav {
+      padding: 0 $size-32;
+      width: 100%;
+    }
+    h2 {
+      margin-top: $size-32;
+    }
+    & > a {
+      margin: $size-16 auto;
+    }
+
+    article {
+      padding: $size-16;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+  .photoGauche, .photoGauche nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photoGauche h2 {
+    align-self: initial;
   }
 }

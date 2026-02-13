@@ -2,6 +2,7 @@
 @use "./fonts.scss" as *;
 @use "./sizes.scss" as *;
 @use "./extendLayout.scss";
+@use "./mixins.scss" as *;
 @use "../components/card/card.scss";
 @use "../components/cta/cta.scss";
 
@@ -90,5 +91,18 @@
 
   a {
     @extend .cta;
+  }
+}
+
+@include jusque("tablet"){
+  .sectionWithCards{
+    flex-direction: column;
+    nav {
+    flex-direction: column;
+
+    }
+  }
+  .sectionBase {
+    text-align: initial;
   }
 }

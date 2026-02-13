@@ -3,6 +3,7 @@
 @use "../../styles/extendTypo.scss";
 @use "../../styles/fonts.scss" as *;
 @use "../../styles/sizes.scss" as *;
+@use "../../styles/mixins.scss" as *;
 
 .produits{
 
@@ -52,5 +53,11 @@
   p {
     @extend .useAlbertMedium;
     text-align: initial;
+  }
+}
+
+@include jusque("tablet") {
+  .produits {
+    display: block;
   }
 }

@@ -1,4 +1,5 @@
 @use "./sizes.scss" as *;
+@use "./mixins.scss" as *;
 
 .flexCentered {
   display        : inline-flex !important;
@@ -8,14 +9,33 @@
 
 .dw383 {
   width: $desktopWidth383px;
+  @include jusque("desktop"){
+    width: 100%;
+  }
+
+  @include jusque("desktopXl"){
+
+  }
 }
 
 .block {
   padding: $size-60 $size-120;
+  @include jusque("tablet"){
+    padding: $size-24 $size-40;
+  }
+
+  @include jusque("desktopXl"){
+
+  }
 }
 
 .baseGrid{
   display     : grid;
-  gap         : var(--s-8);
-  margin-right: var(--s-24);
+  gap         : $size-8;
+  margin-right: $size-24;
+}
+
+.flexCol{
+  display: flex;
+  flex-direction: column;
 }

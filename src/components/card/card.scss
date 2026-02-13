@@ -3,6 +3,7 @@
 @use "../../styles/extendSurface.scss";
 @use "../../styles/extendTypo.scss";
 @use "../../styles/sizes.scss" as *;
+@use "../../styles/mixins.scss" as *;
 
 $iconSize: 73px;
 $spacing : 21px;
@@ -24,7 +25,7 @@ $spacing : 21px;
   }
 
   ul {
-    padding-inline-start: var(--s-16);
+    padding-inline-start: $size-16;
   }
 
   &:has(ul){
@@ -38,4 +39,18 @@ $spacing : 21px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@include jusque("tablet"){
+  .card {
+    text-align: center;
+  }
+  .cards {
+    flex-direction: column;
+    gap: $size-32;
+    aside {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
