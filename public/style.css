@@ -573,6 +573,7 @@ logo.big {
   position: relative;
   padding: 0 calc((100vw - 1440px) / 2 + 120px);
   background-size: cover;
+  background-position: center;
 }
 .hero.home article {
   display: grid;
@@ -686,7 +687,7 @@ logo.big {
     width: 100%;
   }
   .hero:not(.home) {
-    height: 220px;
+    height: initial;
   }
 }
 .photoGauche {
@@ -812,18 +813,28 @@ logo.big {
     gap: 32px;
     grid: "h" "i" "p";
   }
-  .photoDroite:has(nav) {
+  .photoDroite:not(:has(nav)) p {
+    margin-bottom: 40px;
+  }
+  .photoDroite:has(nav), .photoDroite:has(ul) {
     grid: "h" "i" "p" "n";
+  }
+  .photoDroite:has(nav) h2, .photoDroite:has(ul) h2 {
+    margin-top: 0;
+  }
+  .photoDroite:has(nav) p, .photoDroite:has(ul) p {
+    margin-bottom: 0;
   }
   .photoDroite img {
     width: 100vw;
   }
-  .photoDroite h2, .photoDroite p {
+  .photoDroite h2, .photoDroite p, .photoDroite ul {
     text-align: initial;
     padding: 0 32px;
   }
-  .photoDroite:not(:has(nav)) p {
-    margin-bottom: 40px;
+  .photoDroite logo {
+    height: 180px;
+    margin: 0 auto;
   }
   .photoDroite nav {
     display: flex;
@@ -1158,10 +1169,10 @@ footer input {
   }
 }
 .valeurs {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 32px 0 16px 0;
   gap: 32px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 32px 0 16px 0;
 }
 .valeurs section {
   display: block;
@@ -1183,7 +1194,7 @@ footer input {
   padding-top: 60px;
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: var(--s-40);
+  background-size: 40px;
 }
 .valeurs section:first-of-type h2 {
   background-image: url(/assets/icons/kern.svg);
@@ -1203,6 +1214,13 @@ footer input {
   padding-left: 20px;
 }
 
+@media (max-width: 767px) {
+  .valeurs section {
+    column-count: initial;
+    column-gap: var(--sf-32);
+    column-fill: initial;
+  }
+}
 .tarifs {
   display: grid;
   grid: "h h" "t1 r" "t2 r" "a a"/60% 40%;

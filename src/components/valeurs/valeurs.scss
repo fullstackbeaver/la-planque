@@ -9,11 +9,10 @@
 .valeurs {
   @extend .flexCol;
 
+  gap      : $size-32;
+  margin   : 0 auto;
   max-width: calc($desktopLargeRef - ($size-120 * 2));
-  margin: 0 auto;
-  padding: $size-32 0 $size-16 0;
-
-  gap: $size-32;
+  padding  : $size-32 0 $size-16 0;
 
   section {
     @extend .bgCol13;
@@ -38,7 +37,7 @@
     padding-top: $size-60;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: var(--s-40);
+    background-size: $size-40;
   }
 
   section:first-of-type h2 {
@@ -65,4 +64,15 @@
     padding-left: $size-20;
   }
 
+}
+
+
+@include jusque("tablet") {
+  .valeurs {
+    section {
+      column-count: initial;
+      column-gap  : var(--sf-32);
+      column-fill : initial;
+    }
+  }
 }

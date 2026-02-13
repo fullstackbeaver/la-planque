@@ -14,9 +14,10 @@
 .hero {
   @extend .tear;
 
-  position       : relative;
-  padding        : 0 calc(((100vw - $desktopLargeRef) / 2) + $size-120);
-  background-size: cover;
+  position           : relative;
+  padding            : 0 calc(((100vw - $desktopLargeRef) / 2) + $size-120);
+  background-size    : cover;
+  background-position: center;
 
   &>nav {
     @extend .mainNav;
@@ -188,7 +189,7 @@
   }
 
   .hero:not(.home) {
-    height: 220px;
+    height: initial;
   }
 
 }

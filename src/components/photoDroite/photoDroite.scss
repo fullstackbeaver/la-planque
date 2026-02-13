@@ -99,26 +99,38 @@
       "i"
       "p";
 
+    &:not(:has(nav)){
+      p {
+        margin-bottom: $size-40;
+      }
+    }
 
-    &:has(nav) {
+    &:has(nav), &:has(ul) {
       grid:
         "h"
         "i"
         "p"
         "n";
+
+      h2{
+        margin-top: 0;
+      }
+      p {
+        margin-bottom: 0;
+      }
     }
+
     img {
       width: 100vw;
     }
-    h2, p {
+    h2, p, ul {
       text-align: initial;
       padding: 0 $size-32;
     }
 
-    &:not(:has(nav)){
-      p {
-        margin-bottom: $size-40;
-      }
+    logo {
+      height: 180px;
+      margin: 0 auto;
     }
     nav {
       display: flex;
