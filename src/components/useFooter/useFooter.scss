@@ -95,7 +95,7 @@ footer {
   & > nav:last-of-type {
     grid-area: legal;
     font-weight: bold;
-    font-size: var(--sf-16);
+    font-size: $sizeF-16;
     justify-self: end;
     margin-bottom: $size-16;
     z-index: 1;
@@ -156,7 +156,7 @@ footer {
   & > p {
     grid-area: cp;
     font-weight: bold;
-    font-size: var(--sf-16);
+    font-size: $sizeF-16;
   }
 
   li {
@@ -167,7 +167,7 @@ footer {
   input{
     @extend .inputForm;
     @extend .useAlbertSemi;
-    font-size: var(--sf-16);
+    font-size: $sizeF-16;
     // width: calc(100% - #{$finalSize} - ($size-16 / 2) ); //padding-default c'est la marge entre le bouton et l'input
   }
 }

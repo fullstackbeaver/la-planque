@@ -39,21 +39,21 @@ h1 {
 
 h2 {
   font-family: $title-font;
-  line-height: var(--sf-48);
+  line-height: $sizeF-48;
   font-size  : var(--sf-40);
   font-weight: 400;
 }
 
 h3 {
   font-family: $title-font;
-  font-size  : var(--sf-32);
+  font-size  : $sizeF-32;
   font-weight: 400;
 }
 
 
 h4 {
   font-family: $title-font;
-  font-size  : var(--sf-20);
+  font-size  : $sizeF-20;
   color      : $color-4;
   font-weight: 400;
 }
@@ -82,7 +82,7 @@ aside + section:not([class*="hero"]) {
 
 blockquote {
   font-family       : $title-font;
-  font-size         : var(--sf-20);
+  font-size         : $sizeF-20;
   overflow          : hidden;
   text-overflow     : ellipsis;
   display           : -webkit-box;

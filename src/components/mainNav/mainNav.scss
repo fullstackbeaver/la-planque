@@ -27,7 +27,7 @@ $navBarHeight: 196px;
   a {
     @extend .titleStyleShadow;
 
-    font-size: var(--sf-20);
+    font-size: $sizeF-20;
     text-decoration: none;
 
     &::after {

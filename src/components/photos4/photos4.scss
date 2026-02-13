@@ -40,7 +40,7 @@
   u {
     display    : block;
     font-family: $action-font;
-    font-size  : var(--sf-16);
+    font-size  : $sizeF-16;
   }
 
   figure {
@@ -50,7 +50,7 @@
 
   figcaption {
     font-family: $title-font;
-    font-size  : var(--sf-20);
+    font-size  : $sizeF-20;
     padding    : $size-12;
   }
 
@@ -61,7 +61,7 @@
   }
 
   p {
-    margin-bottom: var(--sf-16);
+    margin-bottom: $sizeF-16;
   }
 
 }

@@ -20,7 +20,7 @@
 
     display: block;
     column-count: 2;
-    column-gap: var(--sf-48);
+    column-gap: $sizeF-48;
     column-fill: auto;
 
     @include aPartir('desktopXl'){
@@ -71,7 +71,7 @@
   .valeurs {
     section {
       column-count: initial;
-      column-gap  : var(--sf-32);
+      column-gap  : $sizeF-32;
       column-fill : initial;
     }
   }

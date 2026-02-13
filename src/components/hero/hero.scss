@@ -49,7 +49,7 @@
 
     p {
       grid-area  : p;
-      font-size  : var(--sf-16);
+      font-size  : $sizeF-16;
       font-weight: 400;
       line-height: $size-20;
       display    : flex;
@@ -59,7 +59,7 @@
 
     h2 {
       grid-area: h2;
-      font-size: var(--sf-20);
+      font-size: $sizeF-20;
     }
   }
 
@@ -74,8 +74,8 @@
 
     &>p {
       @extend .titleStyleShadow;
-      font-size  : var(--sf-32);
-      line-height: var(--sf-48);
+      font-size  : $sizeF-32;
+      line-height: $sizeF-48;
     }
 
     nav {
@@ -130,7 +130,7 @@
         background-position: right $size-12 center;
         padding-right      : var(--s-40);
         min-height         : calc($size-20 + $size-16 * 2 + 2px);
-        line-height        : var(--sf-20);
+        line-height        : $sizeF-20;
       }
     }
   }

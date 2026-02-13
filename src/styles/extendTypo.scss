@@ -1,4 +1,5 @@
 @use "./fonts.scss" as *;
+@use "./sizes.scss" as *;
 
 .useAlbertRegular {
   font-family: $action-font;
@@ -20,6 +21,6 @@
 .useAlbertMedium20{
   @extend .useAlbertMedium;
 
-  font-size  : var(--sf-20);
-  line-height: var(--sf-28);
+  font-size  : $sizeF-20;
+  line-height: $sizeF-28;
 }

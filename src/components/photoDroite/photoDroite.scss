@@ -79,7 +79,7 @@
   }
   ul {
     margin-bottom: $size-60;
-    padding-left: calc($size-120 + var(--sf-20));
+    padding-left: calc($size-120 + $sizeF-20);
   }
 
   logo{
