@@ -33,14 +33,14 @@ body {
 
 h1 {
   @extend .titleStyleShadow;
-  font-size  : var(--sf-56);
+  font-size  : $sizeF-56;
   font-weight: 400;
 }
 
 h2 {
   font-family: $title-font;
   line-height: $sizeF-48;
-  font-size  : var(--sf-40);
+  font-size  : $sizeF-40;
   font-weight: 400;
 }
 

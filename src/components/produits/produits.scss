@@ -58,6 +58,7 @@
 
 @include jusque("tablet") {
   .produits {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }

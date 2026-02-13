@@ -303,14 +303,14 @@ body {
 }
 
 h1 {
-  font-size: var(--sf-56);
+  font-size: 3.5rem;
   font-weight: 400;
 }
 
 h2 {
   font-family: Montaga;
   line-height: 3rem;
-  font-size: var(--sf-40);
+  font-size: 2.5rem;
   font-weight: 400;
 }
 
@@ -996,7 +996,8 @@ logo.big {
 
 @media (max-width: 767px) {
   .produits {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 footer {
