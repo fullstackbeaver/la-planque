@@ -1,8 +1,9 @@
 @use "../../styles/colors.scss" as *;
-@use "../../styles/fonts.scss" as *;
-@use "../../styles/sizes.scss" as *;
 @use "../../styles/extendLayout.scss";
 @use "../../styles/extendSurface.scss";
+@use "../../styles/fonts.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/sizes.scss" as *;
 
 .contact form {
 
@@ -50,7 +51,7 @@
       color           : $color-11;
       font-size       : var(--sf-20);
       padding         : $size-16;
-      font-family: $action-font;
+      font-family     : $action-font;
 
       &:focus-visible {
         outline: $color-11 auto 1px;
@@ -66,8 +67,25 @@
   }
 }
 
-// @include jusque("tablet") {
-//   .contact form {
-//     width: fit-content;
-//   }
-// }
+@include jusque("tablet") {
+  .contact {
+    padding-top: $size-32;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: $size-16;
+      align-items: unset;
+    }
+    label {
+      margin: 0 !important;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0;
+    }
+    button {
+      margin: 0 auto;
+    }
+  }
+}

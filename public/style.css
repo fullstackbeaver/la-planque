@@ -950,6 +950,27 @@ logo.big {
   justify-self: center;
 }
 
+@media (max-width: 767px) {
+  .contact {
+    padding-top: 32px;
+  }
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: unset;
+  }
+  .contact label {
+    margin: 0 !important;
+  }
+  .contact input, .contact textarea {
+    width: 100%;
+    padding: 0;
+  }
+  .contact button {
+    margin: 0 auto;
+  }
+}
 .produits {
   display: grid;
   grid: "h h h" "a1 a2 a3" "a4 a5 .";
@@ -1122,7 +1143,7 @@ footer input {
     display: block;
   }
   footer form {
-    width: calc(100% - 32px);
+    width: 100%;
     row-gap: 12px;
   }
 }

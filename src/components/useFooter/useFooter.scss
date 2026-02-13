@@ -192,7 +192,7 @@ footer {
       display: block;
     }
     form {
-      width: calc(100% - $size-32);
+      width: 100%;
       row-gap : $size-12;
     }
   }
