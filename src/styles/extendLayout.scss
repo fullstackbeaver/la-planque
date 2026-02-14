@@ -21,12 +21,13 @@
 
 .block {
   padding: $size-60 $size-120;
-  @include jusque("tablet"){
-    padding: $size-40 $size-24;
-  }
 
   @include jusque("desktopXl"){
+    padding: 0 fluid($size-40, $size-120, $desktopLargeRef);
+  }
 
+  @include jusque("tablet"){
+    padding: $size-40 $size-24;
   }
 }
 

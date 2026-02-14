@@ -91,11 +91,17 @@
 .block, .tarifs, .produits, .sectionWithCards, .testimonial, .photos4, .photoGauche, section:not([class]) {
   padding: 60px 120px;
 }
+@media (max-width: 1439px) {
+  .block, .tarifs, .produits, .sectionWithCards, .testimonial, .photos4, .photoGauche, section:not([class]) {
+    padding: 0 clamp(40px, 120px * 100vw / 1440px, 120px);
+  }
+}
 @media (max-width: 767px) {
   .block, .tarifs, .produits, .sectionWithCards, .testimonial, .photos4, .photoGauche, section:not([class]) {
     padding: 40px 24px;
   }
 }
+
 .baseGrid, .contact form label, .hero form label {
   display: grid;
   gap: 8px;
