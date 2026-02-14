@@ -55,8 +55,10 @@
       "iG iD";
 
     --imageMainTriptyque: 100vw;
-    --imageSmallTriptyque: 50vw;
+    --imageSmallTriptyque: calc(var(--imageMainTriptyque) / 2);
     --spaceImageTriptyque: 0;
+    width: var(--imageMainTriptyque);
+    // margin: 0 auto;
     padding: $size-32 0 0 0;
 
     img {

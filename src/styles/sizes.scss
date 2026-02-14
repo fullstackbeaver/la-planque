@@ -1,6 +1,7 @@
 @use "sass:math";
+@use "sass:map";
 @use "./mixins.scss" as *;
-@use "./settings.scss" as *;
+// @use "./settings.scss" as *;
 
 @function fluid($min, $max, $ref) {
   @return clamp($min, calc(#{$max} * 100vw / #{$ref}), $max);
@@ -30,17 +31,13 @@ $sizeF-40: 2.5rem;
 $sizeF-48: 3rem;
 $sizeF-56: 3.5rem;
 
-// responsive images sizes
-$desktopWidth383px: fluid(200px, 383px, $desktopLargeRef);
-
-
 // export responsive values for css
 :root {
     --s-40 : #{$size-40};
     --s-90 : #{$size-90};
     --s-120: #{$size-120};
 
-  @include jusque('tablet') {
+  @include jusque('desktop') {
     --s-40 : #{math.div($size-40, 2)};
     --s-90 : #{math.div($size-90, 2)};
     --s-120: #{math.div($size-120, 2)};

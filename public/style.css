@@ -32,7 +32,7 @@
   --s-90: 90px;
   --s-120: 120px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   :root {
     --s-40: 20px;
     --s-90: 45px;
@@ -68,10 +68,10 @@
   z-index: 1;
   mask-image: var(--tear);
   mask-repeat: no-repeat;
-  mask-size: 100.5% 102%;
+  mask-size: 100.5% 103%;
   -webkit-mask-image: var(--tear);
   -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 100.5% 102%;
+  -webkit-mask-size: 100.5% 103%;
 }
 
 .flexCentered, footer aside a:not(:first-of-type), button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
@@ -81,9 +81,9 @@
 }
 
 .dw383, .produits img, .photoGauche > img, .hero.home article, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
-  width: clamp(200px, 383px * 100vw / 1440px, 383px);
+  width: clamp(100px, 383px * 100vw / 1440px, 383px);
 }
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .dw383, .produits img, .photoGauche > img, .hero.home article, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
     width: 100%;
   }
@@ -481,7 +481,7 @@ logo.big {
   transform: translateX(-50%);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .mainNav::after, .hero > nav::after {
     content: "";
     position: fixed;
@@ -538,7 +538,7 @@ logo.big {
     color: #666;
   }
 }
-@media (max-width: 767px) and (max-width: 768px) {
+@media (max-width: 1023px) and (max-width: 768px) {
   .mainNav a, .hero > nav a {
     color: white;
     font-size: 1.5rem;
@@ -547,7 +547,7 @@ logo.big {
     color: #ccc;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .mainNav.is-open::before, .hero > nav.is-open::before {
     opacity: 1;
     pointer-events: auto;
@@ -655,9 +655,58 @@ logo.big {
   text-align: center;
 }
 
+@media (max-width: 1439px) {
+  .hero.home div nav {
+    justify-content: space-around;
+  }
+  .hero.home div h1, .hero.home div > p {
+    padding: 0 clamp(0px, 120px * 100vw / 1440px, 120px);
+  }
+  .hero.home article {
+    padding: 16px 24px !important;
+  }
+  .hero form {
+    margin: 0 auto;
+  }
+  .hero p {
+    white-space: unset !important;
+  }
+}
+@media (max-width: 1023px) {
+  .hero.home div {
+    padding-top: 60px;
+  }
+  .hero article {
+    text-align: center;
+    display: flex !important;
+    flex-direction: column;
+  }
+  .hero img {
+    width: 50px;
+    margin: 0 auto;
+  }
+  .hero form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .hero form button {
+    grid-column: 1/3;
+    justify-self: center;
+    margin-top: 16px;
+  }
+}
 @media (max-width: 767px) {
   .hero {
     padding: 32px;
+  }
+  .hero form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero button {
+    align-self: center;
   }
   .hero.home div nav {
     flex-direction: column;
@@ -669,14 +718,8 @@ logo.big {
   .hero.home form {
     margin: 0 auto;
   }
-  .hero.home p {
-    white-space: initial;
-  }
-}
-@media (max-width: 767px) {
-  .hero form {
-    flex-direction: column;
-    width: 100%;
+  .hero.home article p {
+    align-self: center;
   }
   .hero:not(.home) {
     height: initial;
@@ -1173,8 +1216,9 @@ footer input {
   .triptyque {
     grid: "iC iC" "iG iD";
     --imageMainTriptyque: 100vw;
-    --imageSmallTriptyque: 50vw;
+    --imageSmallTriptyque: calc(var(--imageMainTriptyque) / 2);
     --spaceImageTriptyque: 0;
+    width: var(--imageMainTriptyque);
     padding: 32px 0 0 0;
   }
   .triptyque img {

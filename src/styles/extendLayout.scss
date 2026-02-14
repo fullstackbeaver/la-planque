@@ -1,5 +1,6 @@
 @use "./sizes.scss" as *;
 @use "./mixins.scss" as *;
+@use "./settings.scss" as *;
 
 .flexCentered {
   display        : inline-flex !important;
@@ -8,8 +9,8 @@
 }
 
 .dw383 {
-  width: $desktopWidth383px;
-  @include jusque("desktop"){
+  width: fluid(100px, 383px, $desktopLargeRef);
+  @include jusque("tablet"){
     width: 100%;
   }
 

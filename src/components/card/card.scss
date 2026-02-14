@@ -54,3 +54,23 @@ $spacing : 21px;
     }
   }
 }
+
+// @include jusque("desktop"){
+//   .card {
+//     article {
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+
+//     }
+
+//   }
+//   .cards {
+//     // flex-direction: column;
+//     gap: $size-32;
+//     // aside {
+//     //   display: flex;
+//     //   flex-direction: column;
+//     // }
+//   }
+// }

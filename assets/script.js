@@ -1,7 +1,7 @@
 window.onload = () => {
   const nav = document.querySelector('.hero nav');
   const body = document.querySelector('body');
-  console.log("...", nav, window.innerWidth <= 768)
+  console.log("...", nav, window.innerWidth < 1024)
 
   body.addEventListener('click', (e) => {
     if (window.innerWidth > 768) return;

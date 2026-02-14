@@ -8,6 +8,7 @@ $breakpoints: (
   'desktopXl': $desktopLargeRef
 );
 
+
 @mixin aPartir($breakpoint) {
   @media (min-width: map.get($breakpoints, $breakpoint)) {
     @content;

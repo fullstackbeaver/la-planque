@@ -67,7 +67,7 @@ $navBarHeight: 196px;
   transform: translateX(-50%);
 }
 
-@include jusque("tablet") {
+@include jusque("desktop") {
   .mainNav {
     &::after {
       content: '';
