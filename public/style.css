@@ -536,7 +536,6 @@ logo.big {
     z-index: 999;
   }
   .mainNav a, .hero > nav a {
-    color: #AD3C05;
     text-decoration: none;
     transition: color 0.3s ease;
   }
@@ -1347,10 +1346,10 @@ footer input {
   padding-left: 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1439px) {
   .valeurs section {
     column-count: initial;
-    column-gap: 2rem;
+    column-gap: 32px;
     column-fill: initial;
   }
 }

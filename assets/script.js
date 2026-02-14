@@ -4,7 +4,7 @@ window.onload = () => {
   console.log("...", nav, window.innerWidth < 1024)
 
   body.addEventListener('click', (e) => {
-    if (window.innerWidth > 768) return;
+    if (window.innerWidth >= 1024) return;
     const rect = body.getBoundingClientRect();
     // const style = window.getComputedStyle(nav, '::before');
 

@@ -66,12 +66,11 @@
 
 }
 
-
-@include jusque("tablet") {
+@include jusque("desktopXl") {
   .valeurs {
     section {
       column-count: initial;
-      column-gap  : $sizeF-32;
+      column-gap  : $size-32;
       column-fill : initial;
     }
   }
