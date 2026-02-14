@@ -682,6 +682,9 @@ logo.big {
   .hero.home div {
     padding-top: 60px;
   }
+  .hero.home article p {
+    align-self: center;
+  }
   .hero article {
     text-align: center;
     display: flex !important;
@@ -1061,7 +1064,7 @@ logo.big {
 footer {
   position: relative;
   display: grid;
-  grid: "logo propos decouvrir form" "hr hr hr hr" "cp legal legal legal";
+  grid: "logo propos decouvrir form" "hr hr hr hr" "cp cp legal legal";
   padding: 60px 120px 0 120px;
 }
 footer::after {
@@ -1181,7 +1184,14 @@ footer input {
   font-size: 1rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1439px) {
+  footer {
+    --paddingLR: clamp(0px, 90px * 100vw / 1440px, 90px);
+    padding: 60px var(--paddingLR) 0 var(--paddingLR);
+    grid-template-columns: 187px auto auto auto;
+  }
+}
+@media (max-width: 1023px) {
   footer {
     padding: 16px;
     row-gap: 12px;
@@ -1196,6 +1206,9 @@ footer input {
   footer form {
     width: 100%;
     row-gap: 12px;
+  }
+  footer > p:last-of-type {
+    text-align: center;
   }
 }
 .triptyque {
@@ -1227,18 +1240,26 @@ footer input {
   width: var(--imageSmallTriptyque);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .triptyque {
-    grid: "iC iC" "iG iD";
-    --imageMainTriptyque: 100vw;
-    --imageSmallTriptyque: calc(var(--imageMainTriptyque) / 2);
+    --imageMainTriptyque: clamp(250px, 455px * 100vw / 1024px, 455px);
+    --imageSmallTriptyque: calc((100% - var(--imageMainTriptyque)) / 2);
     --spaceImageTriptyque: 0;
-    width: var(--imageMainTriptyque);
+    display: flex;
     padding: 32px 0 0 0;
   }
   .triptyque img {
     box-shadow: initial;
     border-radius: 0;
+  }
+}
+@media (max-width: 767px) {
+  .triptyque {
+    grid: "iC iC" "iG iD";
+    --imageMainTriptyque: 100vw;
+    --imageSmallTriptyque: calc(var(--imageMainTriptyque) / 2);
+    display: grid;
+    width: var(--imageMainTriptyque);
   }
 }
 .valeurs {

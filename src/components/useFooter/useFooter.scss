@@ -2,8 +2,9 @@
 @use "../../styles/extendBlock.scss";
 @use "../../styles/extendLayout.scss";
 @use "../../styles/extendTypo.scss";
-@use "../../styles/sizes.scss" as *;
 @use "../../styles/mixins.scss" as *;
+@use "../../styles/settings.scss" as *;
+@use "../../styles/sizes.scss" as *;
 @use "../cta/cta.scss" as *;
 
 footer {
@@ -12,7 +13,7 @@ footer {
   grid:
     "logo propos decouvrir form"
     "hr hr hr hr"
-    "cp legal legal legal";
+    "cp cp legal legal";
   padding: $size-60 $size-120 0 $size-120;
 
   &::after {
@@ -172,7 +173,15 @@ footer {
   }
 }
 
-@include jusque("tablet"){
+@include jusque("desktopXl"){
+  footer{
+    --paddingLR: #{fluid(0px, $size-90, $desktopLargeRef)};
+    padding: $size-60 var(--paddingLR) 0 var(--paddingLR);
+    grid-template-columns: 187px auto auto auto;
+  }
+}
+
+@include jusque("desktop"){
   footer{
     padding: $size-16;
     row-gap : $size-12;
@@ -194,6 +203,9 @@ footer {
     form {
       width: 100%;
       row-gap : $size-12;
+    }
+    & > p:last-of-type {
+      text-align: center;
     }
   }
 }

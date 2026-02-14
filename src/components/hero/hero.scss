@@ -183,15 +183,11 @@
 
 @include jusque("desktop") {
   .hero.home {
-    // article {
-    //   padding: $size-16 $size-20;
-    // }
     div {
       padding-top: $size-60;
-
-      // h1, & > p {
-      //   padding: 0 $size-60;
-      // }
+    }
+    article p {
+      align-self: center;
     }
 
   }
