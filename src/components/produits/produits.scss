@@ -56,9 +56,43 @@
   }
 }
 
-@include jusque("tablet") {
+@include jusque("desktop") {
   .produits {
+    //TODO ajouter flou sur img
+
+    --artSize: cal( (100% - #{$size-24}) / 2);
+
+    grid:
+      "h h"
+      "a1 a2"
+      "a3 a4"
+      "a5 a5"
+      /1fr 1fr;
+
+    article {
+      // width: clamp(300px, 100%, 383px);
+      // max-width:50%;
+      justify-self: center;
+
+      &:last-of-type{
+        max-width: 50%;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+@include jusque("tablet") {
+  .produits { //TODO ajouter flou sur img
     display: flex;
     flex-direction: column;
+
+    article:last-of-type{
+      max-width: 100% !important;
+    }
   }
 }

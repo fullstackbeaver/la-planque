@@ -2,6 +2,7 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/extendBlock.scss";
 @use "../../styles/mixins.scss" as *;
+@use "../../styles/settings.scss" as *;
 @use "../../styles/sizes.scss" as *;
 
 .photoDroite {
@@ -87,12 +88,40 @@
   }
 }
 
+@include jusque("desktopXl") {
+  .photoDroite {
+    padding: $size-60 fluid($size-40, $size-120, $desktopLargeRef);
+    grid-template-columns: #{fluid(60%, 540px, $desktopLargeRef)} auto;
+
+    img{
+      width: 100%;
+      align-self: center;
+    }
+
+    nav {
+      display: inline-flex;
+      gap: $size-16;
+    }
+
+    &:not(.tear) {
+      h2, p, nav {
+        padding: 0;
+        align-self: center;
+      }
+    }
+
+    &.tear{
+      padding-bottom: $size-16;
+    }
+  }
+}
 
 
 @include jusque("tablet") {
   .photoDroite {
 
-    padding-top: $size-32 !important;
+    // padding-top: $size-32 !important;
+    padding: $size-32 0 !important;
     gap: $size-32;
     grid:
       "h"
