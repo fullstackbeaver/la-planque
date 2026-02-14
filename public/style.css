@@ -93,7 +93,7 @@
 }
 @media (max-width: 1439px) {
   .block, .tarifs, .produits, .sectionWithCards, .testimonial, .photos4, .photoGauche, section:not([class]) {
-    padding: 0 clamp(40px, 120px * 100vw / 1440px, 120px);
+    padding: 60px clamp(40px, 120px * 100vw / 1440px, 120px);
   }
 }
 @media (max-width: 767px) {
@@ -927,11 +927,10 @@ logo.big {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1439px) {
   .photos4 {
-    flex-direction: column;
     padding-top: 60px;
-    gap: 32px;
+    flex-direction: column;
   }
   .photos4 hgroup {
     max-width: unset;
@@ -941,11 +940,21 @@ logo.big {
   }
   .photos4 aside {
     max-width: unset;
-    display: flex !important;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
   }
   .photos4 img {
     width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .photos4 {
+    gap: 32px;
+  }
+  .photos4 aside {
+    display: flex !important;
+    flex-direction: column;
   }
 }
 .contact form {

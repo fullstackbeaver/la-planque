@@ -66,12 +66,10 @@
 
 }
 
-
-@include jusque("tablet"){
+@include jusque("desktopXl"){
   .photos4{
-    flex-direction: column;
     padding-top: $size-60;
-    gap: $size-32;
+    flex-direction: column;
 
     hgroup {
       max-width: unset;
@@ -83,11 +81,24 @@
 
     aside {
       max-width: unset;
-      display: flex !important;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $size-32;
     }
     img {
-      width: 100%;
+      width: 100%; //TODO add blur
+    }
+  }
+}
+
+
+@include jusque("tablet"){
+  .photos4{
+    gap: $size-32;
+
+    aside {
+      display: flex !important;
+      flex-direction: column;
     }
   }
 }
