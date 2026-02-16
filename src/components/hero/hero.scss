@@ -13,11 +13,16 @@
 
 .hero {
   @extend .tear;
+  @extend .jardin;
 
   position           : relative;
   padding            : 0 calc(((100vw - $desktopLargeRef) / 2) + $size-120);
   background-size    : cover;
   background-position: center;
+
+  h1{
+    text-align: center;
+  }
 
   &>nav {
     @extend .mainNav;
@@ -146,14 +151,6 @@
 
 .hero:not(.home) {
   height: 358px;
-
-  h1 {
-    text-align: center;
-  }
-}
-
-.hero.contact {
-  @extend .jardin;
 }
 
 

@@ -41,7 +41,7 @@
 }
 
 .withBorder, .contact form label input, .contact form label textarea, .hero.home article, .hero form, button, .cta, .inputForm, footer input, .hero form label input,
-.hero form label select, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
+.hero form label select, footer > nav:nth-of-type(2) a:first-of-type, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
   border: 2px solid;
   border-radius: 4px;
 }
@@ -74,7 +74,7 @@
   -webkit-mask-size: 100.5% 103%;
 }
 
-.flexCentered, footer aside a:not(:first-of-type), button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
+.flexCentered, footer > nav:nth-of-type(2) a:not(:first-of-type), button, .cta, footer > nav:nth-of-type(2) a:first-of-type, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
   display: inline-flex !important;
   justify-content: center;
   align-items: center;
@@ -124,7 +124,7 @@
   font-weight: 500;
 }
 
-.useAlbertSemi, footer input, button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
+.useAlbertSemi, footer input, button, .cta, footer > nav:nth-of-type(2) a:first-of-type, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
   font-family: Albert Sans;
   font-weight: 600;
 }
@@ -168,7 +168,7 @@
     flex-direction: column;
   }
 }
-button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
+button, .cta, footer > nav:nth-of-type(2) a:first-of-type, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
   padding: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -183,20 +183,20 @@ button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase 
   color: #FFFFFF;
   border-color: #AD3C05;
 }
-button:hover:not(:disabled), .cta:hover:not(:disabled), footer form a:hover:not(:disabled), .photos4 a:hover:not(:disabled), .sectionBase > a:hover:not(:disabled), .nav a:hover:not(:disabled), .sectionBase nav a:hover:not(:disabled), .testimonial > a:hover:not(:disabled), .photoGauche > a:hover:not(:disabled), section:not([class]) > a:hover:not(:disabled), .testimonial nav a:hover:not(:disabled), .photoGauche nav a:hover:not(:disabled), section:not([class]) nav a:hover:not(:disabled), .photoDroite nav a:hover:not(:disabled) {
+button:hover:not(:disabled), .cta:hover:not(:disabled), footer > nav:nth-of-type(2) a:hover:not(:disabled):first-of-type, .photos4 a:hover:not(:disabled), .sectionBase > a:hover:not(:disabled), .nav a:hover:not(:disabled), .sectionBase nav a:hover:not(:disabled), .testimonial > a:hover:not(:disabled), .photoGauche > a:hover:not(:disabled), section:not([class]) > a:hover:not(:disabled), .testimonial nav a:hover:not(:disabled), .photoGauche nav a:hover:not(:disabled), section:not([class]) nav a:hover:not(:disabled), .photoDroite nav a:hover:not(:disabled) {
   background-color: rgb(205.8606741573, 70.9861958266, 5.3393258427);
   border-color: rgb(205.8606741573, 70.9861958266, 5.3393258427);
 }
-button:disabled, .cta:disabled, footer form a:disabled, .photos4 a:disabled, .sectionBase > a:disabled, .nav a:disabled, .sectionBase nav a:disabled, .testimonial > a:disabled, .photoGauche > a:disabled, section:not([class]) > a:disabled, .testimonial nav a:disabled, .photoGauche nav a:disabled, section:not([class]) nav a:disabled, .photoDroite nav a:disabled {
+button:disabled, .cta:disabled, footer > nav:nth-of-type(2) a:disabled:first-of-type, .photos4 a:disabled, .sectionBase > a:disabled, .nav a:disabled, .sectionBase nav a:disabled, .testimonial > a:disabled, .photoGauche > a:disabled, section:not([class]) > a:disabled, .testimonial nav a:disabled, .photoGauche nav a:disabled, section:not([class]) nav a:disabled, .photoDroite nav a:disabled {
   color: #CE8C8D;
   border: 1px solid;
   cursor: not-allowed;
 }
-button, .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
+button, .cta, footer > nav:nth-of-type(2) a:first-of-type, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
   --email: url('/assets/icons/email.svg') no-repeat center;
   /* Différentes icônes selon l'attribut */
 }
-button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-icon="1"]::before, .photos4 a[data-icon="1"]::before, .sectionBase > a[data-icon="1"]::before, .nav a[data-icon="1"]::before, .sectionBase nav a[data-icon="1"]::before, .testimonial > a[data-icon="1"]::before, .photoGauche > a[data-icon="1"]::before, section:not([class]) > a[data-icon="1"]::before, .testimonial nav a[data-icon="1"]::before, .photoGauche nav a[data-icon="1"]::before, section:not([class]) nav a[data-icon="1"]::before, .photoDroite nav a[data-icon="1"]::before {
+button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer > nav:nth-of-type(2) a[data-icon="1"]:first-of-type::before, .photos4 a[data-icon="1"]::before, .sectionBase > a[data-icon="1"]::before, .nav a[data-icon="1"]::before, .sectionBase nav a[data-icon="1"]::before, .testimonial > a[data-icon="1"]::before, .photoGauche > a[data-icon="1"]::before, section:not([class]) > a[data-icon="1"]::before, .testimonial nav a[data-icon="1"]::before, .photoGauche nav a[data-icon="1"]::before, section:not([class]) nav a[data-icon="1"]::before, .photoDroite nav a[data-icon="1"]::before {
   -webkit-mask: var(--email);
   mask: var(--email);
 }
@@ -204,21 +204,21 @@ button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer form a[data-i
   padding: 12px;
 }
 
-.cta-secondary, .photos4 a, button:not(:first-of-type):not(:disabled):not(.cta-small), .cta:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase > a:not(:first-of-type):not(:disabled):not(.cta-small), .nav a:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase nav a:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial > a:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche > a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) > a:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial nav a:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche nav a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) nav a:not(:first-of-type):not(:disabled):not(.cta-small), .photoDroite nav a:not(:first-of-type):not(:disabled):not(.cta-small) {
+.cta-secondary, .photos4 a, button:not(:first-of-type):not(:disabled):not(.cta-small), .cta:not(:first-of-type):not(:disabled):not(.cta-small), footer > nav:nth-of-type(2) a:not(:first-of-type):not(:disabled):not(.cta-small):first-of-type, .photos4 a:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase > a:not(:first-of-type):not(:disabled):not(.cta-small), .nav a:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase nav a:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial > a:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche > a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) > a:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial nav a:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche nav a:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) nav a:not(:first-of-type):not(:disabled):not(.cta-small), .photoDroite nav a:not(:first-of-type):not(:disabled):not(.cta-small) {
   background-color: transparent;
   color: #AD3C05;
 }
-.cta-secondary:hover, .photos4 a:hover, button:hover:not(:first-of-type):not(:disabled):not(.cta-small), .cta:hover:not(:first-of-type):not(:disabled):not(.cta-small), footer form a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photos4 a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoDroite nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small) {
+.cta-secondary:hover, .photos4 a:hover, button:hover:not(:first-of-type):not(:disabled):not(.cta-small), .cta:hover:not(:first-of-type):not(:disabled):not(.cta-small), footer > nav:nth-of-type(2) a:hover:not(:first-of-type):not(:disabled):not(.cta-small):first-of-type, .photos4 a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .sectionBase nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) > a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .testimonial nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoGauche nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), section:not([class]) nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small), .photoDroite nav a:hover:not(:first-of-type):not(:disabled):not(.cta-small) {
   background-color: rgb(246.09, 242.202, 239.61);
 }
 
-.cta-hover-mustard:hover, footer form a:hover, .photos4 a:hover {
+.cta-hover-mustard:hover, footer > nav:nth-of-type(2) a:hover:first-of-type, .photos4 a:hover {
   color: #F4F1EF !important;
   border-color: #F4F1EF !important;
 }
 
 @media (max-width: 767px) {
-  .cta, footer form a, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
+  .cta, footer > nav:nth-of-type(2) a:first-of-type, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a {
     width: initial;
   }
 }
@@ -373,12 +373,12 @@ a {
     width: 50%;
   }
 }
-.jardin, .hero.home, .hero.contact {
+.jardin, .hero, .hero.home {
   background-position: bottom;
   background-image: url("/assets/images/la-planque-jardin-desktop.webp");
 }
 @media (max-width: 767px) {
-  .jardin, .hero.home, .hero.contact {
+  .jardin, .hero, .hero.home {
     background-image: url("/assets/images/la-planque-jardin-mobile.webp");
   }
 }
@@ -572,6 +572,9 @@ logo.big {
   background-size: cover;
   background-position: center;
 }
+.hero h1 {
+  text-align: center;
+}
 .hero.home article {
   display: grid;
   gap: 0 21px;
@@ -655,9 +658,6 @@ logo.big {
 
 .hero:not(.home) {
   height: 358px;
-}
-.hero:not(.home) h1 {
-  text-align: center;
 }
 
 @media (max-width: 1439px) {
@@ -1102,8 +1102,9 @@ logo.big {
 footer {
   position: relative;
   display: grid;
-  grid: "logo propos decouvrir form" "hr hr hr hr" "cp cp legal legal";
+  grid: "logo propos a" "hr hr hr" "cp legal legal"/1fr 1fr 1fr;
   padding: 60px 120px 0 120px;
+  gap: 16px;
 }
 footer::after {
   content: "";
@@ -1123,15 +1124,24 @@ footer::after {
 footer hr {
   grid-area: hr;
 }
-footer aside {
+footer > a {
   grid-area: logo;
-  display: grid;
-  grid: "l l" "a1 a2";
-  width: 178px;
-  margin-bottom: 16px;
-  gap: 16px;
 }
-footer aside a:not(:first-of-type) {
+footer nav a:hover {
+  color: #AD3C05;
+}
+footer > nav:first-of-type {
+  grid-area: propos;
+}
+footer > nav:nth-of-type(2) {
+  grid-area: a;
+  display: grid;
+  grid: "b b" "a1 a2";
+  width: 100%;
+  gap: 32px;
+  z-index: 1;
+}
+footer > nav:nth-of-type(2) a:not(:first-of-type) {
   background-color: #F4F1EF;
   padding: 16px;
   border-radius: 50%;
@@ -1141,28 +1151,20 @@ footer aside a:not(:first-of-type) {
   border: 3px solid transparent;
   transition: border-color 0.3s ease-in-out;
 }
-footer aside a:not(:first-of-type):hover {
+footer > nav:nth-of-type(2) a:not(:first-of-type):hover {
   border-color: #AD3C05;
 }
-footer aside a:not(:first-of-type):nth-of-type(2) {
+footer > nav:nth-of-type(2) a:not(:first-of-type):nth-of-type(2) {
   grid-area: a1;
   justify-self: end;
 }
-footer aside a:not(:first-of-type):last-of-type {
+footer > nav:nth-of-type(2) a:not(:first-of-type):last-of-type {
   grid-area: a2;
   justify-self: start;
 }
-footer aside a:first-of-type {
-  grid-area: l;
-}
-footer nav a:hover {
-  color: #AD3C05;
-}
-footer > nav:first-of-type {
-  grid-area: propos;
-}
-footer > nav:nth-of-type(2) {
-  grid-area: decouvrir;
+footer > nav:nth-of-type(2) a:first-of-type {
+  grid-area: b;
+  width: 100%;
 }
 footer > nav:last-of-type {
   grid-area: legal;
@@ -1176,40 +1178,7 @@ footer > nav:last-of-type li {
   display: inline-flex;
   margin: 0 8px;
 }
-footer form {
-  grid-area: form;
-  display: grid;
-  grid: "h h" 32px "p p" 32px "i b" 48px "n n" 67px/auto 56px;
-  column-gap: 12px;
-  z-index: 1;
-}
-footer form h4 {
-  grid-area: h;
-}
-footer form p {
-  grid-area: p;
-}
-footer form nav {
-  grid-area: n;
-  margin-top: 24px;
-  display: flex;
-  gap: 16px;
-  width: 100%;
-}
-footer form a {
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-}
-footer form button {
-  grid-area: b;
-  margin-left: 4px;
-}
-footer form label {
-  display: none;
-  grid-area: i;
-}
-footer > p {
+footer p {
   grid-area: cp;
   font-weight: bold;
   font-size: 1rem;
@@ -1228,12 +1197,18 @@ footer input {
     padding: 60px var(--paddingLR) 0 var(--paddingLR);
     grid-template-columns: 187px auto auto auto;
   }
+  footer::after {
+    top: -247px;
+  }
+  footer p {
+    text-align: center;
+  }
 }
 @media (max-width: 1023px) {
   footer {
     padding: 16px;
     row-gap: 12px;
-    grid: "logo" "form" "propos" "decouvrir" "hr" "legal" "cp";
+    grid: "logo a" "logo propos" "hr hr" "cp legal";
   }
   footer aside {
     margin: 0 auto;
@@ -1241,12 +1216,22 @@ footer input {
   footer nav {
     display: block;
   }
+  footer nav:first-of-type {
+    margin: 0 auto;
+  }
+  footer nav:first-of-type, footer nav:first-of-type ul {
+    display: inline-flex;
+    gap: 32px;
+  }
+  footer nav:first-of-type li {
+    margin-top: 4px;
+  }
   footer form {
     width: 100%;
     row-gap: 12px;
   }
-  footer > p:last-of-type {
-    text-align: center;
+  footer::after {
+    top: -294px;
   }
 }
 .triptyque {

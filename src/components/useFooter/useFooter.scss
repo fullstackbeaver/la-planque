@@ -11,10 +11,12 @@ footer {
   position: relative;
   display: grid;
   grid:
-    "logo propos decouvrir form"
-    "hr hr hr hr"
-    "cp cp legal legal";
+    "logo propos a"
+    "hr hr hr"
+    "cp legal legal"
+    / 1fr 1fr 1fr;
   padding: $size-60 $size-120 0 $size-120;
+  gap: $size-16;
 
   &::after {
     content         : "";
@@ -36,15 +38,33 @@ footer {
     grid-area: hr;
   }
 
-  aside {
+  &>a {
     grid-area: logo;
+  }
+
+  nav a:hover{
+    color: $color-4;
+  }
+
+  & > nav, p {
+    @extend .useAlbertRegular;
+  }
+
+  & > nav:first-of-type {
+    grid-area: propos;
+    // text-align: center;
+  }
+
+  & > nav:nth-of-type(2) {
+    grid-area: a;
+
     display: grid;
     grid:
-      "l l"
+      "b b"
       "a1 a2";
-    width: 178px;
-    margin-bottom: $size-16;
-    gap:$size-16;
+    width: 100%;
+    gap:$size-32;
+    z-index: 1;
 
     a:not(:first-of-type) {
       @extend .flexCentered;
@@ -73,24 +93,17 @@ footer {
       }
     }
     a:first-of-type {
-      grid-area: l;
+      @extend .cta;
+      @extend .cta-hover-mustard;
+      
+      grid-area: b;
+      width: 100%;
+      // text-align: center;
+      // justify-content: center;
     }
-  }
 
-  nav a:hover{
-    color: $color-4;
-  }
 
-  & > nav, p {
-    @extend .useAlbertRegular;
-  }
 
-  & > nav:first-of-type {
-    grid-area: propos;
-  }
-
-  & > nav:nth-of-type(2) {
-    grid-area: decouvrir;
   }
 
   & > nav:last-of-type {
@@ -107,54 +120,7 @@ footer {
     }
   }
 
-  form {
-    grid-area: form;
-    display: grid;
-    grid:
-      "h h" $size-32
-      "p p" $size-32
-      "i b" 48px
-      "n n" 67px
-      / auto $finalSize;
-    column-gap: $size-12;
-    z-index: 1;
-
-    h4 {
-      grid-area: h;
-    }
-
-    p {
-      grid-area: p;
-    }
-
-    nav {
-      grid-area: n;
-      margin-top: $size-24;
-      display: flex;
-      gap: $size-16;
-      width: 100%;
-    }
-
-    a {
-      @extend .cta;
-      @extend .cta-hover-mustard;
-
-      width: 100%;
-      text-align: center;
-      justify-content: center;
-    }
-
-    button {
-      grid-area: b;
-      margin-left: 4px;
-    }
-    label {
-      display: none;
-      grid-area: i;
-    }
-  }
-
-  & > p {
+  p {
     grid-area: cp;
     font-weight: bold;
     font-size: $sizeF-16;
@@ -178,6 +144,14 @@ footer {
     --paddingLR: #{fluid(0px, $size-90, $desktopLargeRef)};
     padding: $size-60 var(--paddingLR) 0 var(--paddingLR);
     grid-template-columns: 187px auto auto auto;
+
+    &::after {
+      top : -247px;
+    }
+
+    p {
+      text-align: center;
+    }
   }
 }
 
@@ -186,26 +160,37 @@ footer {
     padding: $size-16;
     row-gap : $size-12;
     grid:
-      "logo"
-      "form"
-      "propos"
-      "decouvrir"
-      "hr"
-      "legal"
-      "cp";
+      "logo a"
+      "logo propos"
+      "hr hr"
+      "cp legal";
 
     aside{
       margin: 0 auto;
     }
     nav {
       display: block;
+
+      &:first-of-type{
+        margin: 0 auto;
+      }
+
+      &:first-of-type, &:first-of-type ul {
+        display: inline-flex;
+        gap: $size-32;
+      }
+
+      &:first-of-type li {
+        margin-top: 4px;
+      }
     }
     form {
       width: 100%;
       row-gap : $size-12;
     }
-    & > p:last-of-type {
-      text-align: center;
+
+    &::after {
+      top: -294px;
     }
   }
 }

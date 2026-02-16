@@ -1016,7 +1016,9 @@ src/components/my-button/
 
 **Protection :**
 - Impossible de créer `<div>`, `<span>`, `<article>`, etc.
-- Nom doit contenir un tiret (`my-component`, pas `component`)
+
+**Flexibilité :**
+- Le nom peut contenir un tiret ou être en camelCase
 
 ### Build workflow
 
