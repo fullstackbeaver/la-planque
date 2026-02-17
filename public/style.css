@@ -334,7 +334,7 @@ h4 {
 }
 
 body > section:not([class*=hero]),
-body > aside:not([role=top-banner]),
+body > triptyque,
 footer {
   max-width: 1440px;
   width: 100%;
@@ -731,6 +731,57 @@ logo.big {
   }
   .hero:not(.home) {
     height: initial;
+  }
+}
+triptyque {
+  display: grid;
+  --imageMainTriptyque: clamp(200px, 640px * 100vw / 1440px, 640px);
+  --imageSmallTriptyque: clamp(200px, 360px * 100vw / 1440px, 360px);
+  --spaceImageTriptyque: clamp(5px, 40px * 100vw / 1440px, 40px);
+  grid: ". iC ." "iG iC iD" ". iC ."/var(--imageSmallTriptyque) var(--imageMainTriptyque) var(--imageSmallTriptyque);
+}
+triptyque img {
+  box-shadow: 0px 0px 4px #29261F;
+}
+triptyque {
+  column-gap: var(--spaceImageTriptyque);
+}
+triptyque img {
+  border-radius: 4px;
+}
+triptyque img:first-of-type {
+  grid-area: iG;
+  width: var(--imageSmallTriptyque);
+}
+triptyque img:nth-of-type(2) {
+  grid-area: iC;
+  width: var(--imageMainTriptyque);
+}
+triptyque img:nth-of-type(3) {
+  grid-area: iD;
+  width: var(--imageSmallTriptyque);
+}
+
+@media (max-width: 1023px) {
+  .triptyque {
+    --imageMainTriptyque: clamp(250px, 455px * 100vw / 1024px, 455px);
+    --imageSmallTriptyque: calc((100% - var(--imageMainTriptyque)) / 2);
+    --spaceImageTriptyque: 0;
+    display: flex;
+    padding: 32px 0 0 0;
+  }
+  .triptyque img {
+    box-shadow: initial;
+    border-radius: 0;
+  }
+}
+@media (max-width: 767px) {
+  .triptyque {
+    grid: "iC iC" "iG iD";
+    --imageMainTriptyque: 100vw;
+    --imageSmallTriptyque: calc(var(--imageMainTriptyque) / 2);
+    display: grid;
+    width: var(--imageMainTriptyque);
   }
 }
 .photoGauche {
@@ -1232,57 +1283,6 @@ footer input {
   }
   footer::after {
     top: -294px;
-  }
-}
-.triptyque {
-  display: grid;
-  --imageMainTriptyque: clamp(200px, 640px * 100vw / 1440px, 640px);
-  --imageSmallTriptyque: clamp(200px, 360px * 100vw / 1440px, 360px);
-  --spaceImageTriptyque: clamp(5px, 40px * 100vw / 1440px, 40px);
-  grid: ". iC ." "iG iC iD" ". iC ."/var(--imageSmallTriptyque) var(--imageMainTriptyque) var(--imageSmallTriptyque);
-}
-.triptyque img {
-  box-shadow: 0px 0px 4px #29261F;
-}
-.triptyque {
-  column-gap: var(--spaceImageTriptyque);
-}
-.triptyque img {
-  border-radius: 4px;
-}
-.triptyque img:first-of-type {
-  grid-area: iG;
-  width: var(--imageSmallTriptyque);
-}
-.triptyque img:nth-of-type(2) {
-  grid-area: iC;
-  width: var(--imageMainTriptyque);
-}
-.triptyque img:nth-of-type(3) {
-  grid-area: iD;
-  width: var(--imageSmallTriptyque);
-}
-
-@media (max-width: 1023px) {
-  .triptyque {
-    --imageMainTriptyque: clamp(250px, 455px * 100vw / 1024px, 455px);
-    --imageSmallTriptyque: calc((100% - var(--imageMainTriptyque)) / 2);
-    --spaceImageTriptyque: 0;
-    display: flex;
-    padding: 32px 0 0 0;
-  }
-  .triptyque img {
-    box-shadow: initial;
-    border-radius: 0;
-  }
-}
-@media (max-width: 767px) {
-  .triptyque {
-    grid: "iC iC" "iG iD";
-    --imageMainTriptyque: 100vw;
-    --imageSmallTriptyque: calc(var(--imageMainTriptyque) / 2);
-    display: grid;
-    width: var(--imageMainTriptyque);
   }
 }
 .valeurs {

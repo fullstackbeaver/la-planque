@@ -9,7 +9,7 @@
 @use "../../styles/settings.scss" as *;
 
 
-.triptyque {
+triptyque {
   display: grid;
 
   --imageMainTriptyque: #{fluid(200px, 640px, $desktopLargeRef)};

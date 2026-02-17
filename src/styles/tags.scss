@@ -64,7 +64,7 @@ section:not([class]) {
 }
 
 body > section:not([class*="hero"]),
-body > aside:not([role="top-banner"]),
+body > triptyque,
 footer {
   max-width: $desktopLargeRef;
   width    : 100%;
