@@ -3,6 +3,9 @@ import chokidar        from "chokidar";
 import { existsSync }  from 'fs';
 import fs              from 'fs/promises';
 import { glob }        from "glob";
+import { minify }      from '@minify-html/node';
+import { minify as minJs} from "terser";
+import { transform }   from "lightningcss";
 
 async function exec(cmd, options = {}) {
   console.log(`   💻 ${cmd}`);
@@ -402,10 +405,35 @@ async function startServer() {
   return server;
 }
 
+async function minifyCss() {
+  const path = "./public/style.css";
+  const css = await file(path).text();
+  const { code } = transform({ filename: path, code: Buffer.from(css), minify: true });
+  await write("./public/style.min.css", code);
+}
+
+async function minifyHtml() {
+  const list = await glob("./public/**/*.html");
+  for (const path of list) {
+    const raw = await file(path).text();
+    const minified = minify(Buffer.from(raw), { minify_js: true, minify_css: true });
+    await write(path, minified);
+  }
+}
+
+async function minifyJs() {
+  const list = await glob("./assets/**/*.js");
+  for (const js of list) {
+    const raw = await file(js).text();
+    const { code } = await minJs(raw);
+    await write(js.replace(".js", ".min.js"), code);
+  }
+}
+
 const args = process.argv.slice(2);
 
-const shouldWatch = args.includes('--watch');
 const shouldServe = args.includes('--serve');
+const shouldWatch = args.includes('--watch');
 
 // Mode combiné (dev)
 if (shouldWatch && shouldServe) {
@@ -418,6 +446,15 @@ else if (shouldWatch) {
 }
 else if (shouldServe) {
   await startServer();
+}
+else if (args.includes('--minifyHtml')) {
+  await minifyHtml();
+}
+else if (args.includes('--minifyJs')) {
+  await minifyJs();
+}
+else if (args.includes('--minifyCss')) {
+  await minifyCss();
 }
 else {
   await build();

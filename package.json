@@ -2,8 +2,13 @@
   "name": "la-planque",
   "private": true,
   "devDependencies": {
+    "@minify-html/node": "^0.18.1",
     "@types/bun": "latest",
-    "chokidar": "^5.0.0"
+    "chokidar": "^5.0.0",
+    "glob": "^13.0.0",
+    "lightningcss": "^1.31.1",
+    "sass": "^1.97.3",
+    "terser": "^5.46.0"
   },
   "peerDependencies": {
     "typescript": "^5"
@@ -14,8 +19,5 @@
     "serve": "bun run build.js --serve",
     "dev": "bun run build.js --serve --watch"
   },
-  "dependencies": {
-    "glob": "^13.0.0",
-    "sass": "^1.97.3"
-  }
+  "dependencies": {}
 }
