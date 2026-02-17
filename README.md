@@ -80,7 +80,7 @@ Créez un dossier dans `src/components/[nom-composant]/` :
 **src/components/my-button/my-button.html**
 ```html
 <button class="btn">
-  <slot></slot>
+  <slot/>
 </button>
 ```
 
@@ -122,13 +122,13 @@ Créez un dossier dans `src/components/[nom-composant]/` :
 
 ### 3. Système de Slots
 
-Le contenu entre les balises ouvrantes et fermantes est injecté dans le `<slot>` :
+Le contenu entre les balises ouvrantes et fermantes est injecté dans le `` :
 
 ```html
 <!-- Composant : card.html -->
 <article class="card">
   <header>
-    <h2><slot></slot></h2>
+    <h2><slot/></h2>
   </header>
   <div class="content">
     {children}  <!-- Alternative au slot -->
@@ -137,7 +137,7 @@ Le contenu entre les balises ouvrantes et fermantes est injecté dans le `<slot>
 ```
 
 **Règles des slots :**
-- `<slot></slot>` ou `<slot/>` : Injection du contenu
+- `<slot/>` : Injection du contenu
 - `{children}` : Syntaxe alternative (remplacée après les slots)
 - Si aucun slot n'est trouvé, le contenu est injecté après la première balise ouvrante
 

@@ -86,7 +86,7 @@ $section-spacing-v: 60px;
 ### Layouts Spécifiques
 1. **Hero Section** : Grille avec navigation et contenu centré
 2. **Photo Gauche/Droite** : Grille asymétrique pour texte + image
-3. **Triptyque** : Grille 3 colonnes avec image centrale mise en valeur
+3. **triptyqueCpn** : Grille 3 colonnes avec image centrale mise en valeur
 4. **Cartes** : Grille flexible pour les collections d'éléments
 5. **Footer** : Grille complexe avec zones définies
 

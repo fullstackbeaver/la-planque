@@ -66,7 +66,7 @@ Certains noms de composants pourraient être plus explicites :
 | Actuel | Proposition | Raison |
 |--------|-------------|---------|
 | photoDroite/photoGauche | mediaContent/mediaAside | Plus générique et sémantique |
-| triptyque | galleryThreeImages | Plus descriptif |
+| triptyqueCpn | galleryThreeImages | Plus descriptif |
 | card | contentCard | Plus spécifique |
 
 #### Centralisation des Variables Globales

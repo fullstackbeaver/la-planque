@@ -857,7 +857,7 @@ Templates réutilisables avec contenu variable.
 ```html
 <article class="card">
   <header>
-    <h2><slot></slot></h2>
+    <h2><slot/></h2>
   </header>
   <div>
     {children}
@@ -912,7 +912,7 @@ Composants avec contenu identique sur toutes les pages (headers, footers, etc.).
 ### Système de slots
 
 **Règles :**
-- `<slot></slot>` ou `<slot/>` : injection du contenu
+- `<slot/>` : injection du contenu
 - `{children}` : syntaxe alternative
 - Si aucun slot, le contenu est injecté après la première balise ouvrante
 
@@ -922,7 +922,7 @@ Composants avec contenu identique sur toutes les pages (headers, footers, etc.).
 <!-- Template -->
 <article class="testimonial">
   <blockquote>
-    <slot></slot>
+    <slot/>
   </blockquote>
   <footer>
     {children}
@@ -958,7 +958,7 @@ Les attributs de la balise custom sont fusionnés avec le template.
 
 <!-- Template -->
 <article class="card">
-  <slot></slot>
+  <slot/>
 </article>
 
 <!-- Résultat -->
@@ -1362,7 +1362,7 @@ mkdir -p src/components/button
 
 ```html
 <button class="cta">
-  <slot></slot>
+  <slot/>
 </button>
 ```
 

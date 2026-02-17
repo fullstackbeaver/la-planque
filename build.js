@@ -109,7 +109,7 @@ function injectAttributes(template, attrs) {
   // Gestion des data-attributes
   for (const [name, value] of Object.entries(dataAttrs)) {
     // Échapper les guillemets dans la valeur si nécessaire
-    const escapedValue = value.replace(/"/g, '&quot;');
+    const escapedValue = value.replace(/"/g, '"');
     attrsToAdd += ` ${name}="${value}"`;
   }
 
@@ -141,9 +141,9 @@ function injectSlot(template, slotContent) {
   }
 
   if (template.includes('<slot>') || template.includes('<slot/>') || template.includes('<slot />')) {
-    template = template.replace(/<slot\s*\/?>/g, slotContent);
+    template = template.replace(/<slot\s*\/?>/, slotContent);
   } else if (template.includes('{children}')) {
-    template = template.replace(/\{children\}/g, slotContent);
+    template = template.replace(/\{children\}/, slotContent);
   } else {
     const firstClosingTag = template.indexOf('>');
     if (firstClosingTag !== -1) {
