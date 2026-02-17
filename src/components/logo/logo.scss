@@ -1,6 +1,8 @@
 @use "../../styles/colors.scss" as *;
 @use "../../styles/sizes.scss" as *;
 
+$widthDark: 179px;
+
 logo {
   --img       : url('/assets/icons/logo.svg') no-repeat center / contain;
   display     : block;
@@ -15,7 +17,7 @@ logo {
 
   &.dark {
     background-color: $color-12;
-    width           : 179px;
+    width           : $widthDark;
     height          : 178px;
   }
 

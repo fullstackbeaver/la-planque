@@ -424,6 +424,7 @@ async function minifyHtml() {
 async function minifyJs() {
   const list = await glob("./assets/**/*.js");
   for (const js of list) {
+    if (js.includes(".min.js")) continue;
     const raw = await file(js).text();
     const { code } = await minJs(raw);
     await write(js.replace(".js", ".min.js"), code);
