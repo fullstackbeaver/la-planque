@@ -9,8 +9,13 @@
     </label>
 
 
-    <label for="sujet">Sujet*
-      <input id="sujet" type="text" autocorrect="on" name="sujet" required placeholder="Objet de votre message" aria-required="true"/>
+    <label for="subject">Object de votre message*
+        <select id="subject" name="subject" required aria-required="true">
+            <option value="" disabled selected hidden>Objet de votre message</option>
+            <option value="">sujet 1</option>
+            <option value="">sujet 2</option>
+            <option value="">sujet 3</option>
+        </select>
     </label>
 
     <label for="message">Message*

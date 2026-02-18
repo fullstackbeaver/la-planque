@@ -41,7 +41,7 @@
 }
 
 .withBorder, .contact form label input, .contact form label textarea, .hero.home article, .hero form, button, .cta, .inputForm, .hero form label input,
-.hero form label select, footer > a:last-of-type, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
+.hero form label select, select, footer > a:last-of-type, .photos4 a, .sectionBase > a, .nav a, .sectionBase nav a, .testimonial > a, .photoGauche > a, section:not([class]) > a, .testimonial nav a, .photoGauche nav a, section:not([class]) nav a, .photoDroite nav a, .card, .sectionWithCards article, .testimonial article, .photos4 article, .photoGauche article, section:not([class]) article {
   border: 2px solid;
   border-radius: 4px;
 }
@@ -225,8 +225,8 @@ button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer > a[data-icon
   }
 }
 .inputForm, .hero form label input,
-.hero form label select {
-  background-color: #F4F1EF;
+.hero form label select, select {
+  background-color: #FFFFFF;
   border-color: #B2B1AE;
   border-style: solid;
   color: #B2B1AE;
@@ -234,7 +234,7 @@ button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer > a[data-icon
   padding: 16px;
 }
 .inputForm:focus-visible, .hero form label input:focus-visible,
-.hero form label select:focus-visible {
+.hero form label select:focus-visible, select:focus-visible {
   outline: #B2B1AE auto 1px;
 }
 
@@ -365,6 +365,17 @@ blockquote {
 
 a {
   cursor: pointer;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: var(--s-40);
+  min-height: 58px;
+  line-height: 1.25rem;
 }
 
 @keyframes underlineGrow {
@@ -637,17 +648,6 @@ logo.big {
 .hero form label input,
 .hero form label select {
   color: inherit;
-}
-.hero form label input[name=booking-type],
-.hero form label select[name=booking-type] {
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: var(--s-40);
-  min-height: 54px;
-  line-height: 1.25rem;
 }
 .hero form button {
   height: 60px;
@@ -1155,7 +1155,7 @@ triptyque img:nth-of-type(3) {
 footer {
   position: relative;
   display: grid;
-  grid: "logo propos a" "cp legal legal"/179px 1fr 1fr;
+  grid: "logo propos a" "cp legal legal"/233px 1fr 1fr;
   padding: 60px 120px 0 120px;
   gap: 32px 12px;
 }
@@ -1239,14 +1239,16 @@ footer p {
   grid-area: cp;
   font-weight: bold;
   font-size: 1rem;
-  justify-self: center;
-  text-align: center;
-  width: 155px;
 }
 footer li {
   list-style-type: none;
 }
 
+@media (max-width: 1023px) {
+  footer {
+    padding: clamp(16px, 32px * 100vw / 1024px, 32px);
+  }
+}
 @media (max-width: 767px) {
   footer {
     grid: "logo" "propos" "a" "legal" "cp";
@@ -1256,7 +1258,7 @@ footer li {
     top: 110px;
   }
   footer nav:last-of-type, footer > a, footer p {
-    width: 80% !important;
+    width: 90% !important;
     margin: 0 auto;
     justify-self: initial;
     text-align: initial;

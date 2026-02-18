@@ -6,7 +6,6 @@
 @use "../../styles/settings.scss" as *;
 @use "../../styles/sizes.scss" as *;
 @use "../cta/cta.scss" as *;
-@use "../logo/logo.scss" as *;
 
 footer {
   position: relative;
@@ -14,7 +13,7 @@ footer {
   grid:
     "logo propos a"
     "cp legal legal"
-    / $widthDark 1fr 1fr;
+    / 233px 1fr 1fr;
   padding: $size-60 $size-120 0 $size-120;
   gap: $size-32 $size-12;
 
@@ -119,13 +118,16 @@ footer {
     grid-area: cp;
     font-weight: bold;
     font-size: $sizeF-16;
-    justify-self: center;
-    text-align: center;
-    width: 155px;
   }
 
   li {
     list-style-type: none;
+  }
+}
+
+@include jusque("desktop") {
+  footer {
+    padding: fluid($size-16, $size-32, $desktopRef);
   }
 }
 
@@ -144,7 +146,7 @@ footer {
     }
 
     nav:last-of-type, & > a, p {
-      width: 80% !important;
+      width: 90% !important;
       margin: 0 auto;
       justify-self: initial;
       text-align: initial;
@@ -162,7 +164,6 @@ footer {
       }
     }
     logo {
-
       margin: 0 auto;
     }
     p {
