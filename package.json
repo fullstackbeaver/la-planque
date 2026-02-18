@@ -4,7 +4,6 @@
   "devDependencies": {
     "@minify-html/node": "^0.18.1",
     "@types/bun": "latest",
-    "chokidar": "^5.0.0",
     "glob": "^13.0.0",
     "lightningcss": "^1.31.1",
     "sass": "^1.97.3",

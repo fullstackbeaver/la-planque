@@ -1,11 +1,10 @@
-import { file, write } from "bun";
-import chokidar        from "chokidar";
-import { existsSync }  from 'fs';
-import fs              from 'fs/promises';
-import { glob }        from "glob";
-import { minify }      from '@minify-html/node';
-import { minify as minJs} from "terser";
-import { transform }   from "lightningcss";
+import { existsSync, watch } from 'fs';
+import { file, write }       from "bun";
+import fs                    from 'fs/promises';
+import { glob }              from "glob";
+import { minify }            from '@minify-html/node';
+import { minify as minJs }   from "terser";
+import { transform }         from "lightningcss";
 
 async function exec(cmd, options = {}) {
   console.log(`   💻 ${cmd}`);
@@ -50,7 +49,6 @@ function parseAttributes(tagString) {
   if (!attrString) return attrs;
 
   let remainingString = attrString;
-  // Regex amélioré pour capturer les attributs avec guillemets imbriqués
   const attrWithValueRegex = /([a-zA-Z][a-zA-Z0-9-]*)\s*=\s*"([^"]*)"|([a-zA-Z][a-zA-Z0-9-]*)\s*=\s*'([^']*)'/g;
   let attrMatch;
 
@@ -315,7 +313,7 @@ async function build() {
     if (!scssResult) {
       console.error("❌ Erreur pendant la compilation SCSS");
       await fs.unlink('temp-styles.scss').catch(() => { });
-      return;
+      throw new Error("Échec de la compilation SCSS");
     }
 
     await fs.unlink('temp-styles.scss').catch(() => { });
@@ -328,39 +326,22 @@ async function build() {
     console.log(`🎉 Build terminé en ${duration}ms !`);
     console.log("=".repeat(50) + "\n");
 
+    return true; // Indiquer que le build a réussi
+
   } catch (error) {
     console.error("\n💥 Erreur pendant le build :", error.message);
     console.error(error.stack);
+    return false; // Indiquer que le build a échoué
   }
 }
 
 async function startWatcher() {
-  console.log("👁️  Démarrage de la surveillance des fichiers...");
+  console.log("👁️  Démarrage de la surveillance des fichiers avec bun --watch...");
   console.log("📁 Dossiers surveillés : src/");
-  console.log("🛑 Tapez Ctrl+C pour arrêter\n");
-
-  const watcher = chokidar.watch(['src/**/*'], {
-    ignored         : /(^|[\/\\])\../,
-    persistent      : true,
-    ignoreInitial   : true,
-    awaitWriteFinish: {
-      stabilityThreshold: 300,
-      pollInterval      : 100
-    }
+  watch('./src', { recursive: true }, async (event, filename) => {
+    console.log(`🔄 Fichier modifié: ${filename}`);
+    await build();
   });
-
-  watcher
-    .on('add', path => {
-      console.log(`\n📄 ${path} ajouté`);
-      setTimeout(build, 100);
-    })
-    .on('change', path => {
-      console.log(`\n✏️  ${path} modifié`);
-      setTimeout(build, 100);
-    })
-    .on('ready', () => {
-      console.log('✅ Surveillance active !');
-    });
 }
 
 async function startServer() {
@@ -431,17 +412,14 @@ async function minifyJs() {
   }
 }
 
-const args = process.argv.slice(2);
-
+const args        = process.argv.slice(2);
 const shouldServe = args.includes('--serve');
 const shouldWatch = args.includes('--watch');
 
-// Mode combiné (dev)
-if (shouldWatch && shouldServe) {
-  await build();
-  await Promise.all([startWatcher(), startServer()]);
+if (shouldWatch && shouldServe) {  
+  await startServer();
+  await startWatcher();
 }
-// Modes simples
 else if (shouldWatch) {
   await startWatcher();
 }
