@@ -229,7 +229,7 @@ button[data-icon="1"]::before, .cta[data-icon="1"]::before, footer > a[data-icon
   background-color: #FFFFFF;
   border-color: #B2B1AE;
   border-style: solid;
-  color: #B2B1AE;
+  color: #29261F;
   font-size: 1.25rem;
   padding: 16px;
 }
@@ -639,15 +639,10 @@ logo.big {
 .hero form {
   background-color: rgba(244, 241, 239, 0.8);
   border-color: #F4F1EF;
-  color: #29261F;
   display: flex;
   font-family: Albert Sans;
   padding: 24px 32px;
   width: fit-content;
-}
-.hero form label input,
-.hero form label select {
-  color: inherit;
 }
 .hero form button {
   height: 60px;
@@ -1061,7 +1056,7 @@ triptyque img:nth-of-type(3) {
   background-color: #FFFFFF;
   border-color: #B2B1AE;
   border-style: solid;
-  color: #B2B1AE;
+  color: #29261F;
   font-size: 1.25rem;
   padding: 16px;
   font-family: Albert Sans;
@@ -1155,7 +1150,7 @@ triptyque img:nth-of-type(3) {
 footer {
   position: relative;
   display: grid;
-  grid: "logo propos a" "cp legal legal"/233px 1fr 1fr;
+  grid: "logo propos a" "cp legal legal"/235px 1fr 1fr;
   padding: 60px 120px 0 120px;
   gap: 32px 12px;
 }
@@ -1186,6 +1181,9 @@ footer > a:last-of-type {
 }
 footer a:hover {
   color: #AD3C05;
+}
+footer nav, footer a, footer p {
+  z-index: 1;
 }
 footer > nav:first-of-type {
   grid-area: propos;

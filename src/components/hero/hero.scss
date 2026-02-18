@@ -110,7 +110,6 @@
 
   background-color: rgba($color-10, 0.8);
   border-color    : $color-10;
-  color           : $color-12;
   display         : flex;
   font-family     : $action-font;
   padding         : $size-24 $size-32;
@@ -123,8 +122,6 @@
     input,
     select {
       @extend .inputForm;
-
-      color: inherit;
     }
   }
 

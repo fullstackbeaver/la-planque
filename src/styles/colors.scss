@@ -17,7 +17,6 @@ $color-4      : #AD3C05;  //feuillage
 $color-5      : #D67000;  //citrouille
 $color-6      : #CE8C8D;  //brique
 $color-7      : #DEB150;  //soleil
-// $color-7-light: #FFD986;  //soleil clair
 $color-8      : #BC8F35;  //sable
 $color-9      : #B5DFFF;  //ciel
 $color-10     : #F4F1EF;  //nuage
@@ -26,4 +25,5 @@ $color-12     : #29261F;  //terreau
 $color-13     : #FFFFFF;  //neige
 
 
-$link-color: highlighted-color($color-7, true);
+$link-color: highlighted-color($color-7, true);// Test de modification avec debugging
+// Test avec bun --watch

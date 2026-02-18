@@ -13,7 +13,7 @@ footer {
   grid:
     "logo propos a"
     "cp legal legal"
-    / 233px 1fr 1fr;
+    / 235px 1fr 1fr;
   padding: $size-60 $size-120 0 $size-120;
   gap: $size-32 $size-12;
 
@@ -49,6 +49,10 @@ footer {
 
   a:hover {
     color: $color-4;
+  }
+
+  nav, a, p {
+    z-index: 1;
   }
 
   &>nav,
